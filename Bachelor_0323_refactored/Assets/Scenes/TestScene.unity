@@ -273,7 +273,7 @@ GameObject:
   - component: {fileID: 487406336}
   m_Layer: 0
   m_Name: PlayerParent
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -430,7 +430,7 @@ GameObject:
   - component: {fileID: 621898234}
   m_Layer: 0
   m_Name: PlayArea
-  m_TagString: Untagged
+  m_TagString: AreaBorder
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -752,7 +752,7 @@ GameObject:
   - component: {fileID: 1855842860}
   m_Layer: 0
   m_Name: BulletSpawn
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -812,9 +812,10 @@ GameObject:
   - component: {fileID: 1932186267}
   - component: {fileID: 1932186270}
   - component: {fileID: 1932186271}
+  - component: {fileID: 1932186272}
   m_Layer: 0
   m_Name: PlayerBody
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -936,6 +937,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3d00dbb00bfa4f346b4da61fc579a54d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &1932186272
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1932186265}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 37c69c7ae4d5c2d40a196c91429fce37, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  restrictedArea: {fileID: 0}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
