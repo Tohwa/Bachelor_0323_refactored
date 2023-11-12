@@ -7,10 +7,18 @@ public class PlayerShooting : MonoBehaviour
 {
     public FloatReference FireDelay;
     public FloatReference BulletVelocity;
+    public IntReference poolSize;
 
     public GameObject bulletPrefab;
 
+    private MyObjectPool<Bullet> bulletPool;
+    
     private bool canFire;
+
+    private void Awake()
+    {
+        bulletPool = new MyObjectPool<Bullet>(bulletPrefab, poolSize.Value, this.transform);
+    }
 
     private void Update()
     {
@@ -23,8 +31,8 @@ public class PlayerShooting : MonoBehaviour
         {
             if(canFire)
             {
-                GameObject bullet = Instantiate(bulletPrefab, transform.position, transform.rotation);
-                Rigidbody rb = bullet.GetComponent<Rigidbody>();
+                Bullet temp = bulletPool.GetItem();
+                Rigidbody rb = temp.GetComponent<Rigidbody>();
 
                 rb.AddForce(transform.forward * BulletVelocity.Value, ForceMode.Impulse);
             }

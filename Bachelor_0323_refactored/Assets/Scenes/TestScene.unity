@@ -792,6 +792,10 @@ MonoBehaviour:
     UseConstant: 0
     ConstantValue: 0
     Variable: {fileID: 11400000, guid: dfe988b0d57e77a40acded5ed503377d, type: 2}
+  poolSize:
+    UseConstant: 0
+    ConstantValue: 0
+    Variable: {fileID: 11400000, guid: 68286db2dc1fe154799bf1cd3d0fde98, type: 2}
   bulletPrefab: {fileID: 3876662155361478548, guid: 89e8cc12d38960d4ca7f026135a95636,
     type: 3}
 --- !u!1 &1932186265

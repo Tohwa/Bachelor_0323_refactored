@@ -8,7 +8,7 @@ public class AreaRestriciton : MonoBehaviour
     {
         if (other.CompareTag("bullet"))
         {
-            Destroy(other.gameObject);
+            other.gameObject.SetActive(false);
         }
     }
 }
