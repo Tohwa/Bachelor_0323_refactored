@@ -4,7 +4,7 @@ using UnityEngine;
 
 public interface IPoolable<T> where T : MonoBehaviour, IPoolable<T>
 {
-    public void Initialize(MyObjectPool<T> pool);
+    public void Initialize(BulletPool<T> pool);
 
     public void Deactivate();
 

@@ -4,14 +4,14 @@ using UnityEngine;
 
 public class Bullet : MonoBehaviour, IPoolable<Bullet>
 {
-    private MyObjectPool<Bullet> pool;
+    private BulletPool<Bullet> pool;
 
     public void Deactivate()
     {
         gameObject.SetActive(false);
     }
 
-    public void Initialize(MyObjectPool<Bullet> _pool)
+    public void Initialize(BulletPool<Bullet> _pool)
     {
         pool = _pool;
     }
@@ -27,6 +27,5 @@ public class Bullet : MonoBehaviour, IPoolable<Bullet>
         {
             pool.ReturnItem(this);
         }
-        Debug.Log("test");
     }
 }

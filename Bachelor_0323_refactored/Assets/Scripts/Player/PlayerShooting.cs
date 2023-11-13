@@ -11,13 +11,13 @@ public class PlayerShooting : MonoBehaviour
 
     public GameObject bulletPrefab;
 
-    private MyObjectPool<Bullet> bulletPool;
+    private BulletPool<Bullet> bulletPool;
     
     private bool canFire;
 
     private void Awake()
     {
-        bulletPool = new MyObjectPool<Bullet>(bulletPrefab, poolSize.Value, this.transform);
+        bulletPool = new BulletPool<Bullet>(bulletPrefab, poolSize.Value, this.transform);
     }
 
     private void Update()
@@ -44,5 +44,10 @@ public class PlayerShooting : MonoBehaviour
         canFire = false;
         yield return new WaitForSeconds(FireDelay.Value);
         canFire = true;
+    }
+
+    private void OnDrawGizmos()
+    {
+        Gizmos.DrawLine(transform.position, transform.forward);
     }
 }

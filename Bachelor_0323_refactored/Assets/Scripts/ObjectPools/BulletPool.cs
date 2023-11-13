@@ -2,11 +2,11 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class MyObjectPool<T> where T : MonoBehaviour, IPoolable<T>
+public class BulletPool<T> where T : MonoBehaviour, IPoolable<T>
 {
     public GameObject prefab;
 
-    public MyObjectPool(GameObject _prefab, int _size, Transform _parent)
+    public BulletPool(GameObject _prefab, int _size, Transform _parent)
     {
         prefab = _prefab;
         for (int i = 0; i < _size; i++)
