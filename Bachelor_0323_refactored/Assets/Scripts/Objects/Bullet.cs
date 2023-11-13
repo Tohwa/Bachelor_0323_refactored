@@ -11,7 +11,7 @@ public class Bullet : MonoBehaviour, IPoolable<Bullet>
         gameObject.SetActive(false);
     }
 
-    public void Initialize(BulletPool<Bullet> _pool)
+    public void InitializeBullet(BulletPool<Bullet> _pool)
     {
         pool = _pool;
     }

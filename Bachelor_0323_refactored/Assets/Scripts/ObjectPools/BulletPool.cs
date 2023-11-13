@@ -12,7 +12,7 @@ public class BulletPool<T> where T : MonoBehaviour, IPoolable<T>
         for (int i = 0; i < _size; i++)
         {
             T temp = GameObject.Instantiate(_prefab).GetComponent<T>();
-            temp.Initialize(this);
+            temp.InitializeBullet(this);
             temp.transform.parent = _parent;
             ReturnItem(temp);
         }        
