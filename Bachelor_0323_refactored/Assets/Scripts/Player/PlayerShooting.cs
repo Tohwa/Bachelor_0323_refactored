@@ -17,25 +17,25 @@ public class PlayerShooting : MonoBehaviour
 
     private void Awake()
     {
-        bulletPool = new BulletPool<Bullet>(bulletPrefab, poolSize.Value, this.transform);
+        bulletPool = new BulletPool<Bullet>(bulletPrefab, poolSize.Value, this.transform.parent.parent);
     }
 
     private void Update()
     {
-        StartCoroutine(ShotDelay());
+        //StartCoroutine(ShotDelay());
     }
 
     public void OnShoot(InputAction.CallbackContext ctx)
     {
         if (ctx.performed)
         {
-            if(canFire)
-            {
+            //if(canFire)
+            //{
                 Bullet temp = bulletPool.GetItem();
                 Rigidbody rb = temp.GetComponent<Rigidbody>();
 
                 rb.AddForce(transform.forward * BulletVelocity.Value, ForceMode.Impulse);
-            }
+            //}
         }
     }
 

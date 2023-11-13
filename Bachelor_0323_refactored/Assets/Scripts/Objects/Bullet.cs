@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Bullet : MonoBehaviour, IPoolable<Bullet>
+public class Bullet : MonoBehaviour, IPoolableBullet<Bullet>
 {
     private BulletPool<Bullet> pool;
 
