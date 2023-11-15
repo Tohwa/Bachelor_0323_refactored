@@ -12,6 +12,8 @@ public class PlayerShooting : MonoBehaviour
     public GameObject bulletPrefab;
 
     private BulletPool<Bullet> bulletPool;
+
+    private bool canFire;
     
     private void Awake()
     {
@@ -20,14 +22,21 @@ public class PlayerShooting : MonoBehaviour
 
     private void Update()
     {
-
+        if(canFire)
+        {
+            ShootBullet();
+        }
     }
 
     public void OnShoot(InputAction.CallbackContext ctx)
     {
-        if (ctx.performed)
+        if (ctx.started)
         {
-            ShootBullet();                            
+            canFire = true;                           
+        }
+        else if(ctx.canceled)
+        {
+            canFire = false;
         }
     }
 
@@ -35,6 +44,7 @@ public class PlayerShooting : MonoBehaviour
     {
         Bullet temp = bulletPool.GetItem();
         Rigidbody rb = temp.GetComponent<Rigidbody>();
+        temp.transform.position = transform.position;
 
         rb.AddForce(transform.forward * BulletVelocity.Value, ForceMode.Impulse);
     }
