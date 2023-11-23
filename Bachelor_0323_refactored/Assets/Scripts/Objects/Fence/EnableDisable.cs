@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class EnableDisable : MonoBehaviour
 {
-    public RuntimeSet<GameObject> fences;
+    public GameObjectSet fences;
 
     private void OnEnable()
     {
