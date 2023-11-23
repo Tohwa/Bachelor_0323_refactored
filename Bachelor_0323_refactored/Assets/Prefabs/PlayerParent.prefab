@@ -165,7 +165,7 @@ GameObject:
   - component: {fileID: 5963388646622017440}
   m_Layer: 0
   m_Name: PlayerParent
-  m_TagString: Player
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -321,7 +321,7 @@ GameObject:
   - component: {fileID: 8035969138516027511}
   m_Layer: 0
   m_Name: BulletSpawn
-  m_TagString: Player
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

@@ -2,17 +2,17 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class EnableDisable : MonoBehaviour
+public class SheepSetInteractor : MonoBehaviour
 {
-    public GameObjectSet fences;
+    public GameObjectSet sheepList;
 
     private void OnEnable()
     {
-        fences.Add(gameObject);
+        sheepList.Add(gameObject);
     }
 
     private void OnDisable()
     {
-        fences.Remove(gameObject);
+        sheepList.Remove(gameObject);
     }
 }
