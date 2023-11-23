@@ -2,16 +2,16 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Bullet : MonoBehaviour, IPoolable<Bullet>
+public class Bullet : MonoBehaviour, IPoolableBullet<Bullet>
 {
-    private MyObjectPool<Bullet> pool;
+    private BulletPool<Bullet> pool;
 
     public void Deactivate()
     {
         gameObject.SetActive(false);
     }
 
-    public void Initialize(MyObjectPool<Bullet> _pool)
+    public void InitializeBullet(BulletPool<Bullet> _pool)
     {
         pool = _pool;
     }
@@ -27,6 +27,5 @@ public class Bullet : MonoBehaviour, IPoolable<Bullet>
         {
             pool.ReturnItem(this);
         }
-        Debug.Log("test");
     }
 }

@@ -5,67 +5,91 @@ using UnityEngine;
 
 public abstract class BaseState
 {
-    //#region Fields
-    //protected Player player;
-    //protected Enemy enemy;
-    //protected NeutralNPC animal;
-    //protected StateMachine stateMachine;
-    //protected PlayerData playerData;
-    //protected NPCData npcData;
+    #region Fields
+    protected WolfController wolf;
+    protected BoarController boar;
+    protected GoatController goat;
+    protected GoblinController goblin;
+    protected BossController boss;
 
-    ////private float startTime;
+    protected SheepController sheep;
 
-    ////private string animBoolName;
-    //#endregion
+    protected StateMachine stateMachine;
 
-    //public BaseState(Enemy _enemy, StateMachine _stateMachine, NPCData _npcData/*, String _animBoolName */)
-    //{
-    //    enemy = _enemy;
-    //    stateMachine = _stateMachine;
-    //    npcData = _npcData;
-    //    //animBoolName = _animBoolName;
-    //}
+    //private string animBoolName;
+    #endregion
 
-    //public BaseState(NeutralNPC _animal, StateMachine _stateMachine, NPCData _npcData/*, String _animBoolName */)
-    //{
-    //    animal = _animal;
-    //    stateMachine = _stateMachine;
-    //    npcData = _npcData;
-    //    //animBoolName = _animBoolName;
-    //}
+    #region Constructor
+    public BaseState(WolfController _enemy, StateMachine _stateMachine/*, String _animBoolName */)
+    {
+        wolf = _enemy;
+        stateMachine = _stateMachine;
+        //animBoolName = _animBoolName;
+    }
 
-    //public BaseState(Player _player, StateMachine _stateMachine, PlayerData _playerData/*, String _animBoolName */)
-    //{
-    //    player = _player;
-    //    stateMachine = _stateMachine;
-    //    playerData = _playerData;
-    //    //animBoolName = _animBoolName;
-    //}
+    public BaseState(BoarController _enemy, StateMachine _stateMachine/*, String _animBoolName */)
+    {
+        boar = _enemy;
+        stateMachine = _stateMachine;
+        //animBoolName = _animBoolName;
+    }
 
-    //public BaseState(StateMachine _stateMachine)
-    //{
-    //    stateMachine = _stateMachine;
-    //}
+    public BaseState(GoatController _enemy, StateMachine _stateMachine/*, String _animBoolName */)
+    {
+        goat = _enemy;
+        stateMachine = _stateMachine;
+        //animBoolName = _animBoolName;
+    }
 
-    //public virtual void EnterState()
-    //{
-    //    //player.anim.setBool(animBoolName, true);
-    //    //startTime = Time.time;
-    //}
+    public BaseState(GoblinController _enemy, StateMachine _stateMachine/*, String _animBoolName */)
+    {
+        goblin = _enemy;
+        stateMachine = _stateMachine;
+        //animBoolName = _animBoolName;
+    }
 
-    //public virtual void LogicUpdate()
-    //{
+    public BaseState(BossController _enemy, StateMachine _stateMachine/*, String _animBoolName */)
+    {
+        boss = _enemy;
+        stateMachine = _stateMachine;
+        //animBoolName = _animBoolName;
+    }
 
-    //}
+    public BaseState(SheepController _enemy, StateMachine _stateMachine/*, String _animBoolName */)
+    {
+        sheep = _enemy;
+        stateMachine = _stateMachine;
+        //animBoolName = _animBoolName;
+    }
 
-    //public virtual void PhysicsUpdate()
-    //{
+    public BaseState(StateMachine _stateMachine)    //GameState
+    {
+        stateMachine = _stateMachine;
+    }
 
-    //}
+    #endregion
 
-    //public virtual void ExitState()
-    //{
-    //    //player.anim.setBool(animBoolName, false);
-    //}
+    #region virtuals
+    public virtual void EnterState()
+    {
+        //player.anim.setBool(animBoolName, true);
+        //startTime = Time.time;
+    }
+
+    public virtual void LogicUpdate()
+    {
+
+    }
+
+    public virtual void PhysicsUpdate()
+    {
+
+    }
+
+    public virtual void ExitState()
+    {
+        //player.anim.setBool(animBoolName, false);
+    }
+    #endregion
 
 }

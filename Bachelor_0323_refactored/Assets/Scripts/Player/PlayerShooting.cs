@@ -11,38 +11,46 @@ public class PlayerShooting : MonoBehaviour
 
     public GameObject bulletPrefab;
 
-    private MyObjectPool<Bullet> bulletPool;
-    
-    private bool canFire;
+    private BulletPool<Bullet> bulletPool;
 
+    private bool canFire;
+    
     private void Awake()
     {
-        bulletPool = new MyObjectPool<Bullet>(bulletPrefab, poolSize.Value, this.transform);
+        bulletPool = new BulletPool<Bullet>(bulletPrefab, poolSize.Value, transform.parent.parent);
     }
 
     private void Update()
     {
-        StartCoroutine(ShotDelay());
+        if(canFire)
+        {
+            ShootBullet();
+        }
     }
 
     public void OnShoot(InputAction.CallbackContext ctx)
     {
-        if (ctx.performed)
+        if (ctx.started)
         {
-            if(canFire)
-            {
-                Bullet temp = bulletPool.GetItem();
-                Rigidbody rb = temp.GetComponent<Rigidbody>();
-
-                rb.AddForce(transform.forward * BulletVelocity.Value, ForceMode.Impulse);
-            }
+            canFire = true;                           
+        }
+        else if(ctx.canceled)
+        {
+            canFire = false;
         }
     }
 
-    public IEnumerator ShotDelay()
+    private void ShootBullet()
     {
-        canFire = false;
-        yield return new WaitForSeconds(FireDelay.Value);
-        canFire = true;
+        Bullet temp = bulletPool.GetItem();
+        Rigidbody rb = temp.GetComponent<Rigidbody>();
+        temp.transform.position = transform.position;
+
+        rb.AddForce(transform.forward * BulletVelocity.Value, ForceMode.Impulse);
+    }
+
+    private void OnDrawGizmos()
+    {
+        Gizmos.DrawLine(transform.position, transform.forward);
     }
 }
