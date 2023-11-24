@@ -6,7 +6,9 @@ using UnityEngine.AI;
 
 public class WolfController : MonoBehaviour
 {
-    public FloatVariable speed;
+    public GameObject target;
+
+    public FloatReference speed;
 
     public Locator locator;
 
@@ -17,6 +19,9 @@ public class WolfController : MonoBehaviour
     public WolfLocateState LocateTargetState { get; private set; }
     public WolfAttackState AttackState { get; private set; }
     public WolfChaseState ChaseState { get; private set; }
+
+    public GameObjectSet sheepSet;
+    public GameObjectSet fenceSet;
 
     private void Awake()
     {
@@ -47,5 +52,5 @@ public class WolfController : MonoBehaviour
     private void FixedUpdate()
     {
         WolfStateMachine.wolfState.PhysicsUpdate();
-    }   
+    }
 }

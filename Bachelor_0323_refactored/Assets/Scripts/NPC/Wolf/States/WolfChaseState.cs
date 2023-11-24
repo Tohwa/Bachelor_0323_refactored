@@ -10,7 +10,7 @@ public class WolfChaseState : BaseState
 
     public override void EnterState()
     {
-        
+        wolf.Agent.SetDestination(wolf.target.transform.position);
     }
 
     public override void ExitState()

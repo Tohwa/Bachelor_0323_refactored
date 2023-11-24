@@ -5,7 +5,7 @@ using UnityEngine.AI;
 
 public class GoblinController : MonoBehaviour
 {
-    public FloatVariable speed;
+    public FloatReference speed;
 
     public Locator locator;
 
