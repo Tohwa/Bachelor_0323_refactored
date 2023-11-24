@@ -5,7 +5,6 @@ using UnityEngine;
 
 public class WolfLocateState : BaseState
 {
-
     public WolfLocateState(WolfController _enemy, StateMachine _stateMachine) : base(_enemy, _stateMachine)
     {
     }
@@ -54,30 +53,31 @@ public class WolfLocateState : BaseState
     private void FindClosestFence()
     {
         List<float> tempL = new List<float>();
+        List<GameObject> tempR = new List<GameObject>();
 
         foreach (GameObject item in wolf.fenceSet.Items)
         {
             float calcfloat = Distance(wolf.transform.position, item.transform.position);
             tempL.Add(calcfloat);
+            tempR.Add(item);
         }
 
-        int n = tempL.Count;
+        int n = tempR.Count;
 
-        for (int i = 0; i < n; i++)
-        {
-            for (int j = 0; j < n - i; j++)
+        
+            for (int j = 0; j == n - 1; j++)
             {
-                if (tempL[j] > tempL[j + 1])
+                if (tempL[j] < tempL[j + 1])
                 {
                     float tempF = tempL[j];
-                    GameObject tempG = wolf.fenceSet.Items[j];
+                    GameObject tempG = tempR[j];
                     tempL[j] = tempL[j + 1];
-                    wolf.fenceSet.Items[j] = wolf.fenceSet.Items[j + 1];
+                    tempR[j] = tempR[j + 1];
                     tempL[j + 1] = tempF;
-                    wolf.fenceSet.Items[j + 1] = tempG;
+                    tempR[j + 1] = tempG;
                 }
             }
-        }
+        
 
         wolf.target = wolf.fenceSet.Items[0];
     }
