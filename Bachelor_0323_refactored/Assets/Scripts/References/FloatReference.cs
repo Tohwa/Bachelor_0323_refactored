@@ -17,5 +17,6 @@ public class FloatReference
             return UseConstant ? ConstantValue :
                                    Variable.Value;
         }
+        set { Variable.Value = value; }
     }
 }

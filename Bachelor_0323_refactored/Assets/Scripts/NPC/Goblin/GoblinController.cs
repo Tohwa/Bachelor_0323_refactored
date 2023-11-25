@@ -5,9 +5,9 @@ using UnityEngine.AI;
 
 public class GoblinController : MonoBehaviour
 {
-    public FloatReference speed;
+    public GameObject target;
 
-    public Locator locator;
+    public FloatReference speed;
 
     public NavMeshAgent Agent { get; private set; }
 
@@ -16,6 +16,9 @@ public class GoblinController : MonoBehaviour
     public GoblinLocateState LocateTargetState { get; private set; }
     public GoblinAttackState AttackState { get; private set; }
     public GoblinChaseState ChaseState { get; private set; }
+
+    public GameObjectSet sheepSet;
+    public GameObjectSet fenceSet;
 
     private void Awake()
     {

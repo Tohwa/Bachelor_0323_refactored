@@ -10,8 +10,6 @@ public class WolfController : MonoBehaviour
 
     public FloatReference speed;
 
-    public Locator locator;
-
     public NavMeshAgent Agent { get; private set; }
 
     public StateMachine WolfStateMachine { get; private set; }

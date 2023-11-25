@@ -5,9 +5,9 @@ using UnityEngine.AI;
 
 public class GoatController : MonoBehaviour
 {
-    public FloatVariable speed;
+    public GameObject target;
 
-    public Locator locator;
+    public FloatVariable speed;
 
     public NavMeshAgent Agent { get; private set; }
 

@@ -1,18 +1,22 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
 
 public class WolfSetInteract : MonoBehaviour
 {
-    public GameObjectSet wolfList;
+    public GameEvent AddToList;
+    public GameEvent RemoveFromList;
+    public UnityEvent addition;
+    public UnityEvent substraction;
 
     private void OnEnable()
     {
-        wolfList.Add(gameObject);
+        AddToList.Raise();
     }
 
     private void OnDisable()
     {
-        wolfList.Remove(gameObject);
+        RemoveFromList.Raise();
     }
 }

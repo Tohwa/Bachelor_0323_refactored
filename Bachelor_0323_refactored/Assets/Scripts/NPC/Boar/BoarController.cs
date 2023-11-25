@@ -5,9 +5,9 @@ using UnityEngine.AI;
 
 public class BoarController : MonoBehaviour
 {
-    public FloatVariable speed;
+    public GameObject target;
 
-    public Locator locator;
+    public FloatVariable speed;
 
     public NavMeshAgent Agent { get; private set; }
 
@@ -16,6 +16,9 @@ public class BoarController : MonoBehaviour
     public BoarLocateState LocateTargetState { get; private set; }
     public BoarAttackState AttackState { get; private set; }
     public BoarChaseState ChaseState { get; private set; }
+
+    public GameObjectSet sheepSet;
+    public GameObjectSet fenceSet;
 
     private void Awake()
     {
