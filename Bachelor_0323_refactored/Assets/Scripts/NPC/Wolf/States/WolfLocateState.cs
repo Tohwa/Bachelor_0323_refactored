@@ -21,7 +21,7 @@ public class WolfLocateState : BaseState
 
     public override void LogicUpdate()
     {
-        if(wolf.target != null)
+        if (wolf.target != null)
         {
             wolf.WolfStateMachine.ChangeWolfState(wolf.ChaseState);
         }
@@ -39,7 +39,6 @@ public class WolfLocateState : BaseState
             if (wolf.fenceSet.Items.Count != 0)
             {
                 FindClosestFence();
-                Debug.Log("Found closest fence as active target.");
             }
             else
             {
@@ -64,10 +63,12 @@ public class WolfLocateState : BaseState
 
         int n = tempR.Count;
 
-        
-            for (int j = 0; j == n - 1; j++)
+
+        for (int i = 0; i < n - 1; i++)
+        {
+            for (int j = 0; j < n - 1 - i; j++)
             {
-                if (tempL[j] < tempL[j + 1])
+                if (tempL[j] > tempL[j + 1])
                 {
                     float tempF = tempL[j];
                     GameObject tempG = tempR[j];
@@ -77,9 +78,9 @@ public class WolfLocateState : BaseState
                     tempR[j + 1] = tempG;
                 }
             }
-        
+        }
 
-        wolf.target = wolf.fenceSet.Items[0];
+        wolf.target = tempR[0];
     }
 
     public float Distance(Vector3 firstTransform, Vector3 secTransform)
