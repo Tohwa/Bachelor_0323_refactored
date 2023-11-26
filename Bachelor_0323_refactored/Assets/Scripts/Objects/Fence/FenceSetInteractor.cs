@@ -6,6 +6,14 @@ public class FenceSetInteractor : MonoBehaviour
 {
     public GameObjectSet fenceList;
 
+    private void Update()
+    {
+        if (!gameObject.activeSelf)
+        {
+            gameObject.GetComponent<FenceSetInteractor>().enabled = false;
+        }
+    }
+
     private void OnEnable()
     {
         fenceList.Add(gameObject);

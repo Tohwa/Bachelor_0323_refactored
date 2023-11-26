@@ -1,5 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.AI.Navigation;
+using UnityEditor.AI;
 using UnityEngine;
 
 public class FenceDurability : MonoBehaviour
@@ -10,7 +12,6 @@ public class FenceDurability : MonoBehaviour
         if (durability.Value <= 0)
         {
             gameObject.SetActive(false);
-            //remove from active enemy List -- look up Video on discord talk03/23
         }
     }
 }

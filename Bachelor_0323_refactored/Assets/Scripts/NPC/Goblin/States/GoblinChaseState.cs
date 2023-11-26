@@ -30,7 +30,7 @@ public class GoblinChaseState : BaseState
                 }
             }
         }
-        else if (wolf.target == null)
+        else if (goblin.target == null)
         {
             goblin.GoblinStateMachine.ChangeGoblinState(goblin.LocateTargetState);
         }
