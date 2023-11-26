@@ -148,6 +148,8 @@ GameObject:
   m_Component:
   - component: {fileID: 6544662457011404829}
   - component: {fileID: 6690717892030908452}
+  - component: {fileID: 6074138573414243032}
+  - component: {fileID: 936688148873032968}
   m_Layer: 0
   m_Name: Shop
   m_TagString: Untagged
@@ -191,3 +193,27 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 0.28694472, y: 0.4950346, z: 0.16040103}
   m_Center: {x: -0.35652825, y: 0.25248298, z: 0.07236901}
+--- !u!114 &6074138573414243032
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6267572661455388067}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 24f2409471d44d748a5ef069c174efa1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &936688148873032968
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6267572661455388067}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e458a9a945fe5e8448f64864ec83b33b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

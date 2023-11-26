@@ -10,7 +10,7 @@ public class GoatLocateState : BaseState
 
     public override void EnterState()
     {
-
+        FindTarget();
     }
 
     public override void ExitState()
@@ -20,11 +20,20 @@ public class GoatLocateState : BaseState
 
     public override void LogicUpdate()
     {
-
+        if(goat.target != null)
+        {
+            goat.GoatStateMachine.ChangeGoatState(goat.ChaseState);
+        }
     }
 
     public override void PhysicsUpdate()
     {
 
+    }
+
+    private void FindTarget()
+    {
+        GameObject temp = GameObject.FindGameObjectWithTag("Player");
+        goat.target = temp;
     }
 }

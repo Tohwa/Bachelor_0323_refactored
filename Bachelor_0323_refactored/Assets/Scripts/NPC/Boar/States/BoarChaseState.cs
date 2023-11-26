@@ -10,7 +10,7 @@ public class BoarChaseState : BaseState
 
     public override void EnterState()
     {
-        
+        boar.Agent.SetDestination(boar.target.transform.position);
     }
 
     public override void ExitState()
@@ -20,7 +20,20 @@ public class BoarChaseState : BaseState
 
     public override void LogicUpdate()
     {
-        
+        if (!boar.Agent.pathPending)
+        {
+            if (boar.Agent.remainingDistance <= boar.Agent.stoppingDistance)
+            {
+                if (!boar.Agent.hasPath || boar.Agent.velocity.sqrMagnitude == 0f)
+                {
+                    boar.BoarStateMachine.ChangeBoarState(boar.AttackState);
+                }
+            }
+        }
+        else if (boar.target == null)
+        {
+            boar.BoarStateMachine.ChangeBoarState(boar.LocateTargetState);
+        }
     }
 
     public override void PhysicsUpdate()

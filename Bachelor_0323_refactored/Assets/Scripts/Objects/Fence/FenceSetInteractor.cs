@@ -12,6 +12,10 @@ public class FenceSetInteractor : MonoBehaviour
         {
             gameObject.GetComponent<FenceSetInteractor>().enabled = false;
         }
+        else if(gameObject.activeSelf)
+        {
+            gameObject.GetComponent<FenceSetInteractor>().enabled = true;
+        }
     }
 
     private void OnEnable()

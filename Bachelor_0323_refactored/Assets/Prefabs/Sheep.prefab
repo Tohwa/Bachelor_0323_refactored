@@ -135,6 +135,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c11839eebdc270e43acbc9154247502b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  health:
+    UseConstant: 1
+    ConstantValue: 3
+    Variable: {fileID: 0}
 --- !u!114 &873984690800058508
 MonoBehaviour:
   m_ObjectHideFlags: 0

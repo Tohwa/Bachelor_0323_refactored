@@ -16,6 +16,10 @@ GameObject:
   - component: {fileID: 2303617559581373877}
   - component: {fileID: 7073996471858410364}
   - component: {fileID: 6945760961554961391}
+  - component: {fileID: 6380465739925602888}
+  - component: {fileID: 5318847518403793790}
+  - component: {fileID: 3701852882028644660}
+  - component: {fileID: 8589750261317007137}
   m_Layer: 0
   m_Name: Wolf
   m_TagString: Untagged
@@ -123,7 +127,38 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 940c46c66cb22e143a745accbfc37dcb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  wolfList: {fileID: 11400000, guid: 6bba6a7e633b2c54fa9a507ecb6ce331, type: 2}
+  AddToList: {fileID: 11400000, guid: bdcf7c4b83db82e4f925a9ba239951d0, type: 2}
+  RemoveFromList: {fileID: 11400000, guid: c3a8a969a60cd954484561b8744a3049, type: 2}
+  addition:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 11400000, guid: bdcf7c4b83db82e4f925a9ba239951d0, type: 2}
+        m_TargetAssemblyTypeName: GameEvent, Assembly-CSharp
+        m_MethodName: Raise
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  substraction:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 11400000, guid: c3a8a969a60cd954484561b8744a3049, type: 2}
+        m_TargetAssemblyTypeName: GameEvent, Assembly-CSharp
+        m_MethodName: Raise
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &2303617559581373877
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -152,10 +187,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f8a63cd2b6243974bb8f78ed67b55b24, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  target: {fileID: 0}
   speed:
     UseConstant: 1
     ConstantValue: 3
     Variable: {fileID: 11400000, guid: 0bf815582ec73d648b74ac6f511c3f21, type: 2}
+  sheepSet: {fileID: 11400000, guid: fa964c0b4d8e57f40ab57337bf0a07c9, type: 2}
+  fenceSet: {fileID: 11400000, guid: 05aa19ef385595643a353d4a244ff574, type: 2}
 --- !u!114 &6945760961554961391
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -168,3 +206,103 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fd7b7913e5934ff4f8a53156bcc75f4d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  canAttack: 1
+  damage:
+    UseConstant: 1
+    ConstantValue: 2
+    Variable: {fileID: 11400000, guid: e84e69d4035099d4ea1e7a24263af0fb, type: 2}
+  delay:
+    UseConstant: 1
+    ConstantValue: 1
+    Variable: {fileID: 11400000, guid: ffb3b4294bc16024783ea62d5b29c869, type: 2}
+--- !u!195 &6380465739925602888
+NavMeshAgent:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1865187529923967389}
+  m_Enabled: 1
+  m_AgentTypeID: 0
+  m_Radius: 0.5
+  m_Speed: 3.5
+  m_Acceleration: 8
+  avoidancePriority: 50
+  m_AngularSpeed: 120
+  m_StoppingDistance: 0
+  m_AutoTraverseOffMeshLink: 1
+  m_AutoBraking: 1
+  m_AutoRepath: 1
+  m_Height: 2
+  m_BaseOffset: 1
+  m_WalkableMask: 4294967295
+  m_ObstacleAvoidanceType: 4
+--- !u!114 &5318847518403793790
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1865187529923967389}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: df7a9d225c34e4843ba3a814bfed448f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Event: {fileID: 11400000, guid: bdcf7c4b83db82e4f925a9ba239951d0, type: 2}
+  Response:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 8589750261317007137}
+        m_TargetAssemblyTypeName: ListEditor, Assembly-CSharp
+        m_MethodName: AddToList
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+--- !u!114 &3701852882028644660
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1865187529923967389}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: df7a9d225c34e4843ba3a814bfed448f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Event: {fileID: 11400000, guid: c3a8a969a60cd954484561b8744a3049, type: 2}
+  Response:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 8589750261317007137}
+        m_TargetAssemblyTypeName: ListEditor, Assembly-CSharp
+        m_MethodName: RemoveFromList
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+--- !u!114 &8589750261317007137
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1865187529923967389}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ca9261699d631604abdda22ffb3fda07, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  wolfSet: {fileID: 11400000, guid: 6bba6a7e633b2c54fa9a507ecb6ce331, type: 2}

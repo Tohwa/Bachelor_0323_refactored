@@ -43,7 +43,6 @@ public class GoblinLocateState : BaseState
             {
                 FindClosestSheep();
             }
-
         }
     }
 

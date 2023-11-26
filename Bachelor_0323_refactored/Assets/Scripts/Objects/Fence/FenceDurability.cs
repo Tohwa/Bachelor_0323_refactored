@@ -7,6 +7,7 @@ using UnityEngine;
 public class FenceDurability : MonoBehaviour
 {
     public FloatReference durability;
+
     private void Update()
     {
         if (durability.Value <= 0)
