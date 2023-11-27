@@ -1257,7 +1257,7 @@ PrefabInstance:
     - target: {fileID: 8107611073668077948, guid: f12ca7e09e616674ca26d43a1a5763fa,
         type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -1413,7 +1413,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4a18dbcbd32af3746804e49d44b185ab, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Event: {fileID: 11400000, guid: 8e679ceeacf5df045badb47513e9c301, type: 2}
+  initFence: {fileID: 11400000, guid: 8e679ceeacf5df045badb47513e9c301, type: 2}
   Response:
     m_PersistentCalls:
       m_Calls:

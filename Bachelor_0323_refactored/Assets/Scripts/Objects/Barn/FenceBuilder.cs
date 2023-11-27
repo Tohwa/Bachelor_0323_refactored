@@ -5,7 +5,7 @@ using UnityEngine.Events;
 
 public class FenceBuilder : MonoBehaviour
 {
-    public GameEvent Event;
+    public GameEvent initFence;
     public UnityEvent Response;
 
     public bool canInteract = false;
@@ -15,7 +15,7 @@ public class FenceBuilder : MonoBehaviour
     {
         if(canInteract && buttonPressed)
         {
-            Event.Raise();
+            initFence.Raise();
         }
     }
 
