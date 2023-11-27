@@ -646,7 +646,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 7170636881229732820}
         m_TargetAssemblyTypeName: FenceBuilder, Assembly-CSharp
-        m_MethodName: Button
+        m_MethodName: Build
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -1184,21 +1184,6 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 267020177229797907, guid: f12ca7e09e616674ca26d43a1a5763fa,
-        type: 3}
-      propertyPath: durability.ConstantValue
-      value: 10
-      objectReference: {fileID: 0}
-    - target: {fileID: 267020177229797907, guid: f12ca7e09e616674ca26d43a1a5763fa,
-        type: 3}
-      propertyPath: durabilityMemory.ConstantValue
-      value: 10
-      objectReference: {fileID: 0}
-    - target: {fileID: 3711033501354737526, guid: f12ca7e09e616674ca26d43a1a5763fa,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 7975535148758538019, guid: f12ca7e09e616674ca26d43a1a5763fa,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -1254,70 +1239,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Solid Fence
       objectReference: {fileID: 0}
-    - target: {fileID: 8107611073668077948, guid: f12ca7e09e616674ca26d43a1a5763fa,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents:
-    - targetCorrespondingSourceObject: {fileID: 8107611073668077948, guid: f12ca7e09e616674ca26d43a1a5763fa,
-        type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 4355736086597381730}
-    - targetCorrespondingSourceObject: {fileID: 8107611073668077948, guid: f12ca7e09e616674ca26d43a1a5763fa,
-        type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 4355736086597381729}
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f12ca7e09e616674ca26d43a1a5763fa, type: 3}
---- !u!1 &4355736086597381727 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 8107611073668077948, guid: f12ca7e09e616674ca26d43a1a5763fa,
-    type: 3}
-  m_PrefabInstance: {fileID: 4355736086597381726}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &4355736086597381729
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4355736086597381727}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e22c1d5a50248054ab2f73cbe9763fa6, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!114 &4355736086597381730
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4355736086597381727}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: df7a9d225c34e4843ba3a814bfed448f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Event: {fileID: 11400000, guid: 8e679ceeacf5df045badb47513e9c301, type: 2}
-  Response:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 4355736086597381729}
-        m_TargetAssemblyTypeName: BuildFence, Assembly-CSharp
-        m_MethodName: Build
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
 --- !u!1001 &7170636881229732816
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1417,9 +1343,9 @@ MonoBehaviour:
   Response:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 11400000, guid: 8e679ceeacf5df045badb47513e9c301, type: 2}
-        m_TargetAssemblyTypeName: GameEvent, Assembly-CSharp
-        m_MethodName: Raise
+      - m_Target: {fileID: 7170636881229732820}
+        m_TargetAssemblyTypeName: FenceBuilder, Assembly-CSharp
+        m_MethodName: Build
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}

@@ -11,17 +11,12 @@ public class FenceBuilder : MonoBehaviour
     public bool canInteract = false;
     public bool buttonPressed = false;
 
-    public void BuildFence()
+    public void Build()
     {
-        if(canInteract && buttonPressed)
+        if(canInteract)
         {
             initFence.Raise();
         }
-    }
-
-    public void Button()
-    {
-        buttonPressed = true;
     }
 
     private void OnTriggerEnter(Collider other)
