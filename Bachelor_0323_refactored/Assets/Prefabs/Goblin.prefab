@@ -14,7 +14,6 @@ GameObject:
   - component: {fileID: 8660247314489286425}
   - component: {fileID: 9188899978488092130}
   - component: {fileID: 644684288960366009}
-  - component: {fileID: 2317919352681642300}
   - component: {fileID: 5294472255973459244}
   - component: {fileID: 6742600213877464060}
   m_Layer: 0
@@ -145,20 +144,17 @@ MonoBehaviour:
     UseConstant: 1
     ConstantValue: 3
     Variable: {fileID: 11400000, guid: 9a7458165ece9264bae0333d525e49f4, type: 2}
+  damage:
+    UseConstant: 1
+    ConstantValue: 1
+    Variable: {fileID: 0}
+  attackDelay:
+    UseConstant: 1
+    ConstantValue: 2
+    Variable: {fileID: 0}
+  delay: 0
   sheepSet: {fileID: 11400000, guid: fa964c0b4d8e57f40ab57337bf0a07c9, type: 2}
   fenceSet: {fileID: 11400000, guid: 05aa19ef385595643a353d4a244ff574, type: 2}
---- !u!114 &2317919352681642300
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8787220552006825274}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 09a72cd25e3d5f342b62dfa819fff39a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &5294472255973459244
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -186,7 +182,7 @@ NavMeshAgent:
   m_Acceleration: 8
   avoidancePriority: 50
   m_AngularSpeed: 120
-  m_StoppingDistance: 0
+  m_StoppingDistance: 1
   m_AutoTraverseOffMeshLink: 1
   m_AutoBraking: 1
   m_AutoRepath: 1

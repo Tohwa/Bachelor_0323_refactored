@@ -17,6 +17,15 @@ public class FloatReference
             return UseConstant ? ConstantValue :
                                    Variable.Value;
         }
-        set { Variable.Value = value; }
+        set {
+            if (UseConstant)
+            {
+                ConstantValue = value;
+            }
+            else if (Variable != null)
+            {
+                Variable.Value = value;
+            }
+        }
     }
 }
