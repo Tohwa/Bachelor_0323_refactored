@@ -10,7 +10,7 @@ public class CozyState : BaseState
 
     public override void EnterState()
     {
-        //sheep.aggroTrigger.SetActive(false);
+        sheep.transform.GetChild(0).gameObject.SetActive(false);
     }
 
     public override void ExitState()

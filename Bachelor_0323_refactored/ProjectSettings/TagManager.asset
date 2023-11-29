@@ -8,6 +8,7 @@ TagManager:
   - AreaBorder
   - Environment
   - Sheep
+  - Enemy
   layers:
   - Default
   - TransparentFX

@@ -12,6 +12,7 @@ public class GoblinController : MonoBehaviour
     public FloatReference attackDelay;
 
     public float delay;
+    public bool canAttack;
 
     public NavMeshAgent Agent { get; private set; }
 
@@ -53,5 +54,21 @@ public class GoblinController : MonoBehaviour
     private void FixedUpdate()
     {
         GoblinStateMachine.goblinState.PhysicsUpdate();
+    }
+
+    public IEnumerator AttackDelay()
+    {
+        if (target.CompareTag("Environment"))
+        {
+            target.GetComponent<FenceDurability>().durability.Value -= damage.Value;
+        }
+        else if (target.CompareTag("Sheep"))
+        {
+            target.GetComponent<SheepHealth>().health.Value -= damage.Value;
+        }
+
+        canAttack = false;
+        yield return new WaitForSeconds(3);
+        canAttack = true;
     }
 }

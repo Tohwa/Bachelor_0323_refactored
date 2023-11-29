@@ -25,54 +25,17 @@ public class GoblinChaseState : BaseState
         {
             if (goblin.Agent.remainingDistance <= goblin.Agent.stoppingDistance)
             {
-                goblin.Agent.isStopped = true;
-                //if (goblin.target.CompareTag("Environment"))
-                //{
-                //    goblin.Agent.isStopped = true;
-
-                //    goblin.delay -= Time.deltaTime;
-                //    if (goblin.delay <= 0)
-                //    {
-                //        goblin.target.GetComponent<FenceDurability>().durability.Value -= goblin.damage.Value;
-                //        goblin.delay = goblin.attackDelay.Value;
-                //    }
-                //    else if (goblin.target.GetComponent<FenceDurability>().durability.Value <= 0)
-                //    {
-                //        goblin.target = null;
-                //        goblin.GoblinStateMachine.ChangeGoblinState(goblin.LocateTargetState);
-                //    }
-                //}
-                //else if (goblin.target.CompareTag("Sheep"))
-                //{
-                //    goblin.Agent.isStopped = true;
-
-                //    goblin.delay -= Time.deltaTime;
-                //    if (goblin.delay <= 0)
-                //    {
-                //        goblin.target.GetComponent<SheepHealth>().health.Value -= goblin.damage.Value;
-                //        goblin.delay = goblin.attackDelay.Value;
-                //    }
-                //    else if (goblin.target.GetComponent<SheepHealth>().health.Value <= 0)
-                //    {
-                //        goblin.target = null;
-                //        goblin.GoblinStateMachine.ChangeGoblinState(goblin.LocateTargetState);
-                //    }
-
-                //    if(goblin.Agent.remainingDistance >= goblin.Agent.stoppingDistance)
-                //    {
-                //        return;
-                //    }
-                //}
-                Debug.Log("In range! Remaining Distance: " + goblin.Agent.remainingDistance);
+                if (!goblin.Agent.hasPath || goblin.Agent.velocity.sqrMagnitude == 0f)
+                {
+                    goblin.GoblinStateMachine.ChangeGoblinState(goblin.AttackState);
+                    goblin.Agent.ResetPath();
+                }
             }
-            
-            if(goblin.Agent.remainingDistance >= goblin.Agent.stoppingDistance)
-            {
-                goblin.Agent.isStopped = false;
-                goblin.Agent.ResetPath();
-                goblin.Agent.SetDestination(goblin.target.transform.position);
-                Debug.Log("Chasing. Remaining Distance: " + goblin.Agent.remainingDistance);
-            }
+        }
+        else if (goblin.target == null)
+        {
+            goblin.GoblinStateMachine.ChangeGoblinState(goblin.LocateTargetState);
+            goblin.Agent.ResetPath();
         }
     }
 

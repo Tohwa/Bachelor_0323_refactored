@@ -11,6 +11,8 @@ public class SheepController : MonoBehaviour
     public FloatReference wanderTimer;
     public float timer;
 
+    public bool escape;
+
     public NavMeshAgent Agent { get; private set; }
 
     public StateMachine SheepStateMachine { get; private set; }
@@ -25,6 +27,11 @@ public class SheepController : MonoBehaviour
     private void Awake()
     {
         SheepStateMachine = new StateMachine();
+
+        CozyState = new CozyState(this, SheepStateMachine);
+        AlarmedState = new AlarmedState(this, SheepStateMachine);
+        EscapeState = new EscapeState(this, SheepStateMachine);
+        ReturnState = new ReturnHomeState(this, SheepStateMachine);
     }
 
     private void Start()
@@ -42,18 +49,23 @@ public class SheepController : MonoBehaviour
         }
         else
         {
-            //SheepStateMachine.InitSheepState(AlarmedState);
+            SheepStateMachine.InitSheepState(AlarmedState);
         }
 
     }
 
     private void Update()
     {
-        SheepStateMachine.goblinState.LogicUpdate();
+        SheepStateMachine.sheepState.LogicUpdate();
     }
 
     private void FixedUpdate()
     {
-        SheepStateMachine.goblinState.PhysicsUpdate();
+        SheepStateMachine.sheepState.PhysicsUpdate();
+    }
+
+    public void RunAway()
+    {
+        escape = true;
     }
 }
