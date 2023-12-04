@@ -82,36 +82,39 @@ public class GoblinLocateState : BaseState
 
     private void FindClosestSheep()
     {
-        List<float> tempL = new List<float>();
-        List<GameObject> tempR = new List<GameObject>();
-
-        foreach (GameObject item in goblin.sheepSet.Items)
+        if(goblin.sheepSet.Items.Count > 0)
         {
-            float calcfloat = Distance(goblin.transform.position, item.transform.position);
-            tempL.Add(calcfloat);
-            tempR.Add(item);
-        }
+            List<float> tempL = new List<float>();
+            List<GameObject> tempR = new List<GameObject>();
 
-        int n = tempR.Count;
-
-
-        for (int i = 0; i < n - 1; i++)
-        {
-            for (int j = 0; j < n - 1 - i; j++)
+            foreach (GameObject item in goblin.sheepSet.Items)
             {
-                if (tempL[j] > tempL[j + 1])
+                float calcfloat = Distance(goblin.transform.position, item.transform.position);
+                tempL.Add(calcfloat);
+                tempR.Add(item);
+            }
+
+            int n = tempR.Count;
+
+
+            for (int i = 0; i < n - 1; i++)
+            {
+                for (int j = 0; j < n - 1 - i; j++)
                 {
-                    float tempF = tempL[j];
-                    GameObject tempG = tempR[j];
-                    tempL[j] = tempL[j + 1];
-                    tempR[j] = tempR[j + 1];
-                    tempL[j + 1] = tempF;
-                    tempR[j + 1] = tempG;
+                    if (tempL[j] > tempL[j + 1])
+                    {
+                        float tempF = tempL[j];
+                        GameObject tempG = tempR[j];
+                        tempL[j] = tempL[j + 1];
+                        tempR[j] = tempR[j + 1];
+                        tempL[j + 1] = tempF;
+                        tempR[j + 1] = tempG;
+                    }
                 }
             }
-        }
 
-        goblin.target = tempR[0];
+            goblin.target = tempR[0];
+        }
     }
 
     public float Distance(Vector3 firstTransform, Vector3 secTransform)

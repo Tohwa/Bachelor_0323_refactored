@@ -9,6 +9,10 @@ public class WolfController : MonoBehaviour
     public GameObject target;
 
     public FloatReference speed;
+    public FloatReference damage;
+    public FloatReference attackDelay;
+
+    public bool canAttack;
 
     public NavMeshAgent Agent { get; private set; }
 
@@ -50,5 +54,21 @@ public class WolfController : MonoBehaviour
     private void FixedUpdate()
     {
         WolfStateMachine.wolfState.PhysicsUpdate();
+    }
+
+    public IEnumerator AttackDelay()
+    {
+        if (target.CompareTag("Environment"))
+        {
+            target.transform.parent.transform.parent.GetComponent<FenceDurability>().durability.Value -= damage.Value;
+        }
+        else if (target.CompareTag("Sheep"))
+        {
+            target.GetComponent<SheepHealth>().health.Value -= damage.Value;
+        }
+
+        canAttack = false;
+        yield return new WaitForSeconds(3);
+        canAttack = true;
     }
 }

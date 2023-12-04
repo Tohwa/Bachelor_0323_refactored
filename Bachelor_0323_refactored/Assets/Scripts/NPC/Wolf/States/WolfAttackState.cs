@@ -20,18 +20,27 @@ public class WolfAttackState : BaseState
 
     public override void LogicUpdate()
     {
-    //    if(wolf.gameObject.GetComponent<WolfAttack>().canAttack && wolf.target != null)
-    //    {
-    //        Debug.Log("Attacking");
-    //        wolf.gameObject.GetComponent<WolfAttack>().StartCoroutine(wolf.gameObject.GetComponent<WolfAttack>().AttackDelay());
-    //    }
+        wolf.StartCoroutine(wolf.AttackDelay());
 
+        if (wolf.target.CompareTag("Environment"))
+        {
+            if (wolf.fenceSet.Items.Count == 0)
+            {
+                wolf.StopCoroutine(wolf.AttackDelay());
+                wolf.target = null;
+                wolf.WolfStateMachine.ChangeWolfState(wolf.LocateTargetState);
+            }
+        }
+        else if (wolf.target.CompareTag("Sheep"))
+        {
+            if (wolf.target.GetComponent<SheepHealth>().health.Value <= 0)
+            {
+                wolf.StopCoroutine(wolf.AttackDelay());
+                wolf.target = null;
+                wolf.WolfStateMachine.ChangeWolfState(wolf.LocateTargetState);
+            }
+        }
 
-    //    if (wolf.target.GetComponent<FenceDurability>().durability.Value <= 0 || wolf.target.GetComponent<SheepHealth>().health.Value <= 0)
-    //    {
-    //        wolf.WolfStateMachine.ChangeWolfState(wolf.LocateTargetState);
-    //    }
-        
     }
 
     public override void PhysicsUpdate()

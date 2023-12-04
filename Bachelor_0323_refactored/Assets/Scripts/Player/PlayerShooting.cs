@@ -6,8 +6,8 @@ using UnityEngine.InputSystem;
 public class PlayerShooting : MonoBehaviour
 {
     public FloatReference FireDelay;
-    public FloatReference BulletVelocity;
     public IntReference poolSize;
+    public FloatReference BulletVelocity;
 
     public GameObject bulletPrefab;
 
@@ -44,13 +44,9 @@ public class PlayerShooting : MonoBehaviour
     {
         Bullet temp = bulletPool.GetItem();
         Rigidbody rb = temp.GetComponent<Rigidbody>();
+
         temp.transform.position = transform.position;
 
         rb.AddForce(transform.forward * BulletVelocity.Value, ForceMode.Impulse);
-    }
-
-    private void OnDrawGizmos()
-    {
-        Gizmos.DrawLine(transform.position, transform.forward);
     }
 }

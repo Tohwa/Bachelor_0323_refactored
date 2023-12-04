@@ -60,7 +60,7 @@ public class GoblinController : MonoBehaviour
     {
         if (target.CompareTag("Environment"))
         {
-            target.GetComponent<FenceDurability>().durability.Value -= damage.Value;
+            target.transform.parent.transform.parent.GetComponent<FenceDurability>().durability.Value -= damage.Value;
         }
         else if (target.CompareTag("Sheep"))
         {

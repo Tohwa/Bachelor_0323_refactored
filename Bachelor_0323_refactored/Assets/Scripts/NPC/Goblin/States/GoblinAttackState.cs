@@ -10,7 +10,7 @@ public class GoblinAttackState : BaseState
 
     public override void EnterState()
     {
-        goblin.StartCoroutine(goblin.AttackDelay());
+
     }
 
     public override void ExitState()
@@ -20,18 +20,11 @@ public class GoblinAttackState : BaseState
 
     public override void LogicUpdate()
     {
-        float temp;
-
-        temp = Distance(goblin.transform.position, goblin.target.transform.position);
+        goblin.StartCoroutine(goblin.AttackDelay());
 
         if (goblin.target.CompareTag("Environment"))
         {
-            if (temp <= goblin.Agent.stoppingDistance)
-            {
-                goblin.StopCoroutine(goblin.AttackDelay());
-                goblin.GoblinStateMachine.ChangeGoblinState(goblin.ChaseState);
-            }
-            else if(goblin.target.GetComponent<FenceDurability>().durability.Value <= 0)
+            if(goblin.fenceSet.Items.Count == 0)
             {
                 goblin.StopCoroutine(goblin.AttackDelay());
                 goblin.target = null;
@@ -40,12 +33,7 @@ public class GoblinAttackState : BaseState
         }
         else if (goblin.target.CompareTag("Sheep"))
         {
-            if (temp <= goblin.Agent.stoppingDistance)
-            {
-                goblin.StopCoroutine(goblin.AttackDelay());
-                goblin.GoblinStateMachine.ChangeGoblinState(goblin.ChaseState);
-            }
-            else if(goblin.target.GetComponent<SheepHealth>().health.Value <= 0)
+            if(goblin.target.GetComponent<SheepHealth>().health.Value <= 0)
             {
                 goblin.StopCoroutine(goblin.AttackDelay());
                 goblin.target = null;

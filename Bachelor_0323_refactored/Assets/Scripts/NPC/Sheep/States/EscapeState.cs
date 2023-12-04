@@ -11,7 +11,7 @@ public class EscapeState : BaseState
 
     public override void EnterState()
     {
-        
+        Debug.Log("running");
     }
 
     public override void ExitState()
