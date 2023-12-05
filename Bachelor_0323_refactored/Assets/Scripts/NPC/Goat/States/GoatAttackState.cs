@@ -20,7 +20,14 @@ public class GoatAttackState : BaseState
 
     public override void LogicUpdate()
     {
-
+        if(goat.Agent.remainingDistance <= goat.Agent.stoppingDistance)
+        {
+            goat.StartCoroutine(goat.AttackDelay());
+        }
+        else
+        {
+            goat.StopAllCoroutines();
+        }
     }
 
     public override void PhysicsUpdate()

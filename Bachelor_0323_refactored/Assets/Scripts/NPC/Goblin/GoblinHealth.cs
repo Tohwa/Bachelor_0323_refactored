@@ -12,7 +12,6 @@ public class GoblinHealth : MonoBehaviour
         {
             health.Value = 0;
             gameObject.SetActive(false);
-            //remove from active enemy List -- look up Video on discord talk03/23
         }
     }
 }

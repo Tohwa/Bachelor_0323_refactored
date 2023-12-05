@@ -68,7 +68,7 @@ public class GoblinController : MonoBehaviour
         }
 
         canAttack = false;
-        yield return new WaitForSeconds(3);
+        yield return new WaitForSeconds(attackDelay.Value);
         canAttack = true;
     }
 }

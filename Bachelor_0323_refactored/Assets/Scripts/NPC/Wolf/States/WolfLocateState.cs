@@ -40,10 +40,9 @@ public class WolfLocateState : BaseState
             {
                 FindClosestFence();
             }
-            else
+            else if (wolf.fenceSet.Items.Count == 0)
             {
-                //FindClosestSheep();
-                Debug.Log("Found closest sheep as active target.");
+                FindClosestSheep();
             }
 
         }
@@ -81,6 +80,43 @@ public class WolfLocateState : BaseState
         }
 
         wolf.target = tempR[0];
+    }
+
+    private void FindClosestSheep()
+    {
+        if (wolf.sheepSet.Items.Count > 0)
+        {
+            List<float> tempL = new List<float>();
+            List<GameObject> tempR = new List<GameObject>();
+
+            foreach (GameObject item in wolf.sheepSet.Items)
+            {
+                float calcfloat = Distance(wolf.transform.position, item.transform.position);
+                tempL.Add(calcfloat);
+                tempR.Add(item);
+            }
+
+            int n = tempR.Count;
+
+
+            for (int i = 0; i < n - 1; i++)
+            {
+                for (int j = 0; j < n - 1 - i; j++)
+                {
+                    if (tempL[j] > tempL[j + 1])
+                    {
+                        float tempF = tempL[j];
+                        GameObject tempG = tempR[j];
+                        tempL[j] = tempL[j + 1];
+                        tempR[j] = tempR[j + 1];
+                        tempL[j + 1] = tempF;
+                        tempR[j + 1] = tempG;
+                    }
+                }
+            }
+
+            wolf.target = tempR[0];
+        }
     }
 
     public float Distance(Vector3 firstTransform, Vector3 secTransform)

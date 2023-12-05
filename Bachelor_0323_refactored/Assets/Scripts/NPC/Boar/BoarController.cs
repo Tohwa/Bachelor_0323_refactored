@@ -7,7 +7,7 @@ public class BoarController : MonoBehaviour
 {
     public GameObject target;
 
-    public FloatVariable speed;
+    public FloatReference speed;
     public FloatReference damage;
     public FloatReference attackDelay;
 
@@ -67,7 +67,7 @@ public class BoarController : MonoBehaviour
         }
 
         canAttack = false;
-        yield return new WaitForSeconds(3);
+        yield return new WaitForSeconds(attackDelay.Value);
         canAttack = true;
     }
 }
