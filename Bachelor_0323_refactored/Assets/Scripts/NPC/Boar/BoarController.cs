@@ -5,9 +5,13 @@ using UnityEngine.AI;
 
 public class BoarController : MonoBehaviour
 {
-    public FloatVariable speed;
+    public GameObject target;
 
-    public Locator locator;
+    public FloatReference speed;
+    public FloatReference damage;
+    public FloatReference attackDelay;
+
+    public bool canAttack;
 
     public NavMeshAgent Agent { get; private set; }
 
@@ -16,6 +20,9 @@ public class BoarController : MonoBehaviour
     public BoarLocateState LocateTargetState { get; private set; }
     public BoarAttackState AttackState { get; private set; }
     public BoarChaseState ChaseState { get; private set; }
+
+    public GameObjectSet sheepSet;
+    public GameObjectSet fenceSet;
 
     private void Awake()
     {
@@ -46,5 +53,21 @@ public class BoarController : MonoBehaviour
     private void FixedUpdate()
     {
         BoarStateMachine.boarState.PhysicsUpdate();
+    }
+
+    public IEnumerator AttackDelay()
+    {
+        if (target.CompareTag("Environment"))
+        {
+            target.transform.parent.transform.parent.GetComponent<FenceDurability>().durability.Value -= damage.Value;
+        }
+        else if (target.CompareTag("Sheep"))
+        {
+            target.GetComponent<SheepHealth>().health.Value -= damage.Value;
+        }
+
+        canAttack = false;
+        yield return new WaitForSeconds(attackDelay.Value);
+        canAttack = true;
     }
 }

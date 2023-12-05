@@ -55,9 +55,9 @@ public abstract class BaseState
         //animBoolName = _animBoolName;
     }
 
-    public BaseState(SheepController _enemy, StateMachine _stateMachine/*, String _animBoolName */)
+    public BaseState(SheepController _ally, StateMachine _stateMachine/*, String _animBoolName */)
     {
-        sheep = _enemy;
+        sheep = _ally;
         stateMachine = _stateMachine;
         //animBoolName = _animBoolName;
     }

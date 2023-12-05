@@ -5,9 +5,9 @@ using UnityEngine.AI;
 
 public class BossController : MonoBehaviour
 {
-    public FloatVariable speed;
+    public GameObject target;
 
-    public Locator locator;
+    public FloatVariable speed;
 
     public NavMeshAgent Agent { get; private set; }
 
@@ -16,6 +16,9 @@ public class BossController : MonoBehaviour
     public BossLocateState LocateTargetState { get; private set; }
     public BossAttackState AttackState { get; private set; }
     public BossChaseState ChaseState { get; private set; }
+
+    public GameObjectSet sheepSet;
+    public GameObjectSet fenceSet;
 
     private void Awake()
     {

@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class GoblinChaseState : BaseState
@@ -10,7 +11,7 @@ public class GoblinChaseState : BaseState
 
     public override void EnterState()
     {
-
+        goblin.Agent.SetDestination(goblin.target.transform.position);
     }
 
     public override void ExitState()
@@ -20,7 +21,22 @@ public class GoblinChaseState : BaseState
 
     public override void LogicUpdate()
     {
-
+        if (!goblin.Agent.pathPending)
+        {
+            if (goblin.Agent.remainingDistance <= goblin.Agent.stoppingDistance)
+            {
+                if (!goblin.Agent.hasPath || goblin.Agent.velocity.sqrMagnitude == 0f)
+                {
+                    goblin.GoblinStateMachine.ChangeGoblinState(goblin.AttackState);
+                    goblin.Agent.ResetPath();
+                }
+            }
+        }
+        else if (goblin.target == null)
+        {
+            goblin.GoblinStateMachine.ChangeGoblinState(goblin.LocateTargetState);
+            goblin.Agent.ResetPath();
+        }
     }
 
     public override void PhysicsUpdate()

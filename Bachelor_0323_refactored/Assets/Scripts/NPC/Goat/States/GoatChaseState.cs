@@ -10,7 +10,7 @@ public class GoatChaseState : BaseState
 
     public override void EnterState()
     {
-
+        goat.Agent.SetDestination(goat.target.transform.position);
     }
 
     public override void ExitState()
@@ -20,7 +20,20 @@ public class GoatChaseState : BaseState
 
     public override void LogicUpdate()
     {
-
+        if (!goat.Agent.pathPending)
+        {
+            if (goat.Agent.remainingDistance <= goat.Agent.stoppingDistance)
+            {
+                if (!goat.Agent.hasPath || goat.Agent.velocity.sqrMagnitude == 0f)
+                {
+                    goat.GoatStateMachine.ChangeGoatState(goat.AttackState);
+                }
+            }
+        }
+        else if (goat.target == null)
+        {
+            goat.GoatStateMachine.ChangeGoatState(goat.LocateTargetState);
+        }
     }
 
     public override void PhysicsUpdate()

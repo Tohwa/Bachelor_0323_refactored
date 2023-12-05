@@ -6,9 +6,13 @@ using UnityEngine.AI;
 
 public class WolfController : MonoBehaviour
 {
-    public FloatVariable speed;
+    public GameObject target;
 
-    public Locator locator;
+    public FloatReference speed;
+    public FloatReference damage;
+    public FloatReference attackDelay;
+
+    public bool canAttack;
 
     public NavMeshAgent Agent { get; private set; }
 
@@ -17,6 +21,9 @@ public class WolfController : MonoBehaviour
     public WolfLocateState LocateTargetState { get; private set; }
     public WolfAttackState AttackState { get; private set; }
     public WolfChaseState ChaseState { get; private set; }
+
+    public GameObjectSet sheepSet;
+    public GameObjectSet fenceSet;
 
     private void Awake()
     {
@@ -47,5 +54,21 @@ public class WolfController : MonoBehaviour
     private void FixedUpdate()
     {
         WolfStateMachine.wolfState.PhysicsUpdate();
-    }   
+    }
+
+    public IEnumerator AttackDelay()
+    {
+        if (target.CompareTag("Environment"))
+        {
+            target.transform.parent.transform.parent.GetComponent<FenceDurability>().durability.Value -= damage.Value;
+        }
+        else if (target.CompareTag("Sheep"))
+        {
+            target.GetComponent<SheepHealth>().health.Value -= damage.Value;
+        }
+
+        canAttack = false;
+        yield return new WaitForSeconds(attackDelay.Value);
+        canAttack = true;
+    }
 }

@@ -5,9 +5,13 @@ using UnityEngine.AI;
 
 public class GoatController : MonoBehaviour
 {
-    public FloatVariable speed;
+    public GameObject target;
 
-    public Locator locator;
+    public FloatReference speed;
+    public FloatReference damage;
+    public FloatReference attackDelay;
+
+    public bool canAttack;
 
     public NavMeshAgent Agent { get; private set; }
 
@@ -46,5 +50,14 @@ public class GoatController : MonoBehaviour
     private void FixedUpdate()
     {
         GoatStateMachine.goatState.PhysicsUpdate();
+    }
+
+    public IEnumerator AttackDelay()
+    {
+        target.GetComponent<PlayerHealth>().health.Value -= damage.Value;
+
+        canAttack = false;
+        yield return new WaitForSeconds(attackDelay.Value);
+        canAttack = true;
     }
 }

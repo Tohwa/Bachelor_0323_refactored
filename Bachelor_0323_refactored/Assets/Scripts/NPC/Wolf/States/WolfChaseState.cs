@@ -10,7 +10,7 @@ public class WolfChaseState : BaseState
 
     public override void EnterState()
     {
-        
+        wolf.Agent.SetDestination(wolf.target.transform.position);
     }
 
     public override void ExitState()
@@ -20,7 +20,20 @@ public class WolfChaseState : BaseState
 
     public override void LogicUpdate()
     {
-        
+        if (!wolf.Agent.pathPending)
+        {
+            if (wolf.Agent.remainingDistance <= wolf.Agent.stoppingDistance)
+            {
+                if (!wolf.Agent.hasPath || wolf.Agent.velocity.sqrMagnitude == 0f)
+                {
+                    wolf.WolfStateMachine.ChangeWolfState(wolf.AttackState);
+                }
+            }
+        }
+        else if (wolf.target == null)
+        {
+            wolf.WolfStateMachine.ChangeWolfState(wolf.LocateTargetState);
+        }
     }
 
     public override void PhysicsUpdate()

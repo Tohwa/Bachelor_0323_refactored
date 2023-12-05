@@ -12,6 +12,7 @@ public class PlayerHealth : MonoBehaviour
     {
         if (health.Value <= 0)
         {
+            health.Value = 0;
             gameObject.SetActive(false);
             //GameEvent GameOver
         }
