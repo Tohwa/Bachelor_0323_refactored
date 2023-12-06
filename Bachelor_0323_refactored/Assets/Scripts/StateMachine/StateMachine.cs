@@ -12,8 +12,6 @@ public class StateMachine
 
     public BaseState sheepState;
 
-    public BaseState gameState;
-
     public void InitWolfState(BaseState _startState)
     {
         wolfState = _startState;
@@ -44,12 +42,6 @@ public class StateMachine
     {
         sheepState = _startState;
         sheepState.EnterState();
-    }
-
-    public void InitGameState(BaseState _startState)
-    {
-        gameState = _startState;
-        gameState.EnterState();
     }
 
     public void ChangeWolfState(BaseState _newState)
@@ -89,12 +81,5 @@ public class StateMachine
         sheepState.ExitState();
         sheepState = _newState;
         sheepState.EnterState();
-    }
-
-    public void ChangeGameState(BaseState _newState)
-    {
-        gameState.ExitState();
-        gameState = _newState;
-        gameState.EnterState();
     }
 }

@@ -13,7 +13,7 @@ public class GameManager : MonoBehaviour
     public bool preparation;
     public bool combat;
 
-    private float timer;
+    public float timer;
 
 
     void Start()
@@ -34,7 +34,7 @@ public class GameManager : MonoBehaviour
             preparation = false;
             combat = true;
             timer = roundTimer.Value;
-            gameEvent.Raise();
+            SendEventMessage();
         }
         else if(timer <= 0 && combat)
         {
@@ -42,5 +42,10 @@ public class GameManager : MonoBehaviour
             combat = false;
             timer = roundTimer.Value;
         }
+    }
+
+    public void SendEventMessage()
+    {
+        gameEvent.Raise();
     }
 }
