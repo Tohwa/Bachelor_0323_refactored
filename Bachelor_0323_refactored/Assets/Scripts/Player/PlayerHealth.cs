@@ -8,11 +8,17 @@ public class PlayerHealth : MonoBehaviour
 {
     public FloatReference health;
 
+    private float hp;
+
+    private void Start()
+    {
+        hp = health.Value;
+    }
     private void Update()
     {
-        if (health.Value <= 0)
+        if (hp <= 0)
         {
-            health.Value = 0;
+            hp = 0;
             gameObject.SetActive(false);
             //GameEvent GameOver
         }

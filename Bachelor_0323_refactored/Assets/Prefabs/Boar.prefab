@@ -146,7 +146,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   target: {fileID: 0}
-  speed: {fileID: 11400000, guid: a8575ace63cf43446914127c6e752eed, type: 2}
+  speed:
+    UseConstant: 1
+    ConstantValue: 0
+    Variable: {fileID: 0}
   damage:
     UseConstant: 1
     ConstantValue: 2
@@ -200,4 +203,4 @@ Rigidbody:
   m_IsKinematic: 0
   m_Interpolate: 0
   m_Constraints: 112
-  m_CollisionDetection: 0
+  m_CollisionDetection: 1
