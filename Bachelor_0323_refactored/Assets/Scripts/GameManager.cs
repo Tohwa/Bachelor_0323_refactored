@@ -5,8 +5,11 @@ using UnityEngine.Events;
 
 public class GameManager : MonoBehaviour
 {
-    public GameEvent gameEvent;
-    public UnityEvent response;
+    public GameEvent prepEvent;
+    public UnityEvent prepResponse;
+
+    public GameEvent combatEvent;
+    public UnityEvent combatResponse;
 
     public FloatReference roundTimer;
 
@@ -24,28 +27,34 @@ public class GameManager : MonoBehaviour
         timer = roundTimer.Value;
     }
 
-    
+
     void Update()
     {
         timer -= Time.deltaTime;
 
-        if(timer <= 0 && preparation)
+        if (timer <= 0 && preparation)
         {
             preparation = false;
             combat = true;
             timer = roundTimer.Value;
-            SendEventMessage();
+            SendCombatMessage();
         }
-        else if(timer <= 0 && combat)
+        else if (timer <= 0 && combat)
         {
             preparation = true;
             combat = false;
             timer = roundTimer.Value;
+            SendPrepMessage();
         }
     }
 
-    public void SendEventMessage()
+    public void SendPrepMessage()
     {
-        gameEvent.Raise();
+        prepEvent.Raise();
+    }
+
+    public void SendCombatMessage()
+    {
+        combatEvent.Raise();
     }
 }

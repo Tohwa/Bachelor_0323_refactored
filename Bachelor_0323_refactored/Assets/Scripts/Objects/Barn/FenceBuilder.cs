@@ -19,11 +19,24 @@ public class FenceBuilder : MonoBehaviour
         }
     }
 
+    private void OnDisable()
+    {
+        canInteract = false;
+    }
+
     private void OnTriggerEnter(Collider other)
     {
         if (other.gameObject.CompareTag("Player"))
         {
             canInteract = true;
+        }
+    }
+
+    private void OnTriggerExit(Collider other)
+    {
+        if (other.gameObject.CompareTag("Player"))
+        {
+            canInteract = false;
         }
     }
 }
