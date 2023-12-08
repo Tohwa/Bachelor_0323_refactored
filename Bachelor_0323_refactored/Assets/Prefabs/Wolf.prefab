@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 4736699277836409303}
   - component: {fileID: 148565526519647481}
   - component: {fileID: 727657157708210081}
-  - component: {fileID: 2303617559581373877}
+  - component: {fileID: 199304216608835451}
   - component: {fileID: 7073996471858410364}
   - component: {fileID: 6380465739925602888}
   - component: {fileID: 5318847518403793790}
@@ -159,7 +159,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
---- !u!114 &2303617559581373877
+--- !u!114 &199304216608835451
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -168,13 +168,14 @@ MonoBehaviour:
   m_GameObject: {fileID: 1865187529923967389}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3561a78c2bae3974dbfbe08128f5d46d, type: 3}
+  m_Script: {fileID: 11500000, guid: eca207417140af14c8baf11e29fa31e4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   health:
     UseConstant: 1
     ConstantValue: 10
     Variable: {fileID: 11400000, guid: 70661403067bb0f4297f3cba6f21e5f6, type: 2}
+  hp: 0
 --- !u!114 &7073996471858410364
 MonoBehaviour:
   m_ObjectHideFlags: 0

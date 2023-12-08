@@ -24,7 +24,7 @@ public class PlayerShooting : MonoBehaviour
 
     private void Start()
     {
-        timeBetweenShots = FireDelay.Value;
+        timeBetweenShots = 0;
     }
 
     private void Update()
@@ -50,6 +50,8 @@ public class PlayerShooting : MonoBehaviour
     {
         Bullet temp = bulletPool.GetItem();
         Rigidbody rb = temp.GetComponent<Rigidbody>();
+
+        temp.transform.parent = null;
 
         temp.transform.position = transform.position;
 
