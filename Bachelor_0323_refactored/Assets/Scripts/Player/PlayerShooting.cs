@@ -9,35 +9,41 @@ public class PlayerShooting : MonoBehaviour
     public IntReference poolSize;
     public FloatReference BulletVelocity;
 
+    public float timeBetweenShots;
+
     public GameObject bulletPrefab;
 
     private BulletPool<Bullet> bulletPool;
 
     private bool canFire;
-    
+
     private void Awake()
     {
         bulletPool = new BulletPool<Bullet>(bulletPrefab, poolSize.Value, transform.parent.parent);
     }
 
+    private void Start()
+    {
+        timeBetweenShots = FireDelay.Value;
+    }
+
     private void Update()
     {
-        if(canFire)
+        if (canFire)
         {
-            ShootBullet();
+            timeBetweenShots -= Time.deltaTime;
+
+            if (timeBetweenShots <= 0)
+            {
+                ShootBullet();
+                timeBetweenShots = FireDelay.Value;
+            }
         }
     }
 
     public void OnShoot(InputAction.CallbackContext ctx)
     {
-        if (ctx.started)
-        {
-            canFire = true;                           
-        }
-        else if(ctx.canceled)
-        {
-            canFire = false;
-        }
+        canFire = ctx.performed;
     }
 
     private void ShootBullet()

@@ -1087,10 +1087,40 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3402847654976201508, guid: c8c48192513a0f641b28236833a6090c,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0.0315
+      objectReference: {fileID: 0}
     - target: {fileID: 3735312640544706423, guid: c8c48192513a0f641b28236833a6090c,
         type: 3}
       propertyPath: m_Name
       value: PlayerParent
+      objectReference: {fileID: 0}
+    - target: {fileID: 5963388646622017440, guid: c8c48192513a0f641b28236833a6090c,
+        type: 3}
+      propertyPath: m_ActionEvents.Array.data[2].m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 2071144171}
+    - target: {fileID: 5963388646622017440, guid: c8c48192513a0f641b28236833a6090c,
+        type: 3}
+      propertyPath: m_ActionEvents.Array.data[2].m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: OnShoot
+      objectReference: {fileID: 0}
+    - target: {fileID: 6167366861862926709, guid: c8c48192513a0f641b28236833a6090c,
+        type: 3}
+      propertyPath: poolSize.ConstantValue
+      value: 30
+      objectReference: {fileID: 0}
+    - target: {fileID: 6167366861862926709, guid: c8c48192513a0f641b28236833a6090c,
+        type: 3}
+      propertyPath: FireDelay.ConstantValue
+      value: 1.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 6167366861862926709, guid: c8c48192513a0f641b28236833a6090c,
+        type: 3}
+      propertyPath: BulletVelocity.ConstantValue
+      value: 20
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -1317,6 +1347,18 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 0}
+--- !u!114 &2071144171 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 6167366861862926709, guid: c8c48192513a0f641b28236833a6090c,
+    type: 3}
+  m_PrefabInstance: {fileID: 1696489692}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e0076efc7a948bd4e8c0195cd24c5a72, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &2109349623 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 1038748981889343116, guid: 63e2f9f769dfea247902a402427550fa,
