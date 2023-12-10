@@ -2,17 +2,17 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class GoblinSetInteractor : MonoBehaviour
+public class CurSetInteraction : MonoBehaviour
 {
-    public GameObjectSet goblinList;
+    public GameObjectSet curEnemyList;
 
     private void OnEnable()
     {
-        goblinList.Add(gameObject);
+        curEnemyList.Add(gameObject);
     }
 
     private void OnDisable()
     {
-        goblinList.Remove(gameObject);
+        curEnemyList.Remove(gameObject);
     }
 }

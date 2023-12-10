@@ -13,8 +13,8 @@ GameObject:
   - component: {fileID: 8238383510762445837}
   - component: {fileID: 8660247314489286425}
   - component: {fileID: 9188899978488092130}
-  - component: {fileID: 644684288960366009}
   - component: {fileID: 5294472255973459244}
+  - component: {fileID: 644684288960366009}
   - component: {fileID: 6742600213877464060}
   - component: {fileID: 3732107366694998820}
   m_Layer: 0
@@ -128,6 +128,20 @@ MonoBehaviour:
     UseConstant: 1
     ConstantValue: 10
     Variable: {fileID: 11400000, guid: 0308143245588df45933a4fda9007bef, type: 2}
+  hp: 0
+--- !u!114 &5294472255973459244
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8787220552006825274}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e755cfbb3d400624191aadb014a59230, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  curEnemyList: {fileID: 11400000, guid: 7b6e7fa62edaf2748b417b093e9c896c, type: 2}
 --- !u!114 &644684288960366009
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -157,19 +171,6 @@ MonoBehaviour:
   canAttack: 0
   sheepSet: {fileID: 11400000, guid: fa964c0b4d8e57f40ab57337bf0a07c9, type: 2}
   fenceSet: {fileID: 11400000, guid: 05aa19ef385595643a353d4a244ff574, type: 2}
---- !u!114 &5294472255973459244
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8787220552006825274}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e755cfbb3d400624191aadb014a59230, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  goblinList: {fileID: 11400000, guid: 380afd89353b3b940858620fd112c3ee, type: 2}
 --- !u!195 &6742600213877464060
 NavMeshAgent:
   m_ObjectHideFlags: 0

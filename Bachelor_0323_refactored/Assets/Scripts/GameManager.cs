@@ -5,13 +5,16 @@ using UnityEngine.Events;
 
 public class GameManager : MonoBehaviour
 {
+    public GameObjectSet curEnemySet;
+
     public GameEvent prepEvent;
     public UnityEvent prepResponse;
 
     public GameEvent combatEvent;
     public UnityEvent combatResponse;
 
-    public FloatReference roundTimer;
+    public FloatReference prepTimer;
+    public FloatReference combatTimer;
 
     public bool preparation;
     public bool combat;
@@ -24,7 +27,7 @@ public class GameManager : MonoBehaviour
         preparation = true;
         combat = false;
 
-        timer = roundTimer.Value;
+        timer = prepTimer.Value;
     }
 
 
@@ -36,14 +39,14 @@ public class GameManager : MonoBehaviour
         {
             preparation = false;
             combat = true;
-            timer = roundTimer.Value;
+            timer = combatTimer.Value;
             SendCombatMessage();
         }
-        else if (timer <= 0 && combat)
+        else if (timer <= 0 && combat || combat && curEnemySet.Items.Count == 0)
         {
             preparation = true;
             combat = false;
-            timer = roundTimer.Value;
+            timer = prepTimer.Value;
             SendPrepMessage();
         }
     }

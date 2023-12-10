@@ -13,12 +13,13 @@ GameObject:
   - component: {fileID: 8921902837642358037}
   - component: {fileID: 2459834978172633290}
   - component: {fileID: 2907839215813389675}
+  - component: {fileID: 4839423069149017758}
   - component: {fileID: 1111961486845785059}
   - component: {fileID: -6933452874926131890}
   - component: {fileID: 4330762449847379795}
   m_Layer: 0
   m_Name: Boar
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -128,6 +129,19 @@ MonoBehaviour:
     ConstantValue: 10
     Variable: {fileID: 11400000, guid: 282b3c0dd11b89c478ab453cfaa2ff1a, type: 2}
   hp: 0
+--- !u!114 &4839423069149017758
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6320231669330817772}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e755cfbb3d400624191aadb014a59230, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  curEnemyList: {fileID: 11400000, guid: 7b6e7fa62edaf2748b417b093e9c896c, type: 2}
 --- !u!114 &1111961486845785059
 MonoBehaviour:
   m_ObjectHideFlags: 0
