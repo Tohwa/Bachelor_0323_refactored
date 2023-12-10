@@ -2,15 +2,22 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class GoblinHealth : MonoBehaviour
+public class EnemyHealth : MonoBehaviour
 {
     public FloatReference health;
 
+    [HideInInspector]public float hp;
+
+    private void Start()
+    {
+        hp = health.Value;
+    }
+
     private void Update()
     {
-        if (health.Value <= 0)
+        if (hp <= 0)
         {
-            health.Value = 0;
+            hp = 0;
             gameObject.SetActive(false);
         }
     }

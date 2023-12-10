@@ -10,6 +10,6 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 80728d7ae216c5546b7374f3f129bc5f, type: 3}
-  m_Name: WolfSet
+  m_Name: curEnemySet
   m_EditorClassIdentifier: 
   Items: []

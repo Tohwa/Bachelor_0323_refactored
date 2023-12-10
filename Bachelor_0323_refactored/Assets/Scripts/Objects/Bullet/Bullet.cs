@@ -4,7 +4,18 @@ using UnityEngine;
 
 public class Bullet : MonoBehaviour, IPoolableBullet<Bullet>
 {
+    public FloatReference bulletDamage;
+
+    [HideInInspector] public float damage;
+
     private BulletPool<Bullet> pool;
+    private Rigidbody rb;
+
+    private void Start()
+    {
+        damage = bulletDamage.Value;
+        rb = GetComponent<Rigidbody>();
+    }
 
     public void Deactivate()
     {
@@ -21,11 +32,16 @@ public class Bullet : MonoBehaviour, IPoolableBullet<Bullet>
         gameObject.SetActive(true);
     }
 
-    private void OnCollisionEnter(Collision collision)
+    private void OnTriggerEnter(Collider other)
     {
         if (pool != null)
         {
             pool.ReturnItem(this);
+
+            if (other.CompareTag("Enemy"))
+            {
+                other.gameObject.GetComponent<EnemyHealth>().hp -= damage;
+            }
         }
     }
 }
