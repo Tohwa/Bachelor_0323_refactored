@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 using UnityEngine;
 
 public class WaveSpawner : MonoBehaviour
@@ -11,17 +12,9 @@ public class WaveSpawner : MonoBehaviour
 
     private int currentWaveIndex = 0;
 
-    //public void SetSpawnsActive()
-    //{
-    //    foreach (var obj in spawnSet.Items)
-    //    {
-    //        obj.gameObject.SetActive(true);
-    //    }
-    //}
-
     public void ClearCurWave()
     {
-        for(int i = curEnemySet.Items.Count - 1 ; i >= 0 ; i--)
+        for (int i = curEnemySet.Items.Count - 1; i >= 0; i--)
         {
             curEnemySet.Items[i].gameObject.SetActive(false);
         }
@@ -29,23 +22,32 @@ public class WaveSpawner : MonoBehaviour
 
     public void SpawnWave()
     {
+        int temp;
+        List<int> tempList = new List<int>();
+
         for (int i = 0; i < waves[currentWaveIndex].enemies.Length; i++)
         {
-            int temp;
-            int prevTemp = 0;
+            tempList.Add(0);
 
             temp = Random.Range(0, spawnSet.Items.Count);
 
-            if(temp != prevTemp )
+            while(tempList.Count < waves[currentWaveIndex].enemies.Length)
             {
-                prevTemp = temp;
-            }
-            else
-            {
-                temp = Random.Range(0, spawnSet.Items.Count);
-            }
+                if (!tempList.Contains(temp))
+                {
+                    tempList.Add(temp);
+                }
+                else
+                {
+                    temp = Random.Range(0, spawnSet.Items.Count);
+                }
+            } 
+        }
 
-            Instantiate(waves[currentWaveIndex].enemies[i], spawnSet.Items[temp].transform);
+
+        for (int i = 0; i < waves[currentWaveIndex].enemies.Length; i++)
+        {
+            Instantiate(waves[currentWaveIndex].enemies[i], spawnSet.Items[tempList[i]].transform);
         }
 
         currentWaveIndex++;
