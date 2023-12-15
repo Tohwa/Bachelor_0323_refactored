@@ -9,6 +9,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5847054913374494687}
+  - component: {fileID: 5862250111421585231}
   m_Layer: 0
   m_Name: Tree
   m_TagString: Untagged
@@ -33,6 +34,29 @@ Transform:
   - {fileID: 3357059085873497762}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &5862250111421585231
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1375563453323608372}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0380fe777c876c04d9d5f6dfb285c829, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  durability:
+    UseConstant: 1
+    ConstantValue: 0
+    Variable: {fileID: 11400000, guid: 29dc32e125445cf4abdbedfcaf98d912, type: 2}
+  damageTimer:
+    UseConstant: 1
+    ConstantValue: 0
+    Variable: {fileID: 0}
+  gettingHit: 0
+  hp: 0
+  timer: 0
 --- !u!1 &4711646749686384862
 GameObject:
   m_ObjectHideFlags: 0
@@ -138,7 +162,7 @@ SphereCollider:
   serializedVersion: 3
   m_Radius: 0.5
   m_Center: {x: 0, y: 0, z: 0}
---- !u!1 &5491023327163195884
+--- !u!1 &5399649733242284797
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -146,29 +170,44 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 6679623967710911882}
+  - component: {fileID: 1297041884384738898}
+  - component: {fileID: 7486086251581794447}
   m_Layer: 0
-  m_Name: DropSpawn
+  m_Name: LootSpawn
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &6679623967710911882
+--- !u!4 &1297041884384738898
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5491023327163195884}
+  m_GameObject: {fileID: 5399649733242284797}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: -0.81, z: 0}
+  m_LocalPosition: {x: 0, y: -0.5, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 8507309446213692580}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &7486086251581794447
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5399649733242284797}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d5e49247780668e4db969de864ec8a46, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  lootPrefab: {fileID: 3678792476139805969, guid: 6f3f0b10faec31b4e8e2eb3f19cff0c0,
+    type: 3}
 --- !u!1 &5840272975509143264
 GameObject:
   m_ObjectHideFlags: 0
@@ -202,7 +241,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 5454140085663681336}
-  - {fileID: 6679623967710911882}
+  - {fileID: 1297041884384738898}
   m_Father: {fileID: 5847054913374494687}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!33 &2942425597984558521
@@ -288,6 +327,7 @@ GameObject:
   m_Component:
   - component: {fileID: 5454140085663681336}
   - component: {fileID: 1570533026992198416}
+  - component: {fileID: 7962541689745115481}
   m_Layer: 0
   m_Name: LogTrigger
   m_TagString: Untagged
@@ -304,7 +344,7 @@ Transform:
   m_GameObject: {fileID: 6678309685268989528}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: 0.528, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -333,3 +373,47 @@ CapsuleCollider:
   m_Height: 2.5777407
   m_Direction: 1
   m_Center: {x: -0.17541766, y: -0.35290894, z: 0}
+--- !u!114 &7962541689745115481
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6678309685268989528}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7015ce6f2d272d443962321e2f5856c2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  TriggerEnterEvent: {fileID: 11400000, guid: 7fdf490d47594bf45b7f507c5c6a0796, type: 2}
+  TriggerExitEvent: {fileID: 11400000, guid: 4072248c058fa7e44a6e4d47ab9b742a, type: 2}
+  EnterResponse:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 7962541689745115481}
+        m_TargetAssemblyTypeName: LogTriggerBehaviour, Assembly-CSharp
+        m_MethodName: OnTriggerEnter
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 1570533026992198416}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Collider, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  ExitResponse:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 7962541689745115481}
+        m_TargetAssemblyTypeName: LogTriggerBehaviour, Assembly-CSharp
+        m_MethodName: OnTriggerExit
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 1570533026992198416}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Collider, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2

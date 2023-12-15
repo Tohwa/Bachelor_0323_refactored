@@ -232,4 +232,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d5e49247780668e4db969de864ec8a46, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  crystal: {fileID: 1037475309014304320, guid: f268c7e4c9d8f64439dac7ba89038997, type: 3}
+  lootPrefab: {fileID: 1037475309014304320, guid: f268c7e4c9d8f64439dac7ba89038997,
+    type: 3}

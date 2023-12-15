@@ -4,10 +4,10 @@ using UnityEngine;
 
 public class SpawnLoot : MonoBehaviour
 {
-    public GameObject crystal;
+    public GameObject lootPrefab;
 
     private void OnDisable()
     {
-        Instantiate(crystal, gameObject.transform.position, crystal.transform.rotation,null);
+        Instantiate(lootPrefab, gameObject.transform.position, lootPrefab.transform.rotation,null);
     }
 }
