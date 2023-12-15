@@ -317,12 +317,12 @@ PrefabInstance:
     - target: {fileID: 6591947212243050461, guid: cdfc15af81f749248abcadffa2f3b482,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -0.27
+      value: 16.14
       objectReference: {fileID: 0}
     - target: {fileID: 6591947212243050461, guid: cdfc15af81f749248abcadffa2f3b482,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: 14.71
+      value: 7.1
       objectReference: {fileID: 0}
     - target: {fileID: 8176830856267110546, guid: cdfc15af81f749248abcadffa2f3b482,
         type: 3}
@@ -332,7 +332,7 @@ PrefabInstance:
     - target: {fileID: 8176830856267110546, guid: cdfc15af81f749248abcadffa2f3b482,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: 10.54
+      value: 15.84
       objectReference: {fileID: 0}
     - target: {fileID: 8880305822818832206, guid: cdfc15af81f749248abcadffa2f3b482,
         type: 3}
@@ -800,6 +800,156 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1001 &1748899543
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 969121176821630262, guid: 1b6c3720e9ec3a04c991b13f6ade184d,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -0.03631784
+      objectReference: {fileID: 0}
+    - target: {fileID: 969121176821630262, guid: 1b6c3720e9ec3a04c991b13f6ade184d,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 5.000002
+      objectReference: {fileID: 0}
+    - target: {fileID: 969121176821630262, guid: 1b6c3720e9ec3a04c991b13f6ade184d,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 22.499748
+      objectReference: {fileID: 0}
+    - target: {fileID: 969121176821630262, guid: 1b6c3720e9ec3a04c991b13f6ade184d,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 969121176821630262, guid: 1b6c3720e9ec3a04c991b13f6ade184d,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 969121176821630262, guid: 1b6c3720e9ec3a04c991b13f6ade184d,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 969121176821630262, guid: 1b6c3720e9ec3a04c991b13f6ade184d,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 969121176821630262, guid: 1b6c3720e9ec3a04c991b13f6ade184d,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 969121176821630262, guid: 1b6c3720e9ec3a04c991b13f6ade184d,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 969121176821630262, guid: 1b6c3720e9ec3a04c991b13f6ade184d,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5588101360060495106, guid: 1b6c3720e9ec3a04c991b13f6ade184d,
+        type: 3}
+      propertyPath: m_Name
+      value: Barn
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 6267572661455388067, guid: 1b6c3720e9ec3a04c991b13f6ade184d,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1748899547}
+    - targetCorrespondingSourceObject: {fileID: 6267572661455388067, guid: 1b6c3720e9ec3a04c991b13f6ade184d,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1748899546}
+  m_SourcePrefab: {fileID: 100100000, guid: 1b6c3720e9ec3a04c991b13f6ade184d, type: 3}
+--- !u!1 &1748899544 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6267572661455388067, guid: 1b6c3720e9ec3a04c991b13f6ade184d,
+    type: 3}
+  m_PrefabInstance: {fileID: 1748899543}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1748899545 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 6074138573414243032, guid: 1b6c3720e9ec3a04c991b13f6ade184d,
+    type: 3}
+  m_PrefabInstance: {fileID: 1748899543}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1748899544}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 24f2409471d44d748a5ef069c174efa1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &1748899546
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1748899544}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: df7a9d225c34e4843ba3a814bfed448f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Event: {fileID: 11400000, guid: 34bbc4ae834af7a43b05c333f3430b5e, type: 2}
+  Response:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1748899545}
+        m_TargetAssemblyTypeName: FenceUpgrader, Assembly-CSharp
+        m_MethodName: IncreaseWoodCount
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+--- !u!114 &1748899547
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1748899544}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: df7a9d225c34e4843ba3a814bfed448f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Event: {fileID: 11400000, guid: 0d2a0563e22f86e49aa7e12081762824, type: 2}
+  Response:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1748899545}
+        m_TargetAssemblyTypeName: FenceUpgrader, Assembly-CSharp
+        m_MethodName: IncreaseCrystalCount
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
@@ -811,3 +961,4 @@ SceneRoots:
   - {fileID: 239618360}
   - {fileID: 28943318}
   - {fileID: 63226890}
+  - {fileID: 1748899543}

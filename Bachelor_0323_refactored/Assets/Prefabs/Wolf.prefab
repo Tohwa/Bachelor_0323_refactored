@@ -17,6 +17,7 @@ GameObject:
   - component: {fileID: 7073996471858410364}
   - component: {fileID: 6380465739925602888}
   - component: {fileID: 6137107298316826156}
+  - component: {fileID: 1918003796864526222}
   m_Layer: 0
   m_Name: Wolf
   m_TagString: Enemy
@@ -219,3 +220,16 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 112
   m_CollisionDetection: 1
+--- !u!114 &1918003796864526222
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1865187529923967389}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d5e49247780668e4db969de864ec8a46, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  crystal: {fileID: 1037475309014304320, guid: f268c7e4c9d8f64439dac7ba89038997, type: 3}
