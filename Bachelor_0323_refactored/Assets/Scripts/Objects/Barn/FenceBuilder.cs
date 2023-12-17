@@ -8,35 +8,10 @@ public class FenceBuilder : MonoBehaviour
     public GameEvent initFence;
     public UnityEvent Response;
 
-    public bool canInteract = false;
-    public bool buttonPressed = false;
-
     public void Build()
     {
-        if(canInteract)
-        {
-            initFence.Raise();
-        }
+        initFence.Raise();
     }
 
-    private void OnDisable()
-    {
-        canInteract = false;
-    }
-
-    private void OnTriggerEnter(Collider other)
-    {
-        if (other.gameObject.CompareTag("Player"))
-        {
-            canInteract = true;
-        }
-    }
-
-    private void OnTriggerExit(Collider other)
-    {
-        if (other.gameObject.CompareTag("Player"))
-        {
-            canInteract = false;
-        }
-    }
+    
 }

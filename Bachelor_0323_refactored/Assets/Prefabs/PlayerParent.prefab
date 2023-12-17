@@ -211,6 +211,38 @@ MonoBehaviour:
       m_Calls: []
     m_ActionId: 163b4d9a-6887-4ee8-87b8-c6a6290ac798
     m_ActionName: UI/TrackedDeviceOrientation
+  - m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 4080962130185981997}
+        m_TargetAssemblyTypeName: TreeLogging, Assembly-CSharp
+        m_MethodName: HitTree
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_ActionId: 89f90c2b-50f6-4579-a9af-6b78470d0051
+    m_ActionName: Player/Log Tree[/Keyboard/e]
+  - m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 5503445682172582284}
+        m_TargetAssemblyTypeName: UseShop, Assembly-CSharp
+        m_MethodName: InteractWithShop
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_ActionId: a3078296-9bc5-403a-819d-bc2624cec244
+    m_ActionName: Player/Open Shop[/Keyboard/f]
   m_NeverAutoSwitchControlSchemes: 0
   m_DefaultControlScheme: 
   m_DefaultActionMap: Player
@@ -323,6 +355,22 @@ PrefabInstance:
         type: 3}
       insertIndex: -1
       addedObject: {fileID: 5610589872644744239}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: c7deb90cec84937458cc42978d860b95,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 4080962130185981997}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: c7deb90cec84937458cc42978d860b95,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 5503445682172582284}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: c7deb90cec84937458cc42978d860b95,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 6156308780384221007}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: c7deb90cec84937458cc42978d860b95,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1374710147640859087}
     - targetCorrespondingSourceObject: {fileID: -8733567025517968081, guid: c7deb90cec84937458cc42978d860b95,
         type: 3}
       insertIndex: -1
@@ -636,6 +684,155 @@ CapsuleCollider:
   m_Height: 0.08033945
   m_Direction: 1
   m_Center: {x: -0.0051420825, y: 0.028626667, z: -0.0035316194}
+--- !u!114 &4080962130185981997
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8212712176001870819}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0525bd54ee393a14db64b2e7ec309aae, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  startLoggingEvent: {fileID: 11400000, guid: d87722a5f6187c143a70a36f231f8133, type: 2}
+  stopLoggingEvent: {fileID: 11400000, guid: df80ba4e7cbedd24da3800a8e48b90cd, type: 2}
+  startResponse:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 4080962130185981997}
+        m_TargetAssemblyTypeName: TreeLogging, Assembly-CSharp
+        m_MethodName: StartLogTree
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  stopResponse:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 4080962130185981997}
+        m_TargetAssemblyTypeName: TreeLogging, Assembly-CSharp
+        m_MethodName: StopLogTree
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  canLogTree: 0
+  hitTree: 0
+--- !u!114 &5503445682172582284
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8212712176001870819}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5c522d3c47d51434eaa3c982799089e2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  startInteractionEvent: {fileID: 11400000, guid: 1f1382ac7cd2cc24a90b64ca6e812b11,
+    type: 2}
+  StopInteractionEvent: {fileID: 11400000, guid: a0cd4dfb4a9dc1e46b329a132c3072bb,
+    type: 2}
+  startResponse:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 5503445682172582284}
+        m_TargetAssemblyTypeName: UseShop, Assembly-CSharp
+        m_MethodName: StartToInteract
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  stopResponse:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 5503445682172582284}
+        m_TargetAssemblyTypeName: UseShop, Assembly-CSharp
+        m_MethodName: StopToInteract
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  interacting: 0
+--- !u!114 &6156308780384221007
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8212712176001870819}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: df7a9d225c34e4843ba3a814bfed448f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Event: {fileID: 11400000, guid: 7fdf490d47594bf45b7f507c5c6a0796, type: 2}
+  Response:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 4080962130185981997}
+        m_TargetAssemblyTypeName: TreeLogging, Assembly-CSharp
+        m_MethodName: CanLogTree
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+--- !u!114 &1374710147640859087
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8212712176001870819}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: df7a9d225c34e4843ba3a814bfed448f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Event: {fileID: 11400000, guid: 4072248c058fa7e44a6e4d47ab9b742a, type: 2}
+  Response:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 4080962130185981997}
+        m_TargetAssemblyTypeName: TreeLogging, Assembly-CSharp
+        m_MethodName: CanNotLogTree
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!4 &8841334191479959897 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: c7deb90cec84937458cc42978d860b95,

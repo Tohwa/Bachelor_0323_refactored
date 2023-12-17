@@ -18,6 +18,8 @@ public class LogTriggerBehaviour : MonoBehaviour
         {
             TriggerEnterEvent.Raise();
         }
+
+        gameObject.transform.parent.transform.parent.GetComponent<TreeDurability>().activeTarget = true;
     }
 
     public void OnTriggerExit(Collider other)
@@ -26,5 +28,7 @@ public class LogTriggerBehaviour : MonoBehaviour
         {
             TriggerExitEvent.Raise();
         }
+
+        gameObject.transform.parent.transform.parent.GetComponent<TreeDurability>().activeTarget = false;
     }
 }

@@ -10,6 +10,8 @@ GameObject:
   m_Component:
   - component: {fileID: 5847054913374494687}
   - component: {fileID: 5862250111421585231}
+  - component: {fileID: 3878797189494306515}
+  - component: {fileID: 1508644271227515431}
   m_Layer: 0
   m_Name: Tree
   m_TagString: Untagged
@@ -48,15 +50,72 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   durability:
     UseConstant: 1
-    ConstantValue: 0
+    ConstantValue: 3
     Variable: {fileID: 11400000, guid: 29dc32e125445cf4abdbedfcaf98d912, type: 2}
   damageTimer:
     UseConstant: 1
-    ConstantValue: 0
-    Variable: {fileID: 0}
+    ConstantValue: 1
+    Variable: {fileID: 11400000, guid: 79a83d8f5266c2b438654a2213bf2430, type: 2}
   gettingHit: 0
+  activeTarget: 0
   hp: 0
   timer: 0
+--- !u!114 &3878797189494306515
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1375563453323608372}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: df7a9d225c34e4843ba3a814bfed448f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Event: {fileID: 11400000, guid: d87722a5f6187c143a70a36f231f8133, type: 2}
+  Response:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 5862250111421585231}
+        m_TargetAssemblyTypeName: TreeDurability, Assembly-CSharp
+        m_MethodName: TreeGettingHit
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+--- !u!114 &1508644271227515431
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1375563453323608372}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: df7a9d225c34e4843ba3a814bfed448f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Event: {fileID: 11400000, guid: df80ba4e7cbedd24da3800a8e48b90cd, type: 2}
+  Response:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 5862250111421585231}
+        m_TargetAssemblyTypeName: TreeDurability, Assembly-CSharp
+        m_MethodName: TreeNotGettingHit
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &4711646749686384862
 GameObject:
   m_ObjectHideFlags: 0

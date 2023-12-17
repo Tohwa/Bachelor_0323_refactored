@@ -157,16 +157,16 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   target: {fileID: 0}
   speed:
-    UseConstant: 1
+    UseConstant: 0
     ConstantValue: 3
     Variable: {fileID: 11400000, guid: 0bf815582ec73d648b74ac6f511c3f21, type: 2}
   damage:
     UseConstant: 1
-    ConstantValue: 0
+    ConstantValue: 1
     Variable: {fileID: 0}
   attackDelay:
     UseConstant: 1
-    ConstantValue: 0
+    ConstantValue: 1
     Variable: {fileID: 0}
   canAttack: 0
   sheepSet: {fileID: 11400000, guid: fa964c0b4d8e57f40ab57337bf0a07c9, type: 2}

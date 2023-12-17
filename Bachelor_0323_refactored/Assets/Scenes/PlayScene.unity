@@ -1668,136 +1668,23 @@ PrefabInstance:
       propertyPath: m_Name
       value: Barn
       objectReference: {fileID: 0}
-    - target: {fileID: 6690717892030908452, guid: 1b6c3720e9ec3a04c991b13f6ade184d,
-        type: 3}
-      propertyPath: m_IsTrigger
-      value: 1
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents:
-    - targetCorrespondingSourceObject: {fileID: 6267572661455388067, guid: 1b6c3720e9ec3a04c991b13f6ade184d,
-        type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 7170636881229732820}
-    - targetCorrespondingSourceObject: {fileID: 6267572661455388067, guid: 1b6c3720e9ec3a04c991b13f6ade184d,
-        type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 7170636881229732827}
-    - targetCorrespondingSourceObject: {fileID: 6267572661455388067, guid: 1b6c3720e9ec3a04c991b13f6ade184d,
-        type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 7170636881229732826}
-    - targetCorrespondingSourceObject: {fileID: 6267572661455388067, guid: 1b6c3720e9ec3a04c991b13f6ade184d,
-        type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 7170636881229732825}
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 1b6c3720e9ec3a04c991b13f6ade184d, type: 3}
---- !u!1 &7170636881229732817 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 6267572661455388067, guid: 1b6c3720e9ec3a04c991b13f6ade184d,
+--- !u!114 &7170636881229732820 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 4273739135392297998, guid: 1b6c3720e9ec3a04c991b13f6ade184d,
     type: 3}
   m_PrefabInstance: {fileID: 7170636881229732816}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &7170636881229732820
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7170636881229732817}
+  m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 4a18dbcbd32af3746804e49d44b185ab, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  initFence: {fileID: 11400000, guid: 8e679ceeacf5df045badb47513e9c301, type: 2}
-  Response:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 7170636881229732820}
-        m_TargetAssemblyTypeName: FenceBuilder, Assembly-CSharp
-        m_MethodName: Build
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-  canInteract: 0
-  buttonPressed: 0
---- !u!114 &7170636881229732825
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7170636881229732817}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ffa5f5ac42ce26e47873fcbb208e480e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!114 &7170636881229732826
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7170636881229732817}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: df7a9d225c34e4843ba3a814bfed448f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Event: {fileID: 11400000, guid: 0567344b8325e774d8a4c242608aa5e8, type: 2}
-  Response:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 7170636881229732825}
-        m_TargetAssemblyTypeName: EnableShop, Assembly-CSharp
-        m_MethodName: DeactivateShop
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
---- !u!114 &7170636881229732827
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7170636881229732817}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: df7a9d225c34e4843ba3a814bfed448f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Event: {fileID: 11400000, guid: b487faa9b45b77045ae2a47f9d2df81a, type: 2}
-  Response:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 7170636881229732825}
-        m_TargetAssemblyTypeName: EnableShop, Assembly-CSharp
-        m_MethodName: ActivateShop
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0

@@ -110,11 +110,11 @@ MonoBehaviour:
         m_CallState: 2
   prepTimer:
     UseConstant: 1
-    ConstantValue: 10
+    ConstantValue: 30
     Variable: {fileID: 0}
   combatTimer:
     UseConstant: 1
-    ConstantValue: 30
+    ConstantValue: 120
     Variable: {fileID: 0}
   preparation: 0
   combat: 0
