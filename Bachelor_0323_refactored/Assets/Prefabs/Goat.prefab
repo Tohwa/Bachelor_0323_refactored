@@ -17,6 +17,7 @@ GameObject:
   - component: {fileID: 4674920030366099543}
   - component: {fileID: 7037766750668972320}
   - component: {fileID: 4002466076820410867}
+  - component: {fileID: 2399259296127579363}
   m_Layer: 0
   m_Name: Goat
   m_TagString: Enemy
@@ -217,3 +218,17 @@ NavMeshAgent:
   m_BaseOffset: 1
   m_WalkableMask: 4294967295
   m_ObstacleAvoidanceType: 4
+--- !u!114 &2399259296127579363
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3330152044900817848}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d5e49247780668e4db969de864ec8a46, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  lootPrefab: {fileID: 1037475309014304320, guid: f268c7e4c9d8f64439dac7ba89038997,
+    type: 3}

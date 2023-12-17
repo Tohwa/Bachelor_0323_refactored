@@ -8,6 +8,7 @@ public class TreeDurability : MonoBehaviour
     public FloatReference damageTimer;
 
     public bool gettingHit;
+    public bool activeTarget;
 
     [HideInInspector] public float hp;
     [HideInInspector] public float timer;
@@ -20,7 +21,7 @@ public class TreeDurability : MonoBehaviour
 
     private void Update()
     {
-        if (gettingHit)
+        if (gettingHit && activeTarget)
         {
             timer -= Time.deltaTime;
 
