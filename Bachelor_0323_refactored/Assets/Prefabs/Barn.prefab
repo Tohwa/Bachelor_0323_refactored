@@ -216,12 +216,28 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   openShopEvent: {fileID: 11400000, guid: 488b9421398158040912a03d0a96f6a7, type: 2}
-  respone:
+  openResponse:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 6577476767240597026}
         m_TargetAssemblyTypeName: GeneralShopBehaviour, Assembly-CSharp
         m_MethodName: OpenShopHUD
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  closeShopeEvent: {fileID: 11400000, guid: 8956e961759eb6c4aa571d457b711733, type: 2}
+  closeResponse:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 6577476767240597026}
+        m_TargetAssemblyTypeName: GeneralShopBehaviour, Assembly-CSharp
+        m_MethodName: CloseShopeHUD
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}

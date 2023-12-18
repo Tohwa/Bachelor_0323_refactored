@@ -2132,9 +2132,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   durability:
-    UseConstant: 1
+    UseConstant: 0
     ConstantValue: 10
     Variable: {fileID: 11400000, guid: 03f36dabaa121f845893fa1951bf7c43, type: 2}
+  hp: 0
 --- !u!114 &3391039230981567486
 MonoBehaviour:
   m_ObjectHideFlags: 0
