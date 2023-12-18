@@ -6,7 +6,10 @@ using UnityEngine.Events;
 public class GeneralShopBehaviour : MonoBehaviour
 {
     public GameEvent openShopEvent;
-    public UnityEvent respone;
+    public UnityEvent openResponse;
+
+    public GameEvent closeShopeEvent;
+    public UnityEvent closeResponse;
 
     public bool canInteract = false;
     public bool isInUse = false;
@@ -17,11 +20,20 @@ public class GeneralShopBehaviour : MonoBehaviour
         {
             OpenShopHUD();
         }
+        else if(!canInteract)
+        {
+            CloseShopeHUD();
+        }
     }
 
     public void OpenShopHUD()
     {
         openShopEvent.Raise();
+    }
+
+    public void CloseShopeHUD()
+    {
+        closeShopeEvent.Raise();
     }
 
     public void ShopIsCalled()

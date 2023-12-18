@@ -1231,6 +1231,52 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d753bfcef5b49524ea5aa43ae591c6b5, type: 3}
+--- !u!1 &679384502 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6961798276608148557, guid: 6653aff272d939649abc35029f9b9416,
+    type: 3}
+  m_PrefabInstance: {fileID: 846068504805605860}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &679384505 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 1225219809214542815, guid: 6653aff272d939649abc35029f9b9416,
+    type: 3}
+  m_PrefabInstance: {fileID: 846068504805605860}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 679384502}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 661906df5430f4c438133765798dd0dd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &679384511
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 679384502}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: df7a9d225c34e4843ba3a814bfed448f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Event: {fileID: 11400000, guid: 8956e961759eb6c4aa571d457b711733, type: 2}
+  Response:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 679384505}
+        m_TargetAssemblyTypeName: DisableShop, Assembly-CSharp
+        m_MethodName: DeactivateShop
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1001 &748010754
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1897,6 +1943,82 @@ PrefabInstance:
       propertyPath: m_Name
       value: Barn
       objectReference: {fileID: 0}
+    - target: {fileID: 6577476767240597026, guid: 1b6c3720e9ec3a04c991b13f6ade184d,
+        type: 3}
+      propertyPath: closeShopeEvent
+      value: 
+      objectReference: {fileID: 11400000, guid: 8956e961759eb6c4aa571d457b711733,
+        type: 2}
+    - target: {fileID: 6577476767240597026, guid: 1b6c3720e9ec3a04c991b13f6ade184d,
+        type: 3}
+      propertyPath: openResponse.m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6577476767240597026, guid: 1b6c3720e9ec3a04c991b13f6ade184d,
+        type: 3}
+      propertyPath: closeResponse.m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6577476767240597026, guid: 1b6c3720e9ec3a04c991b13f6ade184d,
+        type: 3}
+      propertyPath: openResponse.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6577476767240597026, guid: 1b6c3720e9ec3a04c991b13f6ade184d,
+        type: 3}
+      propertyPath: closeResponse.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6577476767240597026, guid: 1b6c3720e9ec3a04c991b13f6ade184d,
+        type: 3}
+      propertyPath: openResponse.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1748899557}
+    - target: {fileID: 6577476767240597026, guid: 1b6c3720e9ec3a04c991b13f6ade184d,
+        type: 3}
+      propertyPath: closeResponse.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1748899557}
+    - target: {fileID: 6577476767240597026, guid: 1b6c3720e9ec3a04c991b13f6ade184d,
+        type: 3}
+      propertyPath: openResponse.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 6577476767240597026, guid: 1b6c3720e9ec3a04c991b13f6ade184d,
+        type: 3}
+      propertyPath: closeResponse.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 6577476767240597026, guid: 1b6c3720e9ec3a04c991b13f6ade184d,
+        type: 3}
+      propertyPath: openResponse.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: OpenShopHUD
+      objectReference: {fileID: 0}
+    - target: {fileID: 6577476767240597026, guid: 1b6c3720e9ec3a04c991b13f6ade184d,
+        type: 3}
+      propertyPath: closeResponse.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: CloseShopeHUD
+      objectReference: {fileID: 0}
+    - target: {fileID: 6577476767240597026, guid: 1b6c3720e9ec3a04c991b13f6ade184d,
+        type: 3}
+      propertyPath: openResponse.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: GeneralShopBehaviour, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 6577476767240597026, guid: 1b6c3720e9ec3a04c991b13f6ade184d,
+        type: 3}
+      propertyPath: closeResponse.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: GeneralShopBehaviour, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 6577476767240597026, guid: 1b6c3720e9ec3a04c991b13f6ade184d,
+        type: 3}
+      propertyPath: openResponse.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 6577476767240597026, guid: 1b6c3720e9ec3a04c991b13f6ade184d,
+        type: 3}
+      propertyPath: closeResponse.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -1924,6 +2046,18 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 4a18dbcbd32af3746804e49d44b185ab, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &1748899557 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 6577476767240597026, guid: 1b6c3720e9ec3a04c991b13f6ade184d,
+    type: 3}
+  m_PrefabInstance: {fileID: 1748899543}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 78ac570fb29afbe43b4e52e2de80a093, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1001 &2056404452
@@ -2145,7 +2279,11 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 6961798276608148557, guid: 6653aff272d939649abc35029f9b9416,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 679384511}
   m_SourcePrefab: {fileID: 100100000, guid: 6653aff272d939649abc35029f9b9416, type: 3}
 --- !u!1001 &4593238558892690498
 PrefabInstance:
