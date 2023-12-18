@@ -12,6 +12,7 @@ public class GoatController : MonoBehaviour
     public FloatReference attackDelay;
 
     public bool canAttack;
+    public float timer;
 
     public NavMeshAgent Agent { get; private set; }
 
@@ -37,6 +38,7 @@ public class GoatController : MonoBehaviour
             Agent = GetComponent<NavMeshAgent>();
         }
 
+        timer = attackDelay.Value;
         Agent.speed = speed.Value;
 
         GoatStateMachine.InitGoatState(LocateTargetState);
@@ -50,14 +52,5 @@ public class GoatController : MonoBehaviour
     private void FixedUpdate()
     {
         GoatStateMachine.goatState.PhysicsUpdate();
-    }
-
-    public IEnumerator AttackDelay()
-    {
-        target.GetComponent<PlayerHealth>().health.Value -= damage.Value;
-
-        canAttack = false;
-        yield return new WaitForSeconds(attackDelay.Value);
-        canAttack = true;
     }
 }

@@ -20,14 +20,28 @@ public class GoatChaseState : BaseState
 
     public override void LogicUpdate()
     {
-        if (!goat.Agent.pathPending)
+        if (goat.Agent.remainingDistance <= goat.Agent.stoppingDistance * 2)
         {
-            if (goat.Agent.remainingDistance <= goat.Agent.stoppingDistance)
+            goat.timer -= Time.deltaTime;
+
+            if (goat.timer <= 0)
             {
-                if (!goat.Agent.hasPath || goat.Agent.velocity.sqrMagnitude == 0f)
+                goat.timer = 0;
+
+                goat.target.GetComponent<SheepHealth>().hp -= goat.damage.Value;
+
+                Debug.Log("Attacking Sheep");
+
+                if (goat.target.GetComponent<SheepHealth>().hp <= 0)
                 {
-                    goat.GoatStateMachine.ChangeGoatState(goat.AttackState);
+                    goat.target = null;
+                    goat.GoatStateMachine.ChangeGoatState(goat.LocateTargetState);
                 }
+                else
+                {
+                    goat.timer = goat.attackDelay.Value;
+                }
+
             }
         }
         else if (goat.target == null)
@@ -38,6 +52,6 @@ public class GoatChaseState : BaseState
 
     public override void PhysicsUpdate()
     {
-
+        goat.Agent.SetDestination(goat.target.transform.position);
     }
 }
