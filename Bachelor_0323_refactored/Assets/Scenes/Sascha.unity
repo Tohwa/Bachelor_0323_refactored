@@ -439,7 +439,7 @@ PrefabInstance:
     - target: {fileID: 1038748981889343116, guid: 63e2f9f769dfea247902a402427550fa,
         type: 3}
       propertyPath: combatTimer.ConstantValue
-      value: 120
+      value: 30
       objectReference: {fileID: 0}
     - target: {fileID: 5188724736645261236, guid: 63e2f9f769dfea247902a402427550fa,
         type: 3}

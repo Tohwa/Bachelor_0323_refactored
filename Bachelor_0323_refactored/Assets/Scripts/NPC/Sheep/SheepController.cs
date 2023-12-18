@@ -74,7 +74,7 @@ public class SheepController : MonoBehaviour
         escape = true;
     }
 
-    public void Reset()
+    public void TravelHome()
     {
         journeyHome = true;
     }
