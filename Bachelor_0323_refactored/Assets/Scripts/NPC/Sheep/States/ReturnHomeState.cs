@@ -10,7 +10,7 @@ public class ReturnHomeState : BaseState
 
     public override void EnterState()
     {
-
+        sheep.Agent.SetDestination(sheep.oriPos);
     }
 
     public override void ExitState()
@@ -20,7 +20,17 @@ public class ReturnHomeState : BaseState
 
     public override void LogicUpdate()
     {
+        if (!sheep.Agent.pathPending)
+        {
+            if (sheep.Agent.remainingDistance <= sheep.Agent.stoppingDistance)
+            {
+                if (!sheep.Agent.hasPath || sheep.Agent.velocity.sqrMagnitude == 0f)
+                {
+                    sheep.SheepStateMachine.ChangeSheepState(sheep.AlarmedState);
 
+                }
+            }
+        }
     }
 
     public override void PhysicsUpdate()

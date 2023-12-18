@@ -274,6 +274,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: PlayerParent
       objectReference: {fileID: 0}
+    - target: {fileID: 3735312640544706423, guid: c8c48192513a0f641b28236833a6090c,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -426,6 +431,16 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1038748981889343116, guid: 63e2f9f769dfea247902a402427550fa,
+        type: 3}
+      propertyPath: prepTimer.ConstantValue
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 1038748981889343116, guid: 63e2f9f769dfea247902a402427550fa,
+        type: 3}
+      propertyPath: combatTimer.ConstantValue
+      value: 120
+      objectReference: {fileID: 0}
     - target: {fileID: 5188724736645261236, guid: 63e2f9f769dfea247902a402427550fa,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -481,6 +496,42 @@ PrefabInstance:
       propertyPath: m_Name
       value: Manager
       objectReference: {fileID: 0}
+    - target: {fileID: 8682098170645006492, guid: 63e2f9f769dfea247902a402427550fa,
+        type: 3}
+      propertyPath: waves.Array.data[0].enemies.Array.data[1]
+      value: 
+      objectReference: {fileID: 6320231669330817772, guid: 2d0935b449efba54a958c8bc52b6cc87,
+        type: 3}
+    - target: {fileID: 8682098170645006492, guid: 63e2f9f769dfea247902a402427550fa,
+        type: 3}
+      propertyPath: waves.Array.data[0].enemies.Array.data[2]
+      value: 
+      objectReference: {fileID: 8787220552006825274, guid: 5d1ef5a2fa9637444a5cce9df2b30713,
+        type: 3}
+    - target: {fileID: 8682098170645006492, guid: 63e2f9f769dfea247902a402427550fa,
+        type: 3}
+      propertyPath: waves.Array.data[1].enemies.Array.data[0]
+      value: 
+      objectReference: {fileID: 8787220552006825274, guid: 5d1ef5a2fa9637444a5cce9df2b30713,
+        type: 3}
+    - target: {fileID: 8682098170645006492, guid: 63e2f9f769dfea247902a402427550fa,
+        type: 3}
+      propertyPath: waves.Array.data[1].enemies.Array.data[2]
+      value: 
+      objectReference: {fileID: 6320231669330817772, guid: 2d0935b449efba54a958c8bc52b6cc87,
+        type: 3}
+    - target: {fileID: 8682098170645006492, guid: 63e2f9f769dfea247902a402427550fa,
+        type: 3}
+      propertyPath: waves.Array.data[2].enemies.Array.data[0]
+      value: 
+      objectReference: {fileID: 6320231669330817772, guid: 2d0935b449efba54a958c8bc52b6cc87,
+        type: 3}
+    - target: {fileID: 8682098170645006492, guid: 63e2f9f769dfea247902a402427550fa,
+        type: 3}
+      propertyPath: waves.Array.data[2].enemies.Array.data[1]
+      value: 
+      objectReference: {fileID: 8787220552006825274, guid: 5d1ef5a2fa9637444a5cce9df2b30713,
+        type: 3}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -843,6 +894,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: sm_Sheep_low
       objectReference: {fileID: 0}
+    - target: {fileID: 5738741334521788864, guid: d59457be06204e94e8ed3effa4cef202,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -1028,6 +1084,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: sm_Sheep_low (3)
+      objectReference: {fileID: 0}
+    - target: {fileID: 5738741334521788864, guid: d59457be06204e94e8ed3effa4cef202,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -1486,6 +1547,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: sm_Sheep_low (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 5738741334521788864, guid: d59457be06204e94e8ed3effa4cef202,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -1553,6 +1619,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: sm_Sheep_low (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 5738741334521788864, guid: d59457be06204e94e8ed3effa4cef202,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -2084,11 +2155,6 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 2479123732507388872, guid: cf74fa8849d999845947854ceddb0656,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 4390263649379634500, guid: cf74fa8849d999845947854ceddb0656,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -2139,25 +2205,15 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 6140567554360879859, guid: cf74fa8849d999845947854ceddb0656,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6508069065782536821, guid: cf74fa8849d999845947854ceddb0656,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7045960283848438551, guid: cf74fa8849d999845947854ceddb0656,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 7136535957484748502, guid: cf74fa8849d999845947854ceddb0656,
         type: 3}
       propertyPath: m_Name
       value: WeakFence
+      objectReference: {fileID: 0}
+    - target: {fileID: 8656466742714313727, guid: cf74fa8849d999845947854ceddb0656,
+        type: 3}
+      propertyPath: durability.UseConstant
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

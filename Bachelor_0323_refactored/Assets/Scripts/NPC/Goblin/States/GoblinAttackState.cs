@@ -20,24 +20,26 @@ public class GoblinAttackState : BaseState
 
     public override void LogicUpdate()
     {
-        goblin.StartCoroutine(goblin.AttackDelay());
+        goblin.timer -= Time.deltaTime;
 
-        if (goblin.target.CompareTag("Environment"))
+        if (goblin.timer <= 0)
         {
-            if(goblin.fenceSet.Items.Count == 0)
+            goblin.timer = 0;
+
+            if (goblin.target.CompareTag("Environment"))
             {
-                goblin.StopCoroutine(goblin.AttackDelay());
-                goblin.target = null;
-                goblin.GoblinStateMachine.ChangeGoblinState(goblin.LocateTargetState);
-            }
-        }
-        else if (goblin.target.CompareTag("Sheep"))
-        {
-            if(goblin.target.GetComponent<SheepHealth>().health.Value <= 0)
-            {
-                goblin.StopCoroutine(goblin.AttackDelay());
-                goblin.target = null;
-                goblin.GoblinStateMachine.ChangeGoblinState(goblin.LocateTargetState);
+                goblin.target.transform.parent.transform.parent.GetComponent<FenceDurability>().hp -= goblin.damage.Value;
+                Debug.Log("Attacking Fence");
+
+                if (goblin.target.transform.parent.transform.parent.GetComponent<FenceDurability>().hp <= 0)
+                {
+                    goblin.target = null;
+                    goblin.GoblinStateMachine.ChangeGoblinState(goblin.LocateTargetState);
+                }
+                else
+                {
+                    goblin.timer = goblin.attackDelay.Value;
+                }
             }
         }
     }
@@ -45,10 +47,5 @@ public class GoblinAttackState : BaseState
     public override void PhysicsUpdate()
     {
 
-    }
-
-    public float Distance(Vector3 firstTransform, Vector3 secTransform)
-    {
-        return Vector3.Distance(firstTransform, secTransform);
     }
 }

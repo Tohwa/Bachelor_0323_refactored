@@ -20,24 +20,26 @@ public class BoarAttackState : BaseState
 
     public override void LogicUpdate()
     {
-        boar.StartCoroutine(boar.AttackDelay());
+        boar.timer -= Time.deltaTime;
 
-        if (boar.target.CompareTag("Environment"))
+        if (boar.timer <= 0)
         {
-            if (boar.fenceSet.Items.Count == 0)
+            boar.timer = 0;
+
+            if (boar.target.CompareTag("Environment"))
             {
-                boar.StopCoroutine(boar.AttackDelay());
-                boar.target = null;
-                boar.BoarStateMachine.ChangeBoarState(boar.LocateTargetState);
-            }
-        }
-        else if (boar.target.CompareTag("Sheep"))
-        {
-            if (boar.target.GetComponent<SheepHealth>().health.Value <= 0)
-            {
-                boar.StopCoroutine(boar.AttackDelay());
-                boar.target = null;
-                boar.BoarStateMachine.ChangeBoarState(boar.LocateTargetState);
+                boar.target.transform.parent.transform.parent.GetComponent<FenceDurability>().hp -= boar.damage.Value;
+                Debug.Log("Attacking Fence");
+
+                if (boar.target.transform.parent.transform.parent.GetComponent<FenceDurability>().hp <= 0)
+                {
+                    boar.target = null;
+                    boar.BoarStateMachine.ChangeBoarState(boar.LocateTargetState);
+                }
+                else
+                {
+                    boar.timer = boar.attackDelay.Value;
+                }
             }
         }
     }

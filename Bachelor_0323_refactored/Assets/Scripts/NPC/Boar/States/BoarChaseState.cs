@@ -30,6 +30,30 @@ public class BoarChaseState : BaseState
                 }
             }
         }
+        else if (boar.target.CompareTag("Sheep") && boar.Agent.remainingDistance <= boar.Agent.stoppingDistance * 2)
+        {
+            boar.timer -= Time.deltaTime;
+
+            if (boar.timer <= 0)
+            {
+                boar.timer = 0;
+
+                boar.target.GetComponent<SheepHealth>().hp -= boar.damage.Value;
+
+                Debug.Log("Attacking Sheep");
+
+                if (boar.target.GetComponent<SheepHealth>().hp <= 0)
+                {
+                    boar.target = null;
+                    boar.BoarStateMachine.ChangeBoarState(boar.LocateTargetState);
+                }
+                else
+                {
+                    boar.timer = boar.attackDelay.Value;
+                }
+
+            }
+        }
         else if (boar.target == null)
         {
             boar.BoarStateMachine.ChangeBoarState(boar.LocateTargetState);
@@ -38,6 +62,6 @@ public class BoarChaseState : BaseState
 
     public override void PhysicsUpdate()
     {
-        
+        boar.Agent.SetDestination(boar.target.transform.position);
     }
 }

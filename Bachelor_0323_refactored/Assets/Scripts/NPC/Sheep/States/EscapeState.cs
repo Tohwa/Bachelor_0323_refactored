@@ -29,6 +29,11 @@ public class EscapeState : BaseState
             sheep.Agent.SetDestination(newPos);
             sheep.timer = 0;
         }
+
+        if (sheep.journeyHome)
+        {
+            sheep.SheepStateMachine.ChangeSheepState(sheep.ReturnState);
+        }
     }
 
     public override void PhysicsUpdate()

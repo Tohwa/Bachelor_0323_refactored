@@ -15,12 +15,12 @@ public class WolfChaseState : BaseState
 
     public override void ExitState()
     {
-        
+
     }
 
     public override void LogicUpdate()
     {
-        if (!wolf.Agent.pathPending)
+        if (!wolf.Agent.pathPending && wolf.target.CompareTag("Environment"))
         {
             if (wolf.Agent.remainingDistance <= wolf.Agent.stoppingDistance)
             {
@@ -28,6 +28,30 @@ public class WolfChaseState : BaseState
                 {
                     wolf.WolfStateMachine.ChangeWolfState(wolf.AttackState);
                 }
+            }
+        }
+        else if (wolf.target.CompareTag("Sheep") && wolf.Agent.remainingDistance <= wolf.Agent.stoppingDistance * 2)
+        {
+            wolf.timer -= Time.deltaTime;
+
+            if (wolf.timer <= 0)
+            {
+                wolf.timer = 0;
+
+                wolf.target.GetComponent<SheepHealth>().hp -= wolf.damage.Value;
+
+                Debug.Log("Attacking Sheep");
+
+                if (wolf.target.GetComponent<SheepHealth>().hp <= 0)
+                {
+                    wolf.target = null;
+                    wolf.WolfStateMachine.ChangeWolfState(wolf.LocateTargetState);
+                }
+                else
+                {
+                    wolf.timer = wolf.attackDelay.Value;
+                }
+
             }
         }
         else if (wolf.target == null)
@@ -38,6 +62,6 @@ public class WolfChaseState : BaseState
 
     public override void PhysicsUpdate()
     {
-        
+        wolf.Agent.SetDestination(wolf.target.transform.position);
     }
 }

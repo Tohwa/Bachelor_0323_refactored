@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.Threading;
 using UnityEngine;
 
 public class WolfAttackState : BaseState
@@ -20,27 +21,28 @@ public class WolfAttackState : BaseState
 
     public override void LogicUpdate()
     {
-        wolf.StartCoroutine(wolf.AttackDelay());
+        wolf.timer -= Time.deltaTime;
 
-        if (wolf.target.CompareTag("Environment"))
+        if (wolf.timer <= 0)
         {
-            if (wolf.fenceSet.Items.Count == 0)
+            wolf.timer = 0;
+
+            if (wolf.target.CompareTag("Environment"))
             {
-                wolf.StopCoroutine(wolf.AttackDelay());
-                wolf.target = null;
-                wolf.WolfStateMachine.ChangeWolfState(wolf.LocateTargetState);
+                wolf.target.transform.parent.transform.parent.GetComponent<FenceDurability>().hp -= wolf.damage.Value;
+                Debug.Log("Attacking Fence");
+
+                if (wolf.target.transform.parent.transform.parent.GetComponent<FenceDurability>().hp <= 0)
+                {
+                    wolf.target = null;
+                    wolf.WolfStateMachine.ChangeWolfState(wolf.LocateTargetState);
+                }
+                else
+                {
+                    wolf.timer = wolf.attackDelay.Value;
+                }
             }
         }
-        else if (wolf.target.CompareTag("Sheep"))
-        {
-            if (wolf.target.GetComponent<SheepHealth>().health.Value <= 0)
-            {
-                wolf.StopCoroutine(wolf.AttackDelay());
-                wolf.target = null;
-                wolf.WolfStateMachine.ChangeWolfState(wolf.LocateTargetState);
-            }
-        }
-
     }
 
     public override void PhysicsUpdate()

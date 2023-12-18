@@ -12,6 +12,9 @@ public class SheepController : MonoBehaviour
     public float timer;
 
     public bool escape;
+    public bool journeyHome;
+
+    public Vector3 oriPos;
 
     public NavMeshAgent Agent { get; private set; }
 
@@ -41,6 +44,8 @@ public class SheepController : MonoBehaviour
             Agent = GetComponent<NavMeshAgent>();
         }
 
+        oriPos = transform.position;
+
         Agent.speed = speed.Value;
 
         if(fenceSet.Items.Count > 0 )
@@ -67,5 +72,10 @@ public class SheepController : MonoBehaviour
     public void RunAway()
     {
         escape = true;
+    }
+
+    public void Reset()
+    {
+        journeyHome = true;
     }
 }

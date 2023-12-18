@@ -11,7 +11,7 @@ public class BoarController : MonoBehaviour
     public FloatReference damage;
     public FloatReference attackDelay;
 
-    public bool canAttack;
+    public float timer;
 
     public NavMeshAgent Agent { get; private set; }
 
@@ -39,7 +39,7 @@ public class BoarController : MonoBehaviour
         {
             Agent = GetComponent<NavMeshAgent>();
         }
-
+        timer = attackDelay.Value;
         Agent.speed = speed.Value;
 
         BoarStateMachine.InitBoarState(LocateTargetState);
@@ -53,21 +53,5 @@ public class BoarController : MonoBehaviour
     private void FixedUpdate()
     {
         BoarStateMachine.boarState.PhysicsUpdate();
-    }
-
-    public IEnumerator AttackDelay()
-    {
-        if (target.CompareTag("Environment"))
-        {
-            target.transform.parent.transform.parent.GetComponent<FenceDurability>().durability.Value -= damage.Value;
-        }
-        else if (target.CompareTag("Sheep"))
-        {
-            target.GetComponent<SheepHealth>().health.Value -= damage.Value;
-        }
-
-        canAttack = false;
-        yield return new WaitForSeconds(attackDelay.Value);
-        canAttack = true;
     }
 }

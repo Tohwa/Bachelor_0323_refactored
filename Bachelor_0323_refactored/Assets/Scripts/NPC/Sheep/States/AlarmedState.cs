@@ -11,7 +11,7 @@ public class AlarmedState : BaseState
     public override void EnterState()
     {
         Debug.Log("alarm");
-        sheep.transform.GetChild(0).gameObject.SetActive(true);
+        sheep.transform.GetChild(8).gameObject.SetActive(true);
     }
 
     public override void ExitState()
@@ -24,6 +24,10 @@ public class AlarmedState : BaseState
         if(sheep.escape)
         {
             sheep.SheepStateMachine.ChangeSheepState(sheep.EscapeState);
+        }
+        else if(sheep.fenceSet.Items.Count > 0)
+        {
+            sheep.SheepStateMachine.ChangeSheepState(sheep.CozyState);
         }
     }
 
