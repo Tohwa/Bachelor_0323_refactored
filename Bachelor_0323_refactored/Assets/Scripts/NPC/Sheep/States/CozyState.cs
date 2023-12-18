@@ -10,7 +10,8 @@ public class CozyState : BaseState
 
     public override void EnterState()
     {
-        sheep.transform.GetChild(0).gameObject.SetActive(false);
+        Debug.Log("Cozy!");
+        sheep.transform.GetChild(8).gameObject.SetActive(false);
     }
 
     public override void ExitState()

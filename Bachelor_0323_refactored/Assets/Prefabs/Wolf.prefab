@@ -161,13 +161,14 @@ MonoBehaviour:
     ConstantValue: 3
     Variable: {fileID: 11400000, guid: 0bf815582ec73d648b74ac6f511c3f21, type: 2}
   damage:
-    UseConstant: 1
+    UseConstant: 0
     ConstantValue: 1
-    Variable: {fileID: 0}
+    Variable: {fileID: 11400000, guid: e84e69d4035099d4ea1e7a24263af0fb, type: 2}
   attackDelay:
     UseConstant: 1
     ConstantValue: 1
     Variable: {fileID: 0}
+  timer: 0
   canAttack: 0
   sheepSet: {fileID: 11400000, guid: fa964c0b4d8e57f40ab57337bf0a07c9, type: 2}
   fenceSet: {fileID: 11400000, guid: 05aa19ef385595643a353d4a244ff574, type: 2}
@@ -185,7 +186,7 @@ NavMeshAgent:
   m_Acceleration: 8
   avoidancePriority: 50
   m_AngularSpeed: 120
-  m_StoppingDistance: 0
+  m_StoppingDistance: 1.1
   m_AutoTraverseOffMeshLink: 1
   m_AutoBraking: 1
   m_AutoRepath: 1

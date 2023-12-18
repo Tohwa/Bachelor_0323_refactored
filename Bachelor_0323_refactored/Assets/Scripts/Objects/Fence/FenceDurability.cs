@@ -7,11 +7,18 @@ public class FenceDurability : MonoBehaviour
 {
     public FloatReference durability;
 
+    [HideInInspector] public float hp;
+
+    private void Start()
+    {
+        hp = durability.Value;
+    }
+
     private void Update()
     {
-        if (durability.Value <= 0)
+        if (hp <= 0)
         {
-            durability.Value = 0;
+            hp = 0;
 
             gameObject.transform.GetChild(0).gameObject.SetActive(false);
             gameObject.transform.GetChild(1).gameObject.SetActive(false);
