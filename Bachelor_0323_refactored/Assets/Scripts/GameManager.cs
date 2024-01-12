@@ -18,8 +18,17 @@ public class GameManager : MonoBehaviour
 
     public bool preparation;
     public bool combat;
+    public bool gamePaused;
 
     public float timer;
+
+    [Header("Menu Values")]
+    public static float masterSliderValue = 0.75f;
+    public static float SFXSliderValue = 0.75f;
+    public static float BGMSliderValue = 0.75f;
+
+    public static int resolutionWidth;
+    public static int resolutionHeight;
 
 
     void Start()
