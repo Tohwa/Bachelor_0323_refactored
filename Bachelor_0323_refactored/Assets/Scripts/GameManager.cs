@@ -58,6 +58,11 @@ public class GameManager : MonoBehaviour
             timer = prepTimer.Value;
             SendPrepMessage();
         }
+
+        if(Time.timeScale == 0)
+        {
+            //Event
+        }
     }
 
     public void SendPrepMessage()
