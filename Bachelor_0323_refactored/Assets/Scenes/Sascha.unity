@@ -2154,7 +2154,7 @@ PrefabInstance:
     - target: {fileID: 5789559999218743756, guid: 4c9269122df72284380b437ebfc57e88,
         type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 0.000011444092
+      value: -0.000005722046
       objectReference: {fileID: 0}
     - target: {fileID: 6118163269251611748, guid: 4c9269122df72284380b437ebfc57e88,
         type: 3}
@@ -2526,6 +2526,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: HUD
       objectReference: {fileID: 0}
+    - target: {fileID: 7886750555869095687, guid: 6653aff272d939649abc35029f9b9416,
+        type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: -0.39898682
+      objectReference: {fileID: 0}
     - target: {fileID: 8250351441668509855, guid: 6653aff272d939649abc35029f9b9416,
         type: 3}
       propertyPath: m_AnchoredPosition.y
@@ -2582,6 +2587,11 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 846068504805605862}
     m_Modifications:
+    - target: {fileID: 122469811206632596, guid: db3a646332c28a44ebaa99afa371e249,
+        type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -0.10357666
+      objectReference: {fileID: 0}
     - target: {fileID: 466977169864917996, guid: db3a646332c28a44ebaa99afa371e249,
         type: 3}
       propertyPath: m_Name
@@ -2717,6 +2727,11 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
       value: MainMenu
       objectReference: {fileID: 0}
+    - target: {fileID: 2034383606837505280, guid: db3a646332c28a44ebaa99afa371e249,
+        type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -0.26867676
+      objectReference: {fileID: 0}
     - target: {fileID: 6359713780201322289, guid: db3a646332c28a44ebaa99afa371e249,
         type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
@@ -2726,6 +2741,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
       value: QuitGame
+      objectReference: {fileID: 0}
+    - target: {fileID: 7321776173143882931, guid: db3a646332c28a44ebaa99afa371e249,
+        type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -1.798523
       objectReference: {fileID: 0}
     - target: {fileID: 7876922230327653920, guid: db3a646332c28a44ebaa99afa371e249,
         type: 3}
