@@ -65,7 +65,7 @@ public class MainMenuManager : MonoBehaviour
 
     public void PlayGame()
     {
-        SceneManager.LoadScene("GamePlay");
+        SceneManager.LoadScene("Sascha");
     }
 
     public void SettingsMenu()

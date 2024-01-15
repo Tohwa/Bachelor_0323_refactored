@@ -110,7 +110,7 @@ public class UiManager : MonoBehaviour
     {
         Time.timeScale = 1f;
         _manager.gamePaused = false;
-        SceneManager.LoadScene("GamePlay");
+        SceneManager.LoadScene("Sascha");
         
     }
 
