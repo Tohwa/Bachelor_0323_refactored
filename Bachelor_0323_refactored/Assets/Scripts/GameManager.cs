@@ -61,7 +61,11 @@ public class GameManager : MonoBehaviour
 
         if(Time.timeScale == 0)
         {
-            //Event
+            gamePaused = true;
+        }
+        else
+        {
+            gamePaused = false;
         }
     }
 

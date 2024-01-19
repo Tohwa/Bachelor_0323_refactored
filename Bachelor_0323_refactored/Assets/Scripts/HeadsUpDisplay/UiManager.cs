@@ -81,8 +81,11 @@ public class UiManager : MonoBehaviour
 
     public void PauseGame()
     {
-        _pauseMenu.SetActive(true);
-        Time.timeScale = 0f;
+        if (!_manager.gamePaused)
+        {
+            _pauseMenu.SetActive(true);
+            Time.timeScale = 0f;
+        }
     }
 
     public void ResumeGame()
@@ -101,9 +104,12 @@ public class UiManager : MonoBehaviour
 
     public void SettingsMenu()
     {
-        _pauseMenu.SetActive(false);
+        if (_manager.gamePaused)
+        {
+            _pauseMenu.SetActive(false);
 
-        _settingsMenu.SetActive(true);
+            _settingsMenu.SetActive(true);
+        }
     }
 
     public void PlayGame()
