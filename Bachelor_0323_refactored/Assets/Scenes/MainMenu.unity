@@ -1111,7 +1111,7 @@ MonoBehaviour:
   _sfxText: {fileID: 2106656594}
   _windowedToggle: {fileID: 1689386602}
   _fullscreenToggle: {fileID: 1853686816}
-  _mixer: {fileID: 24100000, guid: 6fdbfb0d4ccd27a458d5847d9d4b67f3, type: 2}
+  _mixer: {fileID: 24100000, guid: 133d567bfb9a9c344ad64a9bb6ec041a, type: 2}
 --- !u!4 &2113556716
 Transform:
   m_ObjectHideFlags: 0
@@ -1136,7 +1136,7 @@ AudioSource:
   m_GameObject: {fileID: 2113556714}
   m_Enabled: 1
   serializedVersion: 4
-  OutputAudioMixerGroup: {fileID: 24300002, guid: 6fdbfb0d4ccd27a458d5847d9d4b67f3,
+  OutputAudioMixerGroup: {fileID: 24300002, guid: 133d567bfb9a9c344ad64a9bb6ec041a,
     type: 2}
   m_audioClip: {fileID: 0}
   m_PlayOnAwake: 1
