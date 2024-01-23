@@ -11,9 +11,13 @@ GameObject:
   - component: {fileID: 5188724736645261236}
   - component: {fileID: 8682098170645006492}
   - component: {fileID: 1038748981889343116}
+  - component: {fileID: 212032315538624654}
+  - component: {fileID: 5963314703938216483}
+  - component: {fileID: 6643426888260324262}
   - component: {fileID: 2066934547673159844}
   - component: {fileID: 509883311488363309}
   - component: {fileID: 3338782575749240301}
+  - component: {fileID: 3138075131450968348}
   m_Layer: 0
   m_Name: Manager
   m_TagString: Untagged
@@ -53,15 +57,15 @@ MonoBehaviour:
   waves:
   - enemies:
     - {fileID: 1865187529923967389, guid: 0a00c9c5a4f561f44bcc971cb53bac07, type: 3}
-    - {fileID: 1865187529923967389, guid: 0a00c9c5a4f561f44bcc971cb53bac07, type: 3}
-    - {fileID: 1865187529923967389, guid: 0a00c9c5a4f561f44bcc971cb53bac07, type: 3}
+    - {fileID: 6320231669330817772, guid: 2d0935b449efba54a958c8bc52b6cc87, type: 3}
+    - {fileID: 8787220552006825274, guid: 5d1ef5a2fa9637444a5cce9df2b30713, type: 3}
   - enemies:
+    - {fileID: 8787220552006825274, guid: 5d1ef5a2fa9637444a5cce9df2b30713, type: 3}
     - {fileID: 1865187529923967389, guid: 0a00c9c5a4f561f44bcc971cb53bac07, type: 3}
-    - {fileID: 1865187529923967389, guid: 0a00c9c5a4f561f44bcc971cb53bac07, type: 3}
-    - {fileID: 1865187529923967389, guid: 0a00c9c5a4f561f44bcc971cb53bac07, type: 3}
+    - {fileID: 6320231669330817772, guid: 2d0935b449efba54a958c8bc52b6cc87, type: 3}
   - enemies:
-    - {fileID: 1865187529923967389, guid: 0a00c9c5a4f561f44bcc971cb53bac07, type: 3}
-    - {fileID: 1865187529923967389, guid: 0a00c9c5a4f561f44bcc971cb53bac07, type: 3}
+    - {fileID: 6320231669330817772, guid: 2d0935b449efba54a958c8bc52b6cc87, type: 3}
+    - {fileID: 8787220552006825274, guid: 5d1ef5a2fa9637444a5cce9df2b30713, type: 3}
     - {fileID: 1865187529923967389, guid: 0a00c9c5a4f561f44bcc971cb53bac07, type: 3}
 --- !u!114 &1038748981889343116
 MonoBehaviour:
@@ -109,16 +113,73 @@ MonoBehaviour:
           m_BoolArgument: 0
         m_CallState: 2
   prepTimer:
-    UseConstant: 1
-    ConstantValue: 30
-    Variable: {fileID: 0}
+    UseConstant: 0
+    ConstantValue: 5
+    Variable: {fileID: 11400000, guid: 25010b5e1ebf5794f83907456d424d2b, type: 2}
   combatTimer:
-    UseConstant: 1
-    ConstantValue: 120
-    Variable: {fileID: 0}
+    UseConstant: 0
+    ConstantValue: 10
+    Variable: {fileID: 11400000, guid: 2a5ba62ca55cfda409f0976f11639b7c, type: 2}
   preparation: 0
   combat: 0
+  gamePaused: 0
   timer: 0
+--- !u!114 &212032315538624654
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6863852591048213393}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d721b4adf52e91b439779c43f705109d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  pauseMenu: {fileID: 0}
+  settingsMenu: {fileID: 0}
+  audioMenu: {fileID: 0}
+  graphicsMenu: {fileID: 0}
+  keyMapMenu: {fileID: 0}
+  masterSlider: {fileID: 0}
+  bgmSlider: {fileID: 0}
+  sfxSlider: {fileID: 0}
+  masterText: {fileID: 0}
+  bgmText: {fileID: 0}
+  sfxText: {fileID: 0}
+  windowedToggle: {fileID: 0}
+  fullscreenToggle: {fileID: 0}
+  mixer: {fileID: 24100000, guid: 133d567bfb9a9c344ad64a9bb6ec041a, type: 2}
+  manager: {fileID: 1038748981889343116}
+--- !u!114 &5963314703938216483
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6863852591048213393}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2c6c628fb10e08f46bc132c7d5f47bdb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  managerTag: Manager
+  maxPoolSize: 0
+  poolPrefab: {fileID: 0}
+  requests: {fileID: 0}
+--- !u!114 &6643426888260324262
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6863852591048213393}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dd0a85e6ec340734da184776a1064736, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _resolutionDropdown: {fileID: 0}
 --- !u!114 &2066934547673159844
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -203,3 +264,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+--- !u!114 &3138075131450968348
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6863852591048213393}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9615de952c8d32545a631952f600b823, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _masterSlider: {fileID: 0}
+  _sfxSlider: {fileID: 0}
+  _bgmSlider: {fileID: 0}

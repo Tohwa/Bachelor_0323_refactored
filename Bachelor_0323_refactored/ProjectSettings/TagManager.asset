@@ -9,6 +9,11 @@ TagManager:
   - Environment
   - Sheep
   - Enemy
+  - Controller
+  - Weak
+  - Solid
+  - Strong
+  - Manager
   layers:
   - Default
   - TransparentFX
