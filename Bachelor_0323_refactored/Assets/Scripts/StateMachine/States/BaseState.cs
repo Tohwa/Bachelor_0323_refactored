@@ -61,12 +61,6 @@ public abstract class BaseState
         stateMachine = _stateMachine;
         //animBoolName = _animBoolName;
     }
-
-    public BaseState(StateMachine _stateMachine)    //GameState
-    {
-        stateMachine = _stateMachine;
-    }
-
     #endregion
 
     #region virtuals

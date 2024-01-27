@@ -16,6 +16,10 @@ public class FenceUpgrader : MonoBehaviour
     public int crystalCount;
     public int woodCount;
 
+    [SerializeField] private bool weakFenceBuilt = false;
+    [SerializeField] private bool solidFenceBuilt = false;
+    [SerializeField] private bool strongFenceBuilt = false;
+
     public void IncreaseCrystalCount()
     {
         crystalCount += 1;
@@ -28,34 +32,49 @@ public class FenceUpgrader : MonoBehaviour
 
     public void BuildFence()
     {
-        if(woodCount >= 2 && crystalCount >= 2)
+        if (!weakFenceBuilt && !solidFenceBuilt && !strongFenceBuilt && woodCount >= 2 && crystalCount >= 2)
         {
+            weakFenceBuilt = true;
             woodCount -= 2;
             crystalCount -= 2;
 
             buildFence.Raise();
         }
+
     }
 
     public void UpgradeToSolidFence()
     {
-        if(woodCount >= 4 && crystalCount >= 4)
+        if (weakFenceBuilt && !solidFenceBuilt && woodCount >= 4 && crystalCount >= 4)
         {
             woodCount -= 4;
             crystalCount -= 4;
 
             upgradeToSolidEvent.Raise();
+            solidFenceBuilt = true;
         }
+
     }
 
     public void UpgradeToStrongFence()
     {
-        if(woodCount >= 6 && crystalCount >= 6)
+
+        if (solidFenceBuilt && !strongFenceBuilt && woodCount >= 6 && crystalCount >= 6)
         {
             woodCount -= 6;
             crystalCount -= 6;
 
             upgradeToStrongEvent.Raise();
-        }        
+            strongFenceBuilt = true;
+        }
+
+    }
+
+    public void ResetFenceState()
+    {
+        weakFenceBuilt = false;
+        solidFenceBuilt = false;
+        strongFenceBuilt = false;
     }
 }
+

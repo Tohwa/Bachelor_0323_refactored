@@ -8,12 +8,13 @@ public class PlayerHealth : MonoBehaviour
 {
     public FloatReference health;
 
-    private float hp;
+    public float hp;
 
     private void Start()
     {
         hp = health.Value;
     }
+
     private void Update()
     {
         if (hp <= 0)

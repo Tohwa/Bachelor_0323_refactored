@@ -5,6 +5,9 @@ using UnityEngine;
 
 public class BuildFence : MonoBehaviour
 {
+    private UpgradeFence upgrader;
+
+
     public void Build()
     {
         Debug.Log("Building fence!");
@@ -12,5 +15,8 @@ public class BuildFence : MonoBehaviour
         gameObject.transform.GetChild(1).gameObject.SetActive(true);
         gameObject.transform.GetChild(2).gameObject.SetActive(true);
         gameObject.transform.GetChild(3).gameObject.SetActive(true);
+
+        upgrader = gameObject.GetComponent<UpgradeFence>();
+        upgrader.weakBuild = true;
     }
 }

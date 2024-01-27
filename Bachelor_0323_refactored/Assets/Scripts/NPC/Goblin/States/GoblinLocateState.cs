@@ -53,7 +53,7 @@ public class GoblinLocateState : BaseState
 
         foreach (GameObject item in goblin.fenceSet.Items)
         {
-            float calcfloat = Distance(goblin.transform.position, item.transform.position);
+            float calcfloat = goblin.Distance(goblin.transform.position, item.transform.position);
             tempL.Add(calcfloat);
             tempR.Add(item);
         }
@@ -89,7 +89,7 @@ public class GoblinLocateState : BaseState
 
             foreach (GameObject item in goblin.sheepSet.Items)
             {
-                float calcfloat = Distance(goblin.transform.position, item.transform.position);
+                float calcfloat = goblin.Distance(goblin.transform.position, item.transform.position);
                 tempL.Add(calcfloat);
                 tempR.Add(item);
             }
@@ -115,10 +115,5 @@ public class GoblinLocateState : BaseState
 
             goblin.target = tempR[0];
         }
-    }
-
-    public float Distance(Vector3 firstTransform, Vector3 secTransform)
-    {
-        return Vector3.Distance(firstTransform, secTransform);
-    }
+    }    
 }

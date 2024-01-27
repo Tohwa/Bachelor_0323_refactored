@@ -2,36 +2,64 @@ using System.Collections;
 using System.Collections.Generic;
 using Unity.AI.Navigation;
 using UnityEngine;
+using UnityEngine.Events;
 
 public class FenceDurability : MonoBehaviour
 {
+
+    public GameEvent fenceDestroyed;
+    public UnityEvent destructionResponse;
+
     public FloatReference weakDurability;
     public FloatReference solidDurability;
     public FloatReference strongDurability;
 
 
-    [HideInInspector] public float hp;
+    public float hp;
 
-    private void Start()
+    public void Update()
     {
-        
-    }
-
-    private void Update()
-    {
-        if (gameObject.CompareTag("Weak") && gameObject.transform.GetChild(0).gameObject.activeSelf)
+        if (gameObject.CompareTag("Weak"))
         {
-            hp = weakDurability.Value;
+            Transform childTransform = gameObject.transform.GetChild(0);
+            ActivationCheck activationCheck = childTransform.GetComponent<ActivationCheck>();
 
+            // Überprüfen, ob das Kindobjekt aktiviert wurde und zuvor inaktiv war
+            if (childTransform.gameObject.activeSelf && !activationCheck.WasActivated)
+            {
+                hp = weakDurability.Value;
+
+                // Setzen Sie den WasActivated-Flag auf true, um zu verhindern, dass der Code erneut ausgeführt wird
+                activationCheck.SetActivated();
+            }
         }
-        else if (gameObject.CompareTag("Solid") && gameObject.transform.GetChild(0).gameObject.activeSelf)
+        else if (gameObject.CompareTag("Solid"))
         {
-            hp = solidDurability.Value;
+            Transform childTransform = gameObject.transform.GetChild(0);
+            ActivationCheck activationCheck = childTransform.GetComponent<ActivationCheck>();
 
+            // Überprüfen, ob das Kindobjekt aktiviert wurde und zuvor inaktiv war
+            if (childTransform.gameObject.activeSelf && !activationCheck.WasActivated)
+            {
+                hp = solidDurability.Value;
+
+                // Setzen Sie den WasActivated-Flag auf true, um zu verhindern, dass der Code erneut ausgeführt wird
+                activationCheck.SetActivated();
+            }
         }
-        else if (gameObject.CompareTag("Strong") && gameObject.transform.GetChild(0).gameObject.activeSelf)
+        else if (gameObject.CompareTag("Strong"))
         {
-            hp = strongDurability.Value;
+            Transform childTransform = gameObject.transform.GetChild(0);
+            ActivationCheck activationCheck = childTransform.GetComponent<ActivationCheck>();
+
+            // Überprüfen, ob das Kindobjekt aktiviert wurde und zuvor inaktiv war
+            if (childTransform.gameObject.activeSelf && !activationCheck.WasActivated)
+            {
+                hp = strongDurability.Value;
+
+                // Setzen Sie den WasActivated-Flag auf true, um zu verhindern, dass der Code erneut ausgeführt wird
+                activationCheck.SetActivated();
+            }
         }
 
         if (hp <= 0)
@@ -42,6 +70,8 @@ public class FenceDurability : MonoBehaviour
             gameObject.transform.GetChild(1).gameObject.SetActive(false);
             gameObject.transform.GetChild(2).gameObject.SetActive(false);
             gameObject.transform.GetChild(3).gameObject.SetActive(false);
+
+            fenceDestroyed.Raise();
         }
     }
 }

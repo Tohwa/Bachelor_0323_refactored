@@ -31,31 +31,7 @@ public class GoblinChaseState : BaseState
                     goblin.Agent.ResetPath();
                 }
             }
-        }
-        else if (goblin.target.CompareTag("Sheep") && goblin.Agent.remainingDistance <= goblin.Agent.stoppingDistance * 2)
-        {
-            goblin.timer -= Time.deltaTime;
-
-            if (goblin.timer <= 0)
-            {
-                goblin.timer = 0;
-
-                goblin.target.GetComponent<SheepHealth>().hp -= goblin.damage.Value;
-
-                Debug.Log("Attacking Sheep");
-
-                if (goblin.target.GetComponent<SheepHealth>().hp <= 0)
-                {
-                    goblin.target = null;
-                    goblin.GoblinStateMachine.ChangeGoblinState(goblin.LocateTargetState);
-                }
-                else
-                {
-                    goblin.timer = goblin.attackDelay.Value;
-                }
-
-            }
-        }
+        }        
         else if (goblin.target == null)
         {
             goblin.GoblinStateMachine.ChangeGoblinState(goblin.LocateTargetState);

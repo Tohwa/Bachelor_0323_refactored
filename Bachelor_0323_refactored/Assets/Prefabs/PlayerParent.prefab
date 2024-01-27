@@ -107,7 +107,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   MoveSpeed:
     UseConstant: 0
-    ConstantValue: 0
+    ConstantValue: 10
     Variable: {fileID: 11400000, guid: ff71907fdaad93a4da691d083ad53540, type: 2}
 --- !u!114 &5963388646622017440
 MonoBehaviour:
@@ -638,6 +638,7 @@ MonoBehaviour:
     UseConstant: 1
     ConstantValue: 10
     Variable: {fileID: 11400000, guid: 89b77705a5f9fe44b93e674a60ee120e, type: 2}
+  hp: 0
 --- !u!114 &5897856858925384739
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -675,7 +676,7 @@ Rigidbody:
   m_UseGravity: 0
   m_IsKinematic: 0
   m_Interpolate: 0
-  m_Constraints: 116
+  m_Constraints: 126
   m_CollisionDetection: 0
 --- !u!136 &5610589872644744239
 CapsuleCollider:

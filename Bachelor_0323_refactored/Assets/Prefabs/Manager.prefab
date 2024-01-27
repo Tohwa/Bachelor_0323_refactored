@@ -12,7 +12,6 @@ GameObject:
   - component: {fileID: 8682098170645006492}
   - component: {fileID: 1038748981889343116}
   - component: {fileID: 212032315538624654}
-  - component: {fileID: 5963314703938216483}
   - component: {fileID: 6643426888260324262}
   - component: {fileID: 2066934547673159844}
   - component: {fileID: 509883311488363309}
@@ -151,22 +150,6 @@ MonoBehaviour:
   fullscreenToggle: {fileID: 0}
   mixer: {fileID: 24100000, guid: 133d567bfb9a9c344ad64a9bb6ec041a, type: 2}
   manager: {fileID: 1038748981889343116}
---- !u!114 &5963314703938216483
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6863852591048213393}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2c6c628fb10e08f46bc132c7d5f47bdb, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  managerTag: Manager
-  maxPoolSize: 0
-  poolPrefab: {fileID: 0}
-  requests: {fileID: 0}
 --- !u!114 &6643426888260324262
 MonoBehaviour:
   m_ObjectHideFlags: 0

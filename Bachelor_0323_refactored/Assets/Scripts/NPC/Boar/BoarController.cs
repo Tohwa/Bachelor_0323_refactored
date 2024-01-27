@@ -39,7 +39,7 @@ public class BoarController : MonoBehaviour
         {
             Agent = GetComponent<NavMeshAgent>();
         }
-        timer = attackDelay.Value;
+        
         Agent.speed = speed.Value;
 
         BoarStateMachine.InitBoarState(LocateTargetState);
@@ -53,5 +53,10 @@ public class BoarController : MonoBehaviour
     private void FixedUpdate()
     {
         BoarStateMachine.boarState.PhysicsUpdate();
+    }
+
+    public float Distance(Vector3 firstTransform, Vector3 secTransform)
+    {
+        return Vector3.Distance(firstTransform, secTransform);
     }
 }

@@ -11,24 +11,24 @@ public class WolfAttackState : BaseState
 
     public override void EnterState()
     {
-        Debug.Log("Attacking target...");
+
     }
 
     public override void ExitState()
     {
-        
+
     }
 
     public override void LogicUpdate()
     {
-        wolf.timer -= Time.deltaTime;
 
-        if (wolf.timer <= 0)
+        if (wolf.target.CompareTag("WeakFencePart") || wolf.target.CompareTag("SolidFencePart") || wolf.target.CompareTag("StrongFencePart"))
         {
-            wolf.timer = 0;
-
-            if (wolf.target.CompareTag("Environment"))
+            if (wolf.timer <= 0)
             {
+                wolf.timer = 0;
+
+
                 wolf.target.transform.parent.transform.parent.GetComponent<FenceDurability>().hp -= wolf.damage.Value;
                 Debug.Log("Attacking Fence");
 
@@ -43,10 +43,39 @@ public class WolfAttackState : BaseState
                 }
             }
         }
+        else if (wolf.target.CompareTag("Sheep") && wolf.Agent.remainingDistance <= wolf.Agent.stoppingDistance * 2)
+        {
+            if (wolf.timer <= 0)
+            {
+                wolf.timer = 0;
+
+                wolf.target.GetComponent<SheepHealth>().hp -= wolf.damage.Value;
+
+                Debug.Log("Attacking Sheep");
+
+                if (wolf.target.GetComponent<SheepHealth>().hp <= 0)
+                {
+                    wolf.target = null;
+                    wolf.WolfStateMachine.ChangeWolfState(wolf.LocateTargetState);
+                }
+                else
+                {
+                    wolf.timer = wolf.attackDelay.Value;
+                }
+
+            }
+
+            if (wolf.Distance(wolf.transform.position, wolf.target.transform.position) >= wolf.Agent.stoppingDistance)
+            {
+                wolf.WolfStateMachine.ChangeWolfState(wolf.ChaseState);
+            }
+        }
+
+        wolf.timer -= Time.deltaTime;
     }
 
     public override void PhysicsUpdate()
     {
-        
+
     }
 }

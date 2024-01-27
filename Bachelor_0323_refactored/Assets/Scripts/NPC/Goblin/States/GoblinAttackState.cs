@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.AI;
 
 public class GoblinAttackState : BaseState
 {
@@ -20,14 +21,12 @@ public class GoblinAttackState : BaseState
 
     public override void LogicUpdate()
     {
-        goblin.timer -= Time.deltaTime;
-
-        if (goblin.timer <= 0)
+        if (goblin.target.CompareTag("WeakFencePart") || goblin.target.CompareTag("SolidFencePart") || goblin.target.CompareTag("StrongFencePart"))
         {
-            goblin.timer = 0;
-
-            if (goblin.target.CompareTag("Environment"))
+            if (goblin.timer <= 0)
             {
+                goblin.timer = 0;
+
                 goblin.target.transform.parent.transform.parent.GetComponent<FenceDurability>().hp -= goblin.damage.Value;
                 Debug.Log("Attacking Fence");
 
@@ -38,11 +37,41 @@ public class GoblinAttackState : BaseState
                 }
                 else
                 {
-                    goblin.timer = goblin.attackDelay.Value;
+                    goblin.timer = goblin.attackDelay.Value;                    
                 }
             }
         }
+        else if (goblin.target.CompareTag("Sheep") && goblin.Agent.remainingDistance <= goblin.Agent.stoppingDistance)
+        {
+            if (goblin.timer <= 0)
+            {
+                goblin.timer = 0;
+
+                goblin.target.GetComponent<SheepHealth>().hp -= goblin.damage.Value;
+
+                Debug.Log("Attacking Sheep");
+
+                if (goblin.target.GetComponent<SheepHealth>().hp <= 0)
+                {
+                    goblin.target = null;
+                    goblin.GoblinStateMachine.ChangeGoblinState(goblin.LocateTargetState);
+                }
+                else
+                {
+                    goblin.timer = goblin.attackDelay.Value;
+                    goblin.timer -= Time.deltaTime;
+                }
+            }
+
+            if (goblin.Distance(goblin.transform.position, goblin.target.transform.position) >= goblin.Agent.stoppingDistance)
+            {
+                goblin.GoblinStateMachine.ChangeGoblinState(goblin.ChaseState);
+            }
+        }
+
+        goblin.timer -= Time.deltaTime;
     }
+
 
     public override void PhysicsUpdate()
     {

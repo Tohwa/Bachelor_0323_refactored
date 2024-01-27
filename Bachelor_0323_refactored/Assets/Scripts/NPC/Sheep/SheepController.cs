@@ -44,6 +44,8 @@ public class SheepController : MonoBehaviour
             Agent = GetComponent<NavMeshAgent>();
         }
 
+        timer = wanderTimer.Value;
+
         oriPos = transform.position;
 
         Agent.speed = speed.Value;

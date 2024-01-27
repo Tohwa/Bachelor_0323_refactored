@@ -20,15 +20,15 @@ public class EscapeState : BaseState
     }
 
     public override void LogicUpdate()
-    {
-        sheep.timer += Time.deltaTime;
-
+    {       
         if (sheep.timer >= sheep.wanderTimer.Value)
         {
             Vector3 newPos = RandomNavSphere(sheep.transform.position, sheep.wanderRadius.Value, 3);
             sheep.Agent.SetDestination(newPos);
-            sheep.timer = 0;
+            sheep.timer = 0;  
         }
+
+        sheep.timer += Time.deltaTime;
 
         if (sheep.journeyHome)
         {

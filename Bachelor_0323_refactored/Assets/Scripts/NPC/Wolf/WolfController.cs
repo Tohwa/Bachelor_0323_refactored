@@ -41,8 +41,6 @@ public class WolfController : MonoBehaviour
             Agent = GetComponent<NavMeshAgent>();
         }
 
-        timer = attackDelay.Value; 
-
         Agent.speed = speed.Value;
 
         WolfStateMachine.InitWolfState(LocateTargetState);
@@ -56,5 +54,10 @@ public class WolfController : MonoBehaviour
     private void FixedUpdate()
     {
         WolfStateMachine.wolfState.PhysicsUpdate();
+    }
+
+    public float Distance(Vector3 firstTransform, Vector3 secTransform)
+    {
+        return Vector3.Distance(firstTransform, secTransform);
     }
 }

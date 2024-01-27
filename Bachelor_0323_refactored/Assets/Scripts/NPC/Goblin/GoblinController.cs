@@ -11,7 +11,7 @@ public class GoblinController : MonoBehaviour
     public FloatReference damage;
     public FloatReference attackDelay;
 
-    public float timer;
+    public float timer = 0f;
 
     public NavMeshAgent Agent { get; private set; }
 
@@ -41,7 +41,6 @@ public class GoblinController : MonoBehaviour
         }
 
         Agent.speed = speed.Value;
-        timer = attackDelay.Value;
         GoblinStateMachine.InitGoblinState(LocateTargetState);
     }
 
@@ -53,5 +52,10 @@ public class GoblinController : MonoBehaviour
     private void FixedUpdate()
     {
         GoblinStateMachine.goblinState.PhysicsUpdate();
+    }
+
+    public float Distance(Vector3 firstTransform, Vector3 secTransform)
+    {
+        return Vector3.Distance(firstTransform, secTransform);
     }
 }

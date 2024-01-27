@@ -7,7 +7,11 @@ public class BossController : MonoBehaviour
 {
     public GameObject target;
 
-    public FloatVariable speed;
+    public FloatReference speed;
+    public FloatReference damage;
+    public FloatReference attackDelay;
+
+    public float timer;
 
     public NavMeshAgent Agent { get; private set; }
 
@@ -36,9 +40,10 @@ public class BossController : MonoBehaviour
             Agent = GetComponent<NavMeshAgent>();
         }
 
+
         Agent.speed = speed.Value;
 
-        BossStateMachine.InitGoblinState(LocateTargetState);
+        BossStateMachine.InitBossState(LocateTargetState);
     }
 
     private void Update()
@@ -49,5 +54,9 @@ public class BossController : MonoBehaviour
     private void FixedUpdate()
     {
         BossStateMachine.bossState.PhysicsUpdate();
+    }
+    public float Distance(Vector3 firstTransform, Vector3 secTransform)
+    {
+        return Vector3.Distance(firstTransform, secTransform);
     }
 }

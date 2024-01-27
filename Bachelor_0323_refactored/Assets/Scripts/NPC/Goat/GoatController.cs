@@ -38,7 +38,6 @@ public class GoatController : MonoBehaviour
             Agent = GetComponent<NavMeshAgent>();
         }
 
-        timer = attackDelay.Value;
         Agent.speed = speed.Value;
 
         GoatStateMachine.InitGoatState(LocateTargetState);
@@ -52,5 +51,10 @@ public class GoatController : MonoBehaviour
     private void FixedUpdate()
     {
         GoatStateMachine.goatState.PhysicsUpdate();
+    }
+
+    public float Distance(Vector3 firstTransform, Vector3 secTransform)
+    {
+        return Vector3.Distance(firstTransform, secTransform);
     }
 }
