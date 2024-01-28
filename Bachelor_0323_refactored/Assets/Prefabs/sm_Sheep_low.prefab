@@ -417,11 +417,11 @@ MonoBehaviour:
     Variable: {fileID: 11400000, guid: 199b0c58ab5d411448394ff00e432612, type: 2}
   wanderRadius:
     UseConstant: 1
-    ConstantValue: 5
+    ConstantValue: 15
     Variable: {fileID: 11400000, guid: b1f37a2b7986a4d479c41a6efd4f4b2e, type: 2}
   wanderTimer:
     UseConstant: 1
-    ConstantValue: 1
+    ConstantValue: 15
     Variable: {fileID: 11400000, guid: 8a37d227d7586c44daa0dee9ac9b4337, type: 2}
   timer: 0
   escape: 0
