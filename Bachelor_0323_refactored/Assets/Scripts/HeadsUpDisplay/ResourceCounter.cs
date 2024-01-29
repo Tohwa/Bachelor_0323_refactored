@@ -5,7 +5,8 @@ using UnityEngine;
 
 public class ResourceCounter : MonoBehaviour
 {
-    [SerializeField] private GameObject shop;
+    [SerializeField] private GameObject barn
+        ;
     private FenceUpgrader fenceUpgrader;
 
     [SerializeField] private TMP_Text woodText;
@@ -15,7 +16,7 @@ public class ResourceCounter : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        fenceUpgrader = shop.GetComponent<FenceUpgrader>();
+        fenceUpgrader = barn.GetComponent<FenceUpgrader>();
     }
 
     // Update is called once per frame

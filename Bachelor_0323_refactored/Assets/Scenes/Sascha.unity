@@ -135,6 +135,10 @@ GameObject:
   - component: {fileID: 24744958}
   - component: {fileID: 24744960}
   - component: {fileID: 24744959}
+  - component: {fileID: 24744964}
+  - component: {fileID: 24744963}
+  - component: {fileID: 24744962}
+  - component: {fileID: 24744961}
   m_Layer: 0
   m_Name: Barn
   m_TagString: Untagged
@@ -229,6 +233,157 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+--- !u!114 &24744961
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 24744956}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: df7a9d225c34e4843ba3a814bfed448f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Event: {fileID: 11400000, guid: 783f6da6a54ea0947bd4d512f78444d3, type: 2}
+  Response:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 24744964}
+        m_TargetAssemblyTypeName: FenceUpgrader, Assembly-CSharp
+        m_MethodName: ResetFenceState
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+--- !u!114 &24744962
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 24744956}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: df7a9d225c34e4843ba3a814bfed448f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Event: {fileID: 11400000, guid: 34bbc4ae834af7a43b05c333f3430b5e, type: 2}
+  Response:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 24744964}
+        m_TargetAssemblyTypeName: FenceUpgrader, Assembly-CSharp
+        m_MethodName: IncreaseWoodCount
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+--- !u!114 &24744963
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 24744956}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: df7a9d225c34e4843ba3a814bfed448f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Event: {fileID: 11400000, guid: 0d2a0563e22f86e49aa7e12081762824, type: 2}
+  Response:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 24744964}
+        m_TargetAssemblyTypeName: FenceUpgrader, Assembly-CSharp
+        m_MethodName: IncreaseCrystalCount
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+--- !u!114 &24744964
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 24744956}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 24f2409471d44d748a5ef069c174efa1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  upgradeToSolidEvent: {fileID: 11400000, guid: c32d18930dfb4a84b93337bc3cc8a03c,
+    type: 2}
+  upgradeToStrongEvent: {fileID: 11400000, guid: 90c419c40b786784fa72c8eaea820faa,
+    type: 2}
+  buildFence: {fileID: 11400000, guid: 8e679ceeacf5df045badb47513e9c301, type: 2}
+  buildResponse:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 24744964}
+        m_TargetAssemblyTypeName: FenceUpgrader, Assembly-CSharp
+        m_MethodName: BuildFence
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  solidResponse:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 24744964}
+        m_TargetAssemblyTypeName: FenceUpgrader, Assembly-CSharp
+        m_MethodName: UpgradeToSolidFence
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  strongResponse:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 24744964}
+        m_TargetAssemblyTypeName: FenceUpgrader, Assembly-CSharp
+        m_MethodName: UpgradeToStrongFence
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  crystalCount: 15
+  woodCount: 15
+  weakFenceBuilt: 0
+  solidFenceBuilt: 0
+  strongFenceBuilt: 0
 --- !u!1001 &28943318
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2265,7 +2420,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 462727803}
+      - m_Target: {fileID: 24744964}
         m_TargetAssemblyTypeName: FenceUpgrader, Assembly-CSharp
         m_MethodName: UpgradeToStrongFence
         m_Mode: 1
@@ -2483,18 +2638,6 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 462727795}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &462727803 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 2986676074886312272, guid: fc25710c04efe0f44aa6c410ae5270e2,
-    type: 3}
-  m_PrefabInstance: {fileID: 462727795}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 349006047}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 24f2409471d44d748a5ef069c174efa1, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1001 &465916817
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2619,7 +2762,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b27ec2c8dae06ee45a9a16872ba0bf07, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  shop: {fileID: 349006047}
+  barn: {fileID: 24744956}
   woodText: {fileID: 951834092}
   crystalText: {fileID: 1182918349}
 --- !u!1 &489403717
@@ -5982,7 +6125,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b27ec2c8dae06ee45a9a16872ba0bf07, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  shop: {fileID: 349006047}
+  barn: {fileID: 24744956}
   woodText: {fileID: 781441267}
   crystalText: {fileID: 538876694}
 --- !u!1 &1459389374 stripped
@@ -7437,7 +7580,7 @@ PrefabInstance:
         type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
-      objectReference: {fileID: 462727803}
+      objectReference: {fileID: 24744964}
     - target: {fileID: 493305903900958458, guid: 6653aff272d939649abc35029f9b9416,
         type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
@@ -7462,7 +7605,7 @@ PrefabInstance:
         type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
-      objectReference: {fileID: 462727803}
+      objectReference: {fileID: 24744964}
     - target: {fileID: 2038615785932029424, guid: 6653aff272d939649abc35029f9b9416,
         type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
