@@ -165,6 +165,11 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 2602101048043803410, guid: c8c48192513a0f641b28236833a6090c,
+        type: 3}
+      propertyPath: m_Constraints
+      value: 116
+      objectReference: {fileID: 0}
     - target: {fileID: 2990740244596324448, guid: c8c48192513a0f641b28236833a6090c,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -782,7 +787,7 @@ PrefabInstance:
     - target: {fileID: 8682098170645006492, guid: 63e2f9f769dfea247902a402427550fa,
         type: 3}
       propertyPath: waves.Array.data[0].enemies.Array.size
-      value: 5
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8682098170645006492, guid: 63e2f9f769dfea247902a402427550fa,
         type: 3}
@@ -1176,7 +1181,7 @@ PrefabInstance:
   serializedVersion: 2
   m_Modification:
     serializedVersion: 3
-    m_TransformParent: {fileID: 0}
+    m_TransformParent: {fileID: 1387870867}
     m_Modifications:
     - target: {fileID: 167371194156278204, guid: f12ca7e09e616674ca26d43a1a5763fa,
         type: 3}
@@ -1359,6 +1364,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5907770478693494451, guid: f12ca7e09e616674ca26d43a1a5763fa,
         type: 3}
+      propertyPath: Response.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1387870866}
+    - target: {fileID: 5907770478693494451, guid: f12ca7e09e616674ca26d43a1a5763fa,
+        type: 3}
       propertyPath: Response.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
       value: ActivateSolidFence
       objectReference: {fileID: 0}
@@ -1400,17 +1410,17 @@ PrefabInstance:
     - target: {fileID: 7975535148758538019, guid: f12ca7e09e616674ca26d43a1a5763fa,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0
+      value: 9.647987
       objectReference: {fileID: 0}
     - target: {fileID: 7975535148758538019, guid: f12ca7e09e616674ca26d43a1a5763fa,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0
+      value: -6.4355288
       objectReference: {fileID: 0}
     - target: {fileID: 7975535148758538019, guid: f12ca7e09e616674ca26d43a1a5763fa,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: -13
+      value: -15.516105
       objectReference: {fileID: 0}
     - target: {fileID: 7975535148758538019, guid: f12ca7e09e616674ca26d43a1a5763fa,
         type: 3}
@@ -1477,7 +1487,8 @@ PrefabInstance:
       propertyPath: m_TagString
       value: SolidFencePart
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 7195978478696325512, guid: f12ca7e09e616674ca26d43a1a5763fa, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents:
@@ -3001,12 +3012,12 @@ PrefabInstance:
     - target: {fileID: -8679921383154817045, guid: 1a69881e28cb2dc4e94040db6030a1fa,
         type: 3}
       propertyPath: m_LocalScale.z
-      value: 200
+      value: 150
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 1a69881e28cb2dc4e94040db6030a1fa,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0
+      value: 0.03
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 1a69881e28cb2dc4e94040db6030a1fa,
         type: 3}
@@ -3016,7 +3027,7 @@ PrefabInstance:
     - target: {fileID: -8679921383154817045, guid: 1a69881e28cb2dc4e94040db6030a1fa,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: 0
+      value: -3.11
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 1a69881e28cb2dc4e94040db6030a1fa,
         type: 3}
@@ -3495,18 +3506,6 @@ GameObject:
     type: 3}
   m_PrefabInstance: {fileID: 216048260}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &639580833 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 7195978478696325512, guid: f12ca7e09e616674ca26d43a1a5763fa,
-    type: 3}
-  m_PrefabInstance: {fileID: 216048260}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 639580832}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a63f380fe15aaf243b067ed4a859e6d7, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &639580837
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3523,7 +3522,7 @@ MonoBehaviour:
   Response:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 639580833}
+      - m_Target: {fileID: 1387870866}
         m_TargetAssemblyTypeName: UpgradeFence, Assembly-CSharp
         m_MethodName: DisableSolidFence
         m_Mode: 1
@@ -3563,7 +3562,7 @@ MonoBehaviour:
   Response:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 639580833}
+      - m_Target: {fileID: 1387870866}
         m_TargetAssemblyTypeName: UpgradeFence, Assembly-CSharp
         m_MethodName: ResetFenceState
         m_Mode: 1
@@ -3575,6 +3574,12 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+--- !u!4 &639580843 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 7975535148758538019, guid: f12ca7e09e616674ca26d43a1a5763fa,
+    type: 3}
+  m_PrefabInstance: {fileID: 216048260}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &651462338 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 6508069065782536821, guid: cf74fa8849d999845947854ceddb0656,
@@ -5793,18 +5798,6 @@ GameObject:
     type: 3}
   m_PrefabInstance: {fileID: 4593238558892690498}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &1342227231 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 8301375173307746452, guid: cf74fa8849d999845947854ceddb0656,
-    type: 3}
-  m_PrefabInstance: {fileID: 4593238558892690498}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1342227230}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a63f380fe15aaf243b067ed4a859e6d7, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &1342227235 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 8656466742714313727, guid: cf74fa8849d999845947854ceddb0656,
@@ -5833,7 +5826,7 @@ MonoBehaviour:
   Response:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1342227231}
+      - m_Target: {fileID: 1387870866}
         m_TargetAssemblyTypeName: UpgradeFence, Assembly-CSharp
         m_MethodName: ResetFenceState
         m_Mode: 1
@@ -5845,6 +5838,24 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+--- !u!4 &1342227241 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 4390263649379634500, guid: cf74fa8849d999845947854ceddb0656,
+    type: 3}
+  m_PrefabInstance: {fileID: 4593238558892690498}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1342227243 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 4166591019897149283, guid: cf74fa8849d999845947854ceddb0656,
+    type: 3}
+  m_PrefabInstance: {fileID: 4593238558892690498}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1342227230}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e22c1d5a50248054ab2f73cbe9763fa6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1369042827 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 5082905981192756514, guid: 04b4aababc4604547a3089c9b5245062,
@@ -5940,6 +5951,85 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1387318653}
   m_CullTransparentMesh: 1
+--- !u!1 &1387870865
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1387870867}
+  - component: {fileID: 1387870866}
+  - component: {fileID: 1387870868}
+  m_Layer: 0
+  m_Name: Fence
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1387870866
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1387870865}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a63f380fe15aaf243b067ed4a859e6d7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  weakBuild: 0
+  solidBuild: 0
+  strongBuild: 0
+--- !u!4 &1387870867
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1387870865}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -9.647987, y: 6.4355288, z: 2.5161047}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 1342227241}
+  - {fileID: 639580843}
+  - {fileID: 8706567623339886751}
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1387870868
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1387870865}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: df7a9d225c34e4843ba3a814bfed448f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Event: {fileID: 11400000, guid: 8e679ceeacf5df045badb47513e9c301, type: 2}
+  Response:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1387870866}
+        m_TargetAssemblyTypeName: UpgradeFence, Assembly-CSharp
+        m_MethodName: WeakFenceBuilt
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1001 &1420868920
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -8140,7 +8230,7 @@ PrefabInstance:
   serializedVersion: 2
   m_Modification:
     serializedVersion: 3
-    m_TransformParent: {fileID: 0}
+    m_TransformParent: {fileID: 1387870867}
     m_Modifications:
     - target: {fileID: 1145606608723959661, guid: cf74fa8849d999845947854ceddb0656,
         type: 3}
@@ -8197,6 +8287,52 @@ PrefabInstance:
       propertyPath: m_TagString
       value: WeakFencePart
       objectReference: {fileID: 0}
+    - target: {fileID: 4166591019897149283, guid: cf74fa8849d999845947854ceddb0656,
+        type: 3}
+      propertyPath: gameEvent
+      value: 
+      objectReference: {fileID: 11400000, guid: 8e679ceeacf5df045badb47513e9c301,
+        type: 2}
+    - target: {fileID: 4166591019897149283, guid: cf74fa8849d999845947854ceddb0656,
+        type: 3}
+      propertyPath: fenceParent
+      value: 
+      objectReference: {fileID: 1387870865}
+    - target: {fileID: 4166591019897149283, guid: cf74fa8849d999845947854ceddb0656,
+        type: 3}
+      propertyPath: response.m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4166591019897149283, guid: cf74fa8849d999845947854ceddb0656,
+        type: 3}
+      propertyPath: response.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4166591019897149283, guid: cf74fa8849d999845947854ceddb0656,
+        type: 3}
+      propertyPath: response.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1342227243}
+    - target: {fileID: 4166591019897149283, guid: cf74fa8849d999845947854ceddb0656,
+        type: 3}
+      propertyPath: response.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4166591019897149283, guid: cf74fa8849d999845947854ceddb0656,
+        type: 3}
+      propertyPath: response.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: Build
+      objectReference: {fileID: 0}
+    - target: {fileID: 4166591019897149283, guid: cf74fa8849d999845947854ceddb0656,
+        type: 3}
+      propertyPath: response.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: BuildFence, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 4166591019897149283, guid: cf74fa8849d999845947854ceddb0656,
+        type: 3}
+      propertyPath: response.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
     - target: {fileID: 4180799229915088035, guid: cf74fa8849d999845947854ceddb0656,
         type: 3}
       propertyPath: m_TagString
@@ -8205,17 +8341,17 @@ PrefabInstance:
     - target: {fileID: 4390263649379634500, guid: cf74fa8849d999845947854ceddb0656,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0
+      value: 9.647987
       objectReference: {fileID: 0}
     - target: {fileID: 4390263649379634500, guid: cf74fa8849d999845947854ceddb0656,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0
+      value: -6.4355288
       objectReference: {fileID: 0}
     - target: {fileID: 4390263649379634500, guid: cf74fa8849d999845947854ceddb0656,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: -13
+      value: -15.516105
       objectReference: {fileID: 0}
     - target: {fileID: 4390263649379634500, guid: cf74fa8849d999845947854ceddb0656,
         type: 3}
@@ -8277,6 +8413,11 @@ PrefabInstance:
       propertyPath: m_TagString
       value: WeakFencePart
       objectReference: {fileID: 0}
+    - target: {fileID: 5488224325285627899, guid: cf74fa8849d999845947854ceddb0656,
+        type: 3}
+      propertyPath: Response.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1387870866}
     - target: {fileID: 5488224325285627899, guid: cf74fa8849d999845947854ceddb0656,
         type: 3}
       propertyPath: Response.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
@@ -8456,7 +8597,8 @@ PrefabInstance:
       propertyPath: m_TagString
       value: WeakFencePart
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 8301375173307746452, guid: cf74fa8849d999845947854ceddb0656, type: 3}
     m_RemovedGameObjects:
     - {fileID: 5625488396634921134, guid: cf74fa8849d999845947854ceddb0656, type: 3}
     m_AddedGameObjects:
@@ -8492,7 +8634,7 @@ PrefabInstance:
   serializedVersion: 2
   m_Modification:
     serializedVersion: 3
-    m_TransformParent: {fileID: 0}
+    m_TransformParent: {fileID: 1387870867}
     m_Modifications:
     - target: {fileID: 739799805472864229, guid: 04b4aababc4604547a3089c9b5245062,
         type: 3}
@@ -8577,6 +8719,11 @@ PrefabInstance:
         type: 2}
     - target: {fileID: 5104570697554495918, guid: 04b4aababc4604547a3089c9b5245062,
         type: 3}
+      propertyPath: Response.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1387870866}
+    - target: {fileID: 5104570697554495918, guid: 04b4aababc4604547a3089c9b5245062,
+        type: 3}
       propertyPath: Response.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
       value: ActivateStrongFence
       objectReference: {fileID: 0}
@@ -8598,17 +8745,17 @@ PrefabInstance:
     - target: {fileID: 5504295724996255997, guid: 04b4aababc4604547a3089c9b5245062,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0
+      value: 9.647987
       objectReference: {fileID: 0}
     - target: {fileID: 5504295724996255997, guid: 04b4aababc4604547a3089c9b5245062,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0
+      value: -6.4355288
       objectReference: {fileID: 0}
     - target: {fileID: 5504295724996255997, guid: 04b4aababc4604547a3089c9b5245062,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: -13
+      value: -15.516105
       objectReference: {fileID: 0}
     - target: {fileID: 5504295724996255997, guid: 04b4aababc4604547a3089c9b5245062,
         type: 3}
@@ -8793,7 +8940,8 @@ PrefabInstance:
       propertyPath: StrongFence
       value: 
       objectReference: {fileID: 8706567623339886744}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 9024402909804950968, guid: 04b4aababc4604547a3089c9b5245062, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents:
@@ -8904,18 +9052,6 @@ GameObject:
     type: 3}
   m_PrefabInstance: {fileID: 8515579902541465821}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &8706567623339886745 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 9024402909804950968, guid: 04b4aababc4604547a3089c9b5245062,
-    type: 3}
-  m_PrefabInstance: {fileID: 8515579902541465821}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8706567623339886744}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a63f380fe15aaf243b067ed4a859e6d7, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &8706567623339886747 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 7530134603678307553, guid: 04b4aababc4604547a3089c9b5245062,
@@ -8944,7 +9080,7 @@ MonoBehaviour:
   Response:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 8706567623339886745}
+      - m_Target: {fileID: 1387870866}
         m_TargetAssemblyTypeName: UpgradeFence, Assembly-CSharp
         m_MethodName: ResetFenceState
         m_Mode: 1
@@ -8956,6 +9092,12 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+--- !u!4 &8706567623339886751 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 5504295724996255997, guid: 04b4aababc4604547a3089c9b5245062,
+    type: 3}
+  m_PrefabInstance: {fileID: 8515579902541465821}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
@@ -8969,9 +9111,6 @@ SceneRoots:
   - {fileID: 63226890}
   - {fileID: 1974732477}
   - {fileID: 846068504805605860}
-  - {fileID: 4593238558892690498}
-  - {fileID: 216048260}
-  - {fileID: 8515579902541465821}
   - {fileID: 1299890874}
   - {fileID: 320342199}
   - {fileID: 1420868920}
@@ -8979,3 +9118,4 @@ SceneRoots:
   - {fileID: 426882392}
   - {fileID: 24744957}
   - {fileID: 1083607505}
+  - {fileID: 1387870867}

@@ -10,6 +10,13 @@ public class UpgradeFence : MonoBehaviour
     public bool solidBuild = false;
     public bool strongBuild = false;
 
+    private FenceUpgrader upgrader;
+
+    private void Start()
+    {
+        upgrader = GetComponent<FenceUpgrader>();
+    }
+
     private List<GameObject> GetAllChildren(Transform Parent)
     {
         List<GameObject> children = new List<GameObject>();
@@ -30,7 +37,7 @@ public class UpgradeFence : MonoBehaviour
             {
                 if (child.CompareTag("WeakFencePart"))
                 {
-                    child.SetActive(true);
+                    child.SetActive(false);
                 }
             }
         }
@@ -45,7 +52,7 @@ public class UpgradeFence : MonoBehaviour
             {
                 if (child.CompareTag("SolidFencePart"))
                 {
-                    child.SetActive(true);
+                    child.SetActive(false);
                 }
             }
         }
@@ -63,9 +70,11 @@ public class UpgradeFence : MonoBehaviour
                     child.SetActive(true);
                 }
             }
+
             solidBuild = true;
         }
     }
+
     public void ActivateStrongFence()
     {
         if (solidBuild && weakBuild && !strongBuild)
@@ -78,6 +87,7 @@ public class UpgradeFence : MonoBehaviour
                     child.SetActive(true);
                 }
             }
+
             strongBuild = true;
         }
     }
