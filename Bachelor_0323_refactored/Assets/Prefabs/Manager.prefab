@@ -14,7 +14,6 @@ GameObject:
   - component: {fileID: 212032315538624654}
   - component: {fileID: 6643426888260324262}
   - component: {fileID: 2066934547673159844}
-  - component: {fileID: 509883311488363309}
   - component: {fileID: 3338782575749240301}
   - component: {fileID: 3138075131450968348}
   m_Layer: 0
@@ -55,17 +54,20 @@ MonoBehaviour:
   curEnemySet: {fileID: 11400000, guid: 7b6e7fa62edaf2748b417b093e9c896c, type: 2}
   waves:
   - enemies:
-    - {fileID: 1865187529923967389, guid: 0a00c9c5a4f561f44bcc971cb53bac07, type: 3}
-    - {fileID: 6320231669330817772, guid: 2d0935b449efba54a958c8bc52b6cc87, type: 3}
-    - {fileID: 8787220552006825274, guid: 5d1ef5a2fa9637444a5cce9df2b30713, type: 3}
-  - enemies:
-    - {fileID: 8787220552006825274, guid: 5d1ef5a2fa9637444a5cce9df2b30713, type: 3}
-    - {fileID: 1865187529923967389, guid: 0a00c9c5a4f561f44bcc971cb53bac07, type: 3}
     - {fileID: 6320231669330817772, guid: 2d0935b449efba54a958c8bc52b6cc87, type: 3}
   - enemies:
-    - {fileID: 6320231669330817772, guid: 2d0935b449efba54a958c8bc52b6cc87, type: 3}
-    - {fileID: 8787220552006825274, guid: 5d1ef5a2fa9637444a5cce9df2b30713, type: 3}
+    - {fileID: 6299986623056457370, guid: ce64789c5dde94c48bacb6c5e7f70e77, type: 3}
     - {fileID: 1865187529923967389, guid: 0a00c9c5a4f561f44bcc971cb53bac07, type: 3}
+    - {fileID: 1857780336306445557, guid: 7b396c04b5144084e8e727d1771ea5b9, type: 3}
+    - {fileID: 1857780336306445557, guid: 7b396c04b5144084e8e727d1771ea5b9, type: 3}
+  - enemies:
+    - {fileID: 1857780336306445557, guid: 7b396c04b5144084e8e727d1771ea5b9, type: 3}
+    - {fileID: 1857780336306445557, guid: 7b396c04b5144084e8e727d1771ea5b9, type: 3}
+    - {fileID: 1857780336306445557, guid: 7b396c04b5144084e8e727d1771ea5b9, type: 3}
+    - {fileID: 6299986623056457370, guid: ce64789c5dde94c48bacb6c5e7f70e77, type: 3}
+    - {fileID: 6299986623056457370, guid: ce64789c5dde94c48bacb6c5e7f70e77, type: 3}
+  - enemies:
+    - {fileID: 5735220365590825905, guid: c25819a6f7c435044b2d30bdce8b20b0, type: 3}
 --- !u!114 &1038748981889343116
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -182,34 +184,6 @@ MonoBehaviour:
       - m_Target: {fileID: 8682098170645006492}
         m_TargetAssemblyTypeName: WaveSpawner, Assembly-CSharp
         m_MethodName: SpawnWave
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
---- !u!114 &509883311488363309
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6863852591048213393}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: df7a9d225c34e4843ba3a814bfed448f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Event: {fileID: 11400000, guid: 0567344b8325e774d8a4c242608aa5e8, type: 2}
-  Response:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 8682098170645006492}
-        m_TargetAssemblyTypeName: WaveSpawner, Assembly-CSharp
-        m_MethodName: SetSpawnsActive
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}

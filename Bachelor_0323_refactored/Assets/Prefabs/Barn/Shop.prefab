@@ -11,16 +11,13 @@ GameObject:
   - component: {fileID: 2876160914793114517}
   - component: {fileID: 2441890737294500780}
   - component: {fileID: 2773802356424934826}
-  - component: {fileID: 692905084081676734}
   - component: {fileID: 8198427233824415360}
-  - component: {fileID: 5077313597322108806}
   - component: {fileID: 2986676074886312272}
-  - component: {fileID: 5568600470959662686}
-  - component: {fileID: 994127429967922356}
   - component: {fileID: 5828558614899442575}
   - component: {fileID: 8827871909243879644}
   - component: {fileID: 2803619599372942162}
   - component: {fileID: 8122873923726954729}
+  - component: {fileID: 426768196348930266}
   m_Layer: 0
   m_Name: Shop
   m_TagString: Untagged
@@ -62,8 +59,8 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 0.28694472, y: 0.4950346, z: 0.08328805}
-  m_Center: {x: -0.35652825, y: 0.25248298, z: 0.110925704}
+  m_Size: {x: 1.7883925, y: 1.841987, z: 1.064096}
+  m_Center: {x: -0.790282, y: 0.92595917, z: 0.56846833}
 --- !u!114 &2773802356424934826
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -110,18 +107,6 @@ MonoBehaviour:
         m_CallState: 2
   canInteract: 0
   isInUse: 0
---- !u!114 &692905084081676734
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3153512502594393643}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ffa5f5ac42ce26e47873fcbb208e480e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &8198427233824415360
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -134,34 +119,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e458a9a945fe5e8448f64864ec83b33b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &5077313597322108806
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3153512502594393643}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4a18dbcbd32af3746804e49d44b185ab, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  initFence: {fileID: 11400000, guid: 8e679ceeacf5df045badb47513e9c301, type: 2}
-  Response:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 5077313597322108806}
-        m_TargetAssemblyTypeName: FenceBuilder, Assembly-CSharp
-        m_MethodName: Build
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
 --- !u!114 &2986676074886312272
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -174,13 +131,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 24f2409471d44d748a5ef069c174efa1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  upgradeEvent: {fileID: 11400000, guid: c32d18930dfb4a84b93337bc3cc8a03c, type: 2}
-  response:
+  upgradeToSolidEvent: {fileID: 11400000, guid: c32d18930dfb4a84b93337bc3cc8a03c,
+    type: 2}
+  upgradeToStrongEvent: {fileID: 11400000, guid: 90c419c40b786784fa72c8eaea820faa,
+    type: 2}
+  buildFence: {fileID: 11400000, guid: 8e679ceeacf5df045badb47513e9c301, type: 2}
+  buildResponse:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 2986676074886312272}
         m_TargetAssemblyTypeName: FenceUpgrader, Assembly-CSharp
-        m_MethodName: UpgradeFence
+        m_MethodName: BuildFence
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -190,27 +151,12 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-  crystalCount: 0
-  woodCount: 0
---- !u!114 &5568600470959662686
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3153512502594393643}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: df7a9d225c34e4843ba3a814bfed448f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Event: {fileID: 11400000, guid: b487faa9b45b77045ae2a47f9d2df81a, type: 2}
-  Response:
+  solidResponse:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 692905084081676734}
-        m_TargetAssemblyTypeName: EnableShop, Assembly-CSharp
-        m_MethodName: ActivateShop
+      - m_Target: {fileID: 2986676074886312272}
+        m_TargetAssemblyTypeName: FenceUpgrader, Assembly-CSharp
+        m_MethodName: UpgradeToSolidFence
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -220,25 +166,12 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
---- !u!114 &994127429967922356
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3153512502594393643}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: df7a9d225c34e4843ba3a814bfed448f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Event: {fileID: 11400000, guid: 0567344b8325e774d8a4c242608aa5e8, type: 2}
-  Response:
+  strongResponse:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 692905084081676734}
-        m_TargetAssemblyTypeName: EnableShop, Assembly-CSharp
-        m_MethodName: DeactivateShop
+      - m_Target: {fileID: 2986676074886312272}
+        m_TargetAssemblyTypeName: FenceUpgrader, Assembly-CSharp
+        m_MethodName: UpgradeToStrongFence
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -248,6 +181,11 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+  crystalCount: 15
+  woodCount: 15
+  weakFenceBuilt: 0
+  solidFenceBuilt: 0
+  strongFenceBuilt: 0
 --- !u!114 &5828558614899442575
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -351,6 +289,34 @@ MonoBehaviour:
       - m_Target: {fileID: 2773802356424934826}
         m_TargetAssemblyTypeName: GeneralShopBehaviour, Assembly-CSharp
         m_MethodName: ShopIsNoLongerCalled
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+--- !u!114 &426768196348930266
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3153512502594393643}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: df7a9d225c34e4843ba3a814bfed448f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Event: {fileID: 11400000, guid: 783f6da6a54ea0947bd4d512f78444d3, type: 2}
+  Response:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 2986676074886312272}
+        m_TargetAssemblyTypeName: FenceUpgrader, Assembly-CSharp
+        m_MethodName: ResetFenceState
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}

@@ -49,7 +49,7 @@ public class GeneralShopBehaviour : MonoBehaviour
     private void OnDisable()
     {
         canInteract = false;
-    }
+    }    
 
     private void OnTriggerEnter(Collider other)
     {
