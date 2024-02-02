@@ -11,7 +11,7 @@ public class AlarmedState : BaseState
     public override void EnterState()
     {
         Debug.Log("alarm");
-        sheep.transform.GetChild(8).gameObject.SetActive(true);
+        sheep.transform.GetChild(1).gameObject.SetActive(true);
     }
 
     public override void ExitState()

@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.VFX;
 
 public class Bullet : MonoBehaviour, IPoolableBullet<Bullet>
 {
@@ -10,11 +11,13 @@ public class Bullet : MonoBehaviour, IPoolableBullet<Bullet>
 
     private BulletPool<Bullet> pool;
     private Rigidbody rb;
+    private VisualEffect impact;
 
     private void Start()
     {
         damage = bulletDamage.Value;
         rb = GetComponent<Rigidbody>();
+        impact = GetComponent<VisualEffect>();
     }
 
     public void Deactivate()
@@ -41,6 +44,7 @@ public class Bullet : MonoBehaviour, IPoolableBullet<Bullet>
             if (other.CompareTag("Enemy"))
             {
                 other.gameObject.GetComponent<EnemyHealth>().hp -= damage;
+                impact.Play();
             }
         }
     }
