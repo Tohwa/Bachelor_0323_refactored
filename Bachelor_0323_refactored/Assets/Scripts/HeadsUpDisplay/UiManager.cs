@@ -18,7 +18,6 @@ public class UiManager : MonoBehaviour
     [SerializeField] private GameObject audioMenu;
     [SerializeField] private GameObject graphicsMenu;
     [SerializeField] private GameObject keyMapMenu;
-    [SerializeField] private GameObject boss;
 
     [Header("Slider")]
     [SerializeField] private Slider masterSlider;
