@@ -18,12 +18,19 @@ public class UiManager : MonoBehaviour
     [SerializeField] private GameObject audioMenu;
     [SerializeField] private GameObject graphicsMenu;
     [SerializeField] private GameObject keyMapMenu;
+    [SerializeField] private GameObject boss;
+
+    [Header("Slider")]
     [SerializeField] private Slider masterSlider;
     [SerializeField] private Slider bgmSlider;
     [SerializeField] private Slider sfxSlider;
+    
+    [Header("TMPro")]
     [SerializeField] private TextMeshProUGUI masterText;
     [SerializeField] private TextMeshProUGUI bgmText;
     [SerializeField] private TextMeshProUGUI sfxText;
+
+    [Header("Toggle")]
     [SerializeField] private Toggle windowedToggle;
     [SerializeField] private Toggle fullscreenToggle;
 

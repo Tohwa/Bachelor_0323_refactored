@@ -10,8 +10,11 @@ public class PlayerMovement : MonoBehaviour
     public Vector2 MoveVector { get; private set; }
 
     public void Update()
-    {       
-        transform.Translate(MoveVector.x * MoveSpeed.Value * Time.deltaTime, 0, MoveVector.y * MoveSpeed.Value * Time.deltaTime);       
+    {
+        if(Time.timeScale != 0)
+        {
+            transform.Translate(MoveVector.x * MoveSpeed.Value * Time.deltaTime, 0, MoveVector.y * MoveSpeed.Value * Time.deltaTime);
+        }
     }
 
     public void OnMove(InputAction.CallbackContext ctx)

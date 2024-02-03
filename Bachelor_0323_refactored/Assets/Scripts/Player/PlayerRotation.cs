@@ -5,7 +5,6 @@ using UnityEngine;
 public class PlayerRotation : MonoBehaviour
 {
     private Camera mainCamera;
-    private bool gamePaused = false;
 
     private void Start()
     {
@@ -18,7 +17,7 @@ public class PlayerRotation : MonoBehaviour
 
     private void Update()
     {
-        if (!gamePaused)
+        if (Time.timeScale != 0)
         {
             HandleMouseInput();
         }

@@ -54,7 +54,7 @@ MonoBehaviour:
   curEnemySet: {fileID: 11400000, guid: 7b6e7fa62edaf2748b417b093e9c896c, type: 2}
   waves:
   - enemies:
-    - {fileID: 6320231669330817772, guid: 2d0935b449efba54a958c8bc52b6cc87, type: 3}
+    - {fileID: 3127882309121237085, guid: 2e964b00c6c41c545974ce2bd0aa427d, type: 3}
   - enemies:
     - {fileID: 6299986623056457370, guid: ce64789c5dde94c48bacb6c5e7f70e77, type: 3}
     - {fileID: 1865187529923967389, guid: 0a00c9c5a4f561f44bcc971cb53bac07, type: 3}
