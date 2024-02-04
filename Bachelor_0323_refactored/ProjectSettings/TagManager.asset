@@ -17,6 +17,7 @@ TagManager:
   - WeakFencePart
   - SolidFencePart
   - StrongFencePart
+  - BossEnemy
   layers:
   - Default
   - TransparentFX

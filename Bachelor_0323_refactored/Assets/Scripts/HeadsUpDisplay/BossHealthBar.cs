@@ -8,6 +8,7 @@ public class BossHealthBar : MonoBehaviour
 {
     [SerializeField] private GameObjectSet enemySet;
     private GameObject enemy;
+    private EnemyHealth enemyHealthComponent;
 
     [SerializeField] private Image healthBar;
     [SerializeField] private TextMeshProUGUI healthText;
@@ -16,36 +17,7 @@ public class BossHealthBar : MonoBehaviour
     private float maxHealth;
     private float lerpSpeed;
 
-
     private void Start()
-    {
-        GetBossHealthComponent();
-        
-        health = maxHealth;
-    }
-
-    private void Update()
-    {
-        GetBossHealthComponent();
-
-        healthText.text = "Health: " + health + "%";
-
-        if (health > maxHealth)
-        {
-            health = maxHealth;
-        }
-
-        lerpSpeed = 3f * Time.deltaTime;
-
-        HealthBarFiller();
-    }
-
-    private void HealthBarFiller()
-    {
-        healthBar.fillAmount = Mathf.Lerp(healthBar.fillAmount, health / maxHealth, lerpSpeed);
-    }
-
-    private void GetBossHealthComponent()
     {
         foreach (var item in enemySet.Items)
         {
@@ -55,7 +27,7 @@ public class BossHealthBar : MonoBehaviour
             }
         }
 
-        EnemyHealth enemyHealthComponent = enemy.GetComponent<EnemyHealth>();
+        enemyHealthComponent = enemy.GetComponent<EnemyHealth>();
 
         if (enemyHealthComponent != null)
         {
@@ -66,5 +38,24 @@ public class BossHealthBar : MonoBehaviour
             // Fehlerbehandlung, falls das Skript nicht gefunden wurde
             Debug.LogError("EnemyHealth-Skript nicht gefunden!");
         }
+    }
+
+    private void Update()
+    {
+        healthText.text = "Bosshealth: " + enemyHealthComponent.hp;
+
+        if (enemyHealthComponent.hp > maxHealth)
+        {
+            enemyHealthComponent.hp = maxHealth;
+        }
+
+        lerpSpeed = 3f * Time.deltaTime;
+
+        HealthBarFiller();
+    }
+
+    private void HealthBarFiller()
+    {
+        healthBar.fillAmount = Mathf.Lerp(healthBar.fillAmount, enemyHealthComponent.hp / maxHealth, lerpSpeed);
     }
 }

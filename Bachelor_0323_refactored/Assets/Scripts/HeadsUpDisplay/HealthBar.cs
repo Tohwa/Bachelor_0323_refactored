@@ -12,14 +12,16 @@ public class HealthBar : MonoBehaviour
     [SerializeField] private Image healthBar;
     [SerializeField] private TextMeshProUGUI healthText;
 
-    private float health;
+    private PlayerHealth playerHealthComponent;
+
     private float maxHealth;
     private float lerpSpeed;
 
 
     private void Start()
     {
-        PlayerHealth playerHealthComponent = player.transform.GetChild(0).gameObject.GetComponent<PlayerHealth>();
+        playerHealthComponent = player.transform.GetChild(0).gameObject.GetComponent<PlayerHealth>();
+
         if (playerHealthComponent != null)
         {
             maxHealth = playerHealthComponent.hp;
@@ -29,16 +31,15 @@ public class HealthBar : MonoBehaviour
             // Fehlerbehandlung, falls das Skript nicht gefunden wurde
             Debug.LogError("PlayerHealth-Skript nicht gefunden!");
         }
-        health = maxHealth;
     }
 
     private void Update()
     {
-        healthText.text = "Health: " + health + "%";
+        healthText.text = "Health: " + playerHealthComponent.hp;
 
-        if(health > maxHealth)
+        if(playerHealthComponent.hp > maxHealth)
         {
-            health = maxHealth;
+            playerHealthComponent.hp = maxHealth;
         }
 
         lerpSpeed = 3f * Time.deltaTime;
@@ -49,12 +50,12 @@ public class HealthBar : MonoBehaviour
 
     private void HealthBarFiller()
     {
-        healthBar.fillAmount = Mathf.Lerp(healthBar.fillAmount, health / maxHealth, lerpSpeed);
+        healthBar.fillAmount = Mathf.Lerp(healthBar.fillAmount, playerHealthComponent.hp / maxHealth, lerpSpeed);
     }
 
     private void HealthColorChanger()
     {
-        Color healthColor = Color.Lerp(Color.red, Color.green, (health / maxHealth));
+        Color healthColor = Color.Lerp(Color.red, Color.green, (playerHealthComponent.hp / maxHealth));
 
         healthBar.color = healthColor;
     }

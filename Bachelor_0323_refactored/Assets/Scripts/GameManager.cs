@@ -20,6 +20,7 @@ public class GameManager : MonoBehaviour
     public bool combat;
     public bool gamePaused;
 
+
     public float timer;
 
     [Header("Menu Values")]
@@ -29,6 +30,10 @@ public class GameManager : MonoBehaviour
 
     public static int resolutionWidth;
     public static int resolutionHeight;
+
+    [Header("RundenCounter")]
+    [SerializeField] private int roundCounter;
+    [SerializeField] private GameObject BossHUD;
 
 
     void Start()
@@ -48,10 +53,11 @@ public class GameManager : MonoBehaviour
         {
             preparation = false;
             combat = true;
+            roundCounter++;
             timer = combatTimer.Value;
             SendCombatMessage();
         }
-        else if (timer <= 0 && combat || combat && curEnemySet.Items.Count == 0)
+        else if (timer <= 0 && combat && roundCounter != 10|| combat && curEnemySet.Items.Count == 0 && roundCounter != 10)
         {
             preparation = true;
             combat = false;
@@ -66,6 +72,11 @@ public class GameManager : MonoBehaviour
         else
         {
             gamePaused = false;
+        }
+
+        if(roundCounter == 10)
+        {
+            BossHUD.SetActive(true);
         }
     }
 

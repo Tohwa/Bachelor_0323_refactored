@@ -3,50 +3,67 @@ using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
 
-    public class Timer : MonoBehaviour
+public class Timer : MonoBehaviour
+{
+    public FloatReference prepTime;
+    public FloatReference combatTime;
+
+    [SerializeField] private GameObject timerHUD;
+
+    private float timer;
+
+    private bool updateToPrep;
+    private bool updateToCombat;
+
+    private int roundCounter;
+
+    public TMP_Text text;
+
+    private void Start()
     {
-        public FloatReference prepTime;
-        public FloatReference combatTime;
+        updateToPrep = true;
+    }
 
-        private float timer;
-
-        private bool updateToPrep;
-        private bool updateToCombat;
-
-        public TMP_Text text;
-
-        private void Start()
+    private void Update()
+    {
+        if (updateToPrep)
         {
-            updateToPrep = true;
+            updateToPrep = false;
+
+            timer = prepTime.Value;
         }
-
-        private void Update()
+        else if (updateToCombat)
         {
-            if (updateToPrep)
-            {
-                updateToPrep = false;
+            updateToCombat = false;
 
-                timer = prepTime.Value;
-            }
-            else if(updateToCombat)
-            {
-                updateToCombat = false;
+            roundCounter++;
 
+            if(roundCounter != 10)
+            {
                 timer = combatTime.Value;
             }
-
-        timer -= Time.deltaTime;
-
-        text.text = "Remaining Time:" + Mathf.Round(timer);
         }
 
-        public void SetPrepTImer()
-        {
-            updateToPrep = true;
-        }
 
-        public void SetCombatTimer()
+        if(roundCounter == 10)
         {
-            updateToCombat = true;
+            timerHUD.SetActive(false);
+        }
+        else
+        {
+            timer -= Time.deltaTime;
+
+            text.text = "Remaining Time:" + Mathf.Round(timer);
         }
     }
+
+    public void SetPrepTImer()
+    {
+        updateToPrep = true;
+    }
+
+    public void SetCombatTimer()
+    {
+        updateToCombat = true;
+    }
+}

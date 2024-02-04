@@ -41,7 +41,7 @@ public class Bullet : MonoBehaviour, IPoolableBullet<Bullet>
         {
             pool.ReturnItem(this);
 
-            if (other.CompareTag("Enemy"))
+            if (other.CompareTag("Enemy") || other.CompareTag("BossEnemy"))
             {
                 other.gameObject.GetComponent<EnemyHealth>().hp -= damage;
                 impact.Play();

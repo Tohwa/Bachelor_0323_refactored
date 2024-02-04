@@ -66,7 +66,7 @@ public class UiManager : MonoBehaviour
         if(manager.gamePaused)
         {
             PauseGame();
-        }
+        }     
     }
 
     public void OnFullscreenToggleChange(bool _value)

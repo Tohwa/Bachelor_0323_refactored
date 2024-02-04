@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 7209499094861169779}
   m_Layer: 0
   m_Name: Fence 5
-  m_TagString: Environment
+  m_TagString: WeakFencePart
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -111,7 +111,7 @@ GameObject:
   - component: {fileID: 6513113546003700204}
   m_Layer: 0
   m_Name: Fence 3
-  m_TagString: Environment
+  m_TagString: WeakFencePart
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -208,7 +208,7 @@ GameObject:
   - component: {fileID: 7094141753780757339}
   m_Layer: 0
   m_Name: Fence 2
-  m_TagString: Environment
+  m_TagString: WeakFencePart
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -301,9 +301,10 @@ GameObject:
   m_Component:
   - component: {fileID: 4327506335770470986}
   - component: {fileID: 887171031938068144}
+  - component: {fileID: 9165157007469889444}
   m_Layer: 0
   m_Name: wall (3)
-  m_TagString: Environment
+  m_TagString: WeakFencePart
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -323,7 +324,7 @@ Transform:
   m_Children:
   - {fileID: 382545116097361462}
   - {fileID: 5394071919787110064}
-  - {fileID: 2210061335505248474}
+  - {fileID: 1142760197949127181}
   - {fileID: 2535894723549962223}
   - {fileID: 4063148242836159612}
   - {fileID: 7842679592052389347}
@@ -350,6 +351,18 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 0.308177, y: 1.3585737, z: 18.142616}
   m_Center: {x: 10.022057, y: 0.9739891, z: 0.87605095}
+--- !u!114 &9165157007469889444
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2479123732507388872}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d8600071b96c17a4386992ed90fef41b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &2969525714736569180
 GameObject:
   m_ObjectHideFlags: 0
@@ -364,7 +377,7 @@ GameObject:
   - component: {fileID: 8374253392829950363}
   m_Layer: 0
   m_Name: Fence 8
-  m_TagString: Environment
+  m_TagString: WeakFencePart
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -461,7 +474,7 @@ GameObject:
   - component: {fileID: 7031100099312766960}
   m_Layer: 0
   m_Name: Fence 18
-  m_TagString: Environment
+  m_TagString: WeakFencePart
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -558,7 +571,7 @@ GameObject:
   - component: {fileID: 1354195559371806398}
   m_Layer: 0
   m_Name: Fence 1
-  m_TagString: Environment
+  m_TagString: WeakFencePart
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -655,7 +668,7 @@ GameObject:
   - component: {fileID: 384769866236368446}
   m_Layer: 0
   m_Name: Fence 15
-  m_TagString: Environment
+  m_TagString: WeakFencePart
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -752,7 +765,7 @@ GameObject:
   - component: {fileID: 4499796439358437059}
   m_Layer: 0
   m_Name: Fence 6
-  m_TagString: Environment
+  m_TagString: WeakFencePart
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -849,7 +862,7 @@ GameObject:
   - component: {fileID: 6209698742979277684}
   m_Layer: 0
   m_Name: Fence 4
-  m_TagString: Environment
+  m_TagString: WeakFencePart
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -946,7 +959,7 @@ GameObject:
   - component: {fileID: 4765840707977571938}
   m_Layer: 0
   m_Name: Fence 19
-  m_TagString: Environment
+  m_TagString: WeakFencePart
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1043,7 +1056,7 @@ GameObject:
   - component: {fileID: 8657783754432897249}
   m_Layer: 0
   m_Name: Fence 7
-  m_TagString: Environment
+  m_TagString: WeakFencePart
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1140,7 +1153,7 @@ GameObject:
   - component: {fileID: 5888379966556299140}
   m_Layer: 0
   m_Name: Fence 23
-  m_TagString: Environment
+  m_TagString: WeakFencePart
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1237,7 +1250,7 @@ GameObject:
   - component: {fileID: 1481084829011057524}
   m_Layer: 0
   m_Name: Fence 11
-  m_TagString: Environment
+  m_TagString: WeakFencePart
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1334,7 +1347,7 @@ GameObject:
   - component: {fileID: 323281606019006164}
   m_Layer: 0
   m_Name: Fence 16
-  m_TagString: Environment
+  m_TagString: WeakFencePart
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1431,7 +1444,7 @@ GameObject:
   - component: {fileID: 8858894562736912118}
   m_Layer: 0
   m_Name: Fence 22
-  m_TagString: Environment
+  m_TagString: WeakFencePart
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1528,7 +1541,7 @@ GameObject:
   - component: {fileID: 4981054461266984527}
   m_Layer: 0
   m_Name: Fence 14
-  m_TagString: Environment
+  m_TagString: WeakFencePart
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1611,103 +1624,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   fenceList: {fileID: 11400000, guid: 05aa19ef385595643a353d4a244ff574, type: 2}
---- !u!1 &5625488396634921134
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 2210061335505248474}
-  - component: {fileID: 121836826779018626}
-  - component: {fileID: 1146518125531740798}
-  - component: {fileID: 2856840026241068253}
-  m_Layer: 0
-  m_Name: Fence 20
-  m_TagString: Environment
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &2210061335505248474
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5625488396634921134}
-  serializedVersion: 2
-  m_LocalRotation: {x: -0.7071068, y: 0, z: -0, w: 0.7071068}
-  m_LocalPosition: {x: 10.02, y: 0, z: 0.71}
-  m_LocalScale: {x: 2, y: 2, z: 2}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 4327506335770470986}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!33 &121836826779018626
-MeshFilter:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5625488396634921134}
-  m_Mesh: {fileID: -8685560679001764489, guid: 8adc2d3a60e74a2438f148cfdfda079d, type: 3}
---- !u!23 &1146518125531740798
-MeshRenderer:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5625488396634921134}
-  m_Enabled: 1
-  m_CastShadows: 1
-  m_ReceiveShadows: 1
-  m_DynamicOccludee: 1
-  m_StaticShadowCaster: 0
-  m_MotionVectors: 1
-  m_LightProbeUsage: 1
-  m_ReflectionProbeUsage: 1
-  m_RayTracingMode: 2
-  m_RayTraceProcedural: 0
-  m_RenderingLayerMask: 1
-  m_RendererPriority: 0
-  m_Materials:
-  - {fileID: 2100000, guid: 31321ba15b8f8eb4c954353edc038b1d, type: 2}
-  m_StaticBatchInfo:
-    firstSubMesh: 0
-    subMeshCount: 0
-  m_StaticBatchRoot: {fileID: 0}
-  m_ProbeAnchor: {fileID: 0}
-  m_LightProbeVolumeOverride: {fileID: 0}
-  m_ScaleInLightmap: 1
-  m_ReceiveGI: 1
-  m_PreserveUVs: 0
-  m_IgnoreNormalsForChartDetection: 0
-  m_ImportantGI: 0
-  m_StitchLightmapSeams: 1
-  m_SelectedEditorRenderState: 3
-  m_MinimumChartSize: 4
-  m_AutoUVMaxDistance: 0.5
-  m_AutoUVMaxAngle: 89
-  m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
-  m_SortingOrder: 0
-  m_AdditionalVertexStreams: {fileID: 0}
---- !u!114 &2856840026241068253
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5625488396634921134}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 63622082734eb5347bdafe7de26ec301, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  fenceList: {fileID: 11400000, guid: 05aa19ef385595643a353d4a244ff574, type: 2}
 --- !u!1 &5627043106087141435
 GameObject:
   m_ObjectHideFlags: 0
@@ -1722,7 +1638,7 @@ GameObject:
   - component: {fileID: 4480571192476188430}
   m_Layer: 0
   m_Name: Fence 12
-  m_TagString: Environment
+  m_TagString: WeakFencePart
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1815,9 +1731,10 @@ GameObject:
   m_Component:
   - component: {fileID: 4081744526454618941}
   - component: {fileID: 4290318695842991151}
+  - component: {fileID: 6157053291492186702}
   m_Layer: 0
   m_Name: wall
-  m_TagString: Environment
+  m_TagString: WeakFencePart
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1864,6 +1781,18 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 0.308177, y: 1.3585737, z: 18.142616}
   m_Center: {x: 10.022057, y: 0.9739891, z: 0.87605095}
+--- !u!114 &6157053291492186702
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6140567554360879859}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d8600071b96c17a4386992ed90fef41b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &6508069065782536821
 GameObject:
   m_ObjectHideFlags: 0
@@ -1874,9 +1803,10 @@ GameObject:
   m_Component:
   - component: {fileID: 713793206663297712}
   - component: {fileID: 7940805789074262522}
+  - component: {fileID: 5973547087663618948}
   m_Layer: 0
   m_Name: wall (1)
-  m_TagString: Environment
+  m_TagString: WeakFencePart
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1923,6 +1853,18 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 0.308177, y: 1.3585737, z: 18.142616}
   m_Center: {x: 10.022057, y: 0.9739891, z: 0.87605095}
+--- !u!114 &5973547087663618948
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6508069065782536821}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d8600071b96c17a4386992ed90fef41b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &7015851699315435092
 GameObject:
   m_ObjectHideFlags: 0
@@ -1937,7 +1879,7 @@ GameObject:
   - component: {fileID: 5833617342244233933}
   m_Layer: 0
   m_Name: Fence 9
-  m_TagString: Environment
+  m_TagString: WeakFencePart
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2030,9 +1972,10 @@ GameObject:
   m_Component:
   - component: {fileID: 8523669217056302456}
   - component: {fileID: 4234920637753588453}
+  - component: {fileID: 1517191953691477518}
   m_Layer: 0
   m_Name: wall (2)
-  m_TagString: Environment
+  m_TagString: WeakFencePart
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2079,6 +2022,18 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 0.308177, y: 1.3585737, z: 18.142616}
   m_Center: {x: 10.022057, y: 0.9739891, z: 0.87605095}
+--- !u!114 &1517191953691477518
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7045960283848438551}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d8600071b96c17a4386992ed90fef41b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &7136535957484748502
 GameObject:
   m_ObjectHideFlags: 0
@@ -2092,10 +2047,10 @@ GameObject:
   - component: {fileID: 3391039230981567486}
   - component: {fileID: 4166591019897149283}
   - component: {fileID: 5488224325285627899}
-  - component: {fileID: 8301375173307746452}
+  - component: {fileID: 4181272154362333966}
   m_Layer: 0
   m_Name: WeakFence
-  m_TagString: Untagged
+  m_TagString: Weak
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2131,11 +2086,35 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3eb7fa006354f18469f2254797b8b216, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  durability:
+  fenceDestroyed: {fileID: 11400000, guid: 783f6da6a54ea0947bd4d512f78444d3, type: 2}
+  destructionResponse:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 8656466742714313727}
+        m_TargetAssemblyTypeName: FenceDurability, Assembly-CSharp
+        m_MethodName: Update
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  weakDurability:
     UseConstant: 0
-    ConstantValue: 10
+    ConstantValue: 0
     Variable: {fileID: 11400000, guid: 03f36dabaa121f845893fa1951bf7c43, type: 2}
-  hp: 0
+  solidDurability:
+    UseConstant: 0
+    ConstantValue: 0
+    Variable: {fileID: 11400000, guid: d69958f1cdec6d64a93bfa949e01036a, type: 2}
+  strongDurability:
+    UseConstant: 0
+    ConstantValue: 0
+    Variable: {fileID: 11400000, guid: 5edc894f2a915f042a00d1784f0d7b14, type: 2}
+  hp: 1
 --- !u!114 &3391039230981567486
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2176,6 +2155,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e22c1d5a50248054ab2f73cbe9763fa6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  fenceParent: {fileID: 0}
 --- !u!114 &5488224325285627899
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2192,9 +2172,9 @@ MonoBehaviour:
   Response:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 8301375173307746452}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: UpgradeFence, Assembly-CSharp
-        m_MethodName: DisableCurrentFence
+        m_MethodName: DisableWeakFence
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -2204,7 +2184,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
---- !u!114 &8301375173307746452
+--- !u!114 &4181272154362333966
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -2213,9 +2193,25 @@ MonoBehaviour:
   m_GameObject: {fileID: 7136535957484748502}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a63f380fe15aaf243b067ed4a859e6d7, type: 3}
+  m_Script: {fileID: 11500000, guid: df7a9d225c34e4843ba3a814bfed448f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Event: {fileID: 11400000, guid: 783f6da6a54ea0947bd4d512f78444d3, type: 2}
+  Response:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 0}
+        m_TargetAssemblyTypeName: UpgradeFence, Assembly-CSharp
+        m_MethodName: ResetFenceState
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &7285285955233763437
 GameObject:
   m_ObjectHideFlags: 0
@@ -2230,7 +2226,7 @@ GameObject:
   - component: {fileID: 1688275389656854283}
   m_Layer: 0
   m_Name: Fence 21
-  m_TagString: Environment
+  m_TagString: WeakFencePart
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2327,7 +2323,7 @@ GameObject:
   - component: {fileID: 2832046051301437444}
   m_Layer: 0
   m_Name: Fence 10
-  m_TagString: Environment
+  m_TagString: WeakFencePart
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2424,7 +2420,7 @@ GameObject:
   - component: {fileID: 6901413079477157934}
   m_Layer: 0
   m_Name: Fence 17
-  m_TagString: Environment
+  m_TagString: WeakFencePart
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2521,7 +2517,7 @@ GameObject:
   - component: {fileID: 5638336332438596342}
   m_Layer: 0
   m_Name: Fence 13
-  m_TagString: Environment
+  m_TagString: WeakFencePart
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2618,7 +2614,7 @@ GameObject:
   - component: {fileID: 896235781618918498}
   m_Layer: 0
   m_Name: Fence 0
-  m_TagString: Environment
+  m_TagString: WeakFencePart
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2701,3 +2697,120 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   fenceList: {fileID: 11400000, guid: 05aa19ef385595643a353d4a244ff574, type: 2}
+--- !u!1001 &599364838212967910
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 4327506335770470986}
+    m_Modifications:
+    - target: {fileID: -8679921383154817045, guid: e9eceb7b75075244faeae0b174c42c10,
+        type: 3}
+      propertyPath: m_LocalScale.x
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: e9eceb7b75075244faeae0b174c42c10,
+        type: 3}
+      propertyPath: m_LocalScale.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: e9eceb7b75075244faeae0b174c42c10,
+        type: 3}
+      propertyPath: m_LocalScale.z
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: e9eceb7b75075244faeae0b174c42c10,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 10.073002
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: e9eceb7b75075244faeae0b174c42c10,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: e9eceb7b75075244faeae0b174c42c10,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 3.579999
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: e9eceb7b75075244faeae0b174c42c10,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: e9eceb7b75075244faeae0b174c42c10,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: e9eceb7b75075244faeae0b174c42c10,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0.7071068
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: e9eceb7b75075244faeae0b174c42c10,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0.7071068
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: e9eceb7b75075244faeae0b174c42c10,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: -90
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: e9eceb7b75075244faeae0b174c42c10,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 90
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: e9eceb7b75075244faeae0b174c42c10,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: e9eceb7b75075244faeae0b174c42c10,
+        type: 3}
+      propertyPath: m_Name
+      value: zaungate1
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: e9eceb7b75075244faeae0b174c42c10,
+        type: 3}
+      propertyPath: m_TagString
+      value: WeakFencePart
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: e9eceb7b75075244faeae0b174c42c10,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 6356408988575302066}
+  m_SourcePrefab: {fileID: 100100000, guid: e9eceb7b75075244faeae0b174c42c10, type: 3}
+--- !u!1 &328823198500397239 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: e9eceb7b75075244faeae0b174c42c10,
+    type: 3}
+  m_PrefabInstance: {fileID: 599364838212967910}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &6356408988575302066
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 328823198500397239}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 63622082734eb5347bdafe7de26ec301, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  fenceList: {fileID: 11400000, guid: 05aa19ef385595643a353d4a244ff574, type: 2}
+--- !u!4 &1142760197949127181 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: e9eceb7b75075244faeae0b174c42c10,
+    type: 3}
+  m_PrefabInstance: {fileID: 599364838212967910}
+  m_PrefabAsset: {fileID: 0}
