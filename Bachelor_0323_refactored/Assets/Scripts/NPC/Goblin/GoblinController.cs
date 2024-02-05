@@ -47,6 +47,11 @@ public class GoblinController : MonoBehaviour
     private void Update()
     {
         GoblinStateMachine.goblinState.LogicUpdate();
+
+        if (timer > 0)
+        {
+            timer -= Time.deltaTime;
+        }
     }
 
     private void FixedUpdate()

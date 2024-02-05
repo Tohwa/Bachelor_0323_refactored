@@ -49,6 +49,11 @@ public class BossController : MonoBehaviour
     private void Update()
     {
         BossStateMachine.bossState.LogicUpdate();
+
+        if (timer > 0)
+        {
+            timer -= Time.deltaTime;
+        }
     }
 
     private void FixedUpdate()

@@ -43,8 +43,6 @@ public class GoatAttackState : BaseState
             goat.GoatStateMachine.ChangeGoatState(goat.ChaseState);
         }
 
-        goat.timer -= Time.deltaTime;
-
     }
 
     public override void PhysicsUpdate()

@@ -6094,7 +6094,7 @@ PrefabInstance:
         type: 3}
       propertyPath: waves.Array.data[0].enemies.Array.data[0]
       value: 
-      objectReference: {fileID: 3127882309121237085, guid: 2e964b00c6c41c545974ce2bd0aa427d,
+      objectReference: {fileID: 1865187529923967389, guid: 0a00c9c5a4f561f44bcc971cb53bac07,
         type: 3}
     - target: {fileID: 8682098170645006492, guid: 63e2f9f769dfea247902a402427550fa,
         type: 3}
@@ -71618,6 +71618,11 @@ PrefabInstance:
       propertyPath: m_AnchorMax.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1088299176536565924, guid: 6653aff272d939649abc35029f9b9416,
+        type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: -3.5
+      objectReference: {fileID: 0}
     - target: {fileID: 1320706683019519089, guid: 6653aff272d939649abc35029f9b9416,
         type: 3}
       propertyPath: m_Sprite
@@ -71721,6 +71726,11 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 1836889704}
+    - target: {fileID: 2670629718860204017, guid: 6653aff272d939649abc35029f9b9416,
+        type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: -7.4999847
+      objectReference: {fileID: 0}
     - target: {fileID: 2842739464569055109, guid: 6653aff272d939649abc35029f9b9416,
         type: 3}
       propertyPath: m_Sprite
@@ -72209,6 +72219,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_AnchoredPosition.y
       value: 16.399994
+      objectReference: {fileID: 0}
+    - target: {fileID: 8933306462491396681, guid: 6653aff272d939649abc35029f9b9416,
+        type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 0.22241211
       objectReference: {fileID: 0}
     - target: {fileID: 8989104197516860113, guid: 6653aff272d939649abc35029f9b9416,
         type: 3}

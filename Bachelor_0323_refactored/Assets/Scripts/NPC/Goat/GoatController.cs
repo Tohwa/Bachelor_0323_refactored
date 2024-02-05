@@ -46,6 +46,11 @@ public class GoatController : MonoBehaviour
     private void Update()
     {
         GoatStateMachine.goatState.LogicUpdate();
+
+        if (timer > 0)
+        {
+            timer -= Time.deltaTime;
+        }
     }
 
     private void FixedUpdate()

@@ -71,7 +71,6 @@ public class WolfAttackState : BaseState
             }
         }
 
-        wolf.timer -= Time.deltaTime;
     }
 
     public override void PhysicsUpdate()

@@ -67,8 +67,7 @@ public class BoarAttackState : BaseState
                 boar.BoarStateMachine.ChangeBoarState(boar.ChaseState);
             }
         }
-
-        boar.timer -= Time.deltaTime;
+;
     }
 
     public override void PhysicsUpdate()

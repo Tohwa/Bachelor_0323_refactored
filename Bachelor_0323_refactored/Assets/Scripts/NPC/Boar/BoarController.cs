@@ -48,6 +48,11 @@ public class BoarController : MonoBehaviour
     private void Update()
     {
         BoarStateMachine.boarState.LogicUpdate();
+
+        if (timer > 0)
+        {
+            timer -= Time.deltaTime;
+        }
     }
 
     private void FixedUpdate()

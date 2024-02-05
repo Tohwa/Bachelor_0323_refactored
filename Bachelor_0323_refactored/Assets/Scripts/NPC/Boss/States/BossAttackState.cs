@@ -68,7 +68,6 @@ public class BossAttackState : BaseState
             }
         }
 
-        boss.timer -= Time.deltaTime;
     }
 
     public override void PhysicsUpdate()

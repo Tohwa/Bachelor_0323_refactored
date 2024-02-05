@@ -49,6 +49,12 @@ public class WolfController : MonoBehaviour
     private void Update()
     {
         WolfStateMachine.wolfState.LogicUpdate();
+
+        if(timer > 0)
+        {
+            timer -= Time.deltaTime;
+        }
+
     }
 
     private void FixedUpdate()

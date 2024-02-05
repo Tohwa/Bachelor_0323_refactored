@@ -69,7 +69,6 @@ public class GoblinAttackState : BaseState
             }
         }
 
-        goblin.timer -= Time.deltaTime;
     }
 
 
