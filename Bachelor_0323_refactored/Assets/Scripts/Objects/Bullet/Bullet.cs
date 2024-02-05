@@ -6,18 +6,17 @@ using UnityEngine.VFX;
 public class Bullet : MonoBehaviour, IPoolableBullet<Bullet>
 {
     public FloatReference bulletDamage;
+    [SerializeField] private GameObject impactPrefab;
 
     [HideInInspector] public float damage;
 
     private BulletPool<Bullet> pool;
     private Rigidbody rb;
-    private VisualEffect impact;
 
     private void Start()
     {
         damage = bulletDamage.Value;
         rb = GetComponent<Rigidbody>();
-        impact = GetComponent<VisualEffect>();
     }
 
     public void Deactivate()
@@ -44,7 +43,10 @@ public class Bullet : MonoBehaviour, IPoolableBullet<Bullet>
             if (other.CompareTag("Enemy") || other.CompareTag("BossEnemy"))
             {
                 other.gameObject.GetComponent<EnemyHealth>().hp -= damage;
-                impact.Play();
+
+                Instantiate(impactPrefab, other.gameObject.transform);
+
+
             }
         }
     }

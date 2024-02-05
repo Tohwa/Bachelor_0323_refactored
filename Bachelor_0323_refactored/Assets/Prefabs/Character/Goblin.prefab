@@ -89,6 +89,7 @@ MonoBehaviour:
   timer: 0
   sheepSet: {fileID: 11400000, guid: fa964c0b4d8e57f40ab57337bf0a07c9, type: 2}
   fenceSet: {fileID: 11400000, guid: 05aa19ef385595643a353d4a244ff574, type: 2}
+  impact: {fileID: 0}
 --- !u!114 &107030081401160076
 MonoBehaviour:
   m_ObjectHideFlags: 0
