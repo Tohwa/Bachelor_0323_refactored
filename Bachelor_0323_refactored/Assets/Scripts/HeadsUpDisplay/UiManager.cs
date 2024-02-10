@@ -35,6 +35,13 @@ public class UiManager : MonoBehaviour
 
     [Header("Components")]
     [SerializeField] private AudioMixer mixer;
+    [SerializeField] private AudioSource BGMSource;
+    [SerializeField] private AudioSource SFXSource;
+
+    [Header("Menu Audio")]
+    [SerializeField] private AudioClip confirmClip;
+    [SerializeField] private AudioClip toggleClip;
+    [SerializeField] private AudioClip denyClip;
 
     [Header("Scripts")]
     [SerializeField] private GameManager manager;
@@ -75,6 +82,12 @@ public class UiManager : MonoBehaviour
         {
             windowedToggle.isOn = !_value;
             Screen.fullScreen = true;
+
+            if (toggleClip != null && SFXSource != null)
+            {
+                SFXSource.clip = toggleClip;
+                SFXSource.Play();
+            }
         }
     }
 
@@ -84,6 +97,12 @@ public class UiManager : MonoBehaviour
         {
             fullscreenToggle.isOn = !_value;
             Screen.fullScreen = false;
+
+            if (toggleClip != null && SFXSource != null)
+            {
+                SFXSource.clip = toggleClip;
+                SFXSource.Play();
+            }
         }
     }
 
@@ -101,6 +120,12 @@ public class UiManager : MonoBehaviour
         manager.gamePaused = false;
         pauseMenu.SetActive(false);
         Time.timeScale = 1f;
+
+        if (denyClip != null && SFXSource != null)
+        {
+            SFXSource.clip = denyClip;
+            SFXSource.Play();
+        }
     }    
 
     public void MainMenu()
@@ -108,6 +133,13 @@ public class UiManager : MonoBehaviour
         Time.timeScale = 1f;
         manager.gamePaused = false;
         SceneManager.LoadScene("MainMenu");
+        BGMSource.Stop();
+
+        if (denyClip != null && SFXSource != null)
+        {
+            SFXSource.clip = denyClip;
+            SFXSource.Play();
+        }
     }
 
     public void SettingsMenu()
@@ -119,6 +151,12 @@ public class UiManager : MonoBehaviour
             keyMapMenu.SetActive(false);
             graphicsMenu.SetActive(true);
             settingsMenu.SetActive(true);
+
+            if (confirmClip != null && SFXSource != null)
+            {
+                SFXSource.clip = confirmClip;
+                SFXSource.Play();
+            }
         }
     }
 
@@ -127,12 +165,23 @@ public class UiManager : MonoBehaviour
         Time.timeScale = 1f;
         manager.gamePaused = false;
         SceneManager.LoadScene("Sascha");
-        
+
+        if (confirmClip != null && SFXSource != null)
+        {
+            SFXSource.clip = confirmClip;
+            SFXSource.Play();
+        }
     }
 
     public void QuitGame()
     {
-        #if UNITY_EDITOR
+        if (denyClip != null && SFXSource != null)
+        {
+            SFXSource.clip = denyClip;
+            SFXSource.Play();
+        }
+
+#if UNITY_EDITOR
         UnityEditor.EditorApplication.isPlaying = false;
         #endif
 
@@ -161,6 +210,12 @@ public class UiManager : MonoBehaviour
         keyMapMenu.SetActive(false);
         graphicsMenu.SetActive(false);
         settingsMenu.SetActive(false);
+
+        if (denyClip != null && SFXSource != null)
+        {
+            SFXSource.clip = denyClip;
+            SFXSource.Play();
+        }
     }
 
     public void OpenGraphics()
@@ -168,18 +223,36 @@ public class UiManager : MonoBehaviour
         audioMenu.SetActive(false);
         keyMapMenu.SetActive(false);
         graphicsMenu.SetActive(true);
+
+        if (toggleClip != null && SFXSource != null)
+        {
+            SFXSource.clip = toggleClip;
+            SFXSource.Play();
+        }
     }
     public void OpenAudio()
     {
         audioMenu.SetActive(true);
         keyMapMenu.SetActive(false);
         graphicsMenu.SetActive(false);
+
+        if (toggleClip != null && SFXSource != null)
+        {
+            SFXSource.clip = toggleClip;
+            SFXSource.Play();
+        }
     }
     public void OpenKeyMap()
     {
         audioMenu.SetActive(false);
         keyMapMenu.SetActive(true);
         graphicsMenu.SetActive(false);
+
+        if (toggleClip != null && SFXSource != null)
+        {
+            SFXSource.clip = toggleClip;
+            SFXSource.Play();
+        }
     }
 
     private void MasterTextValue(float _value)

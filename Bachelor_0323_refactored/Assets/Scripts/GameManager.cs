@@ -28,8 +28,8 @@ public class GameManager : MonoBehaviour
     public static float SFXSliderValue = 0.75f;
     public static float BGMSliderValue = 0.75f;
 
-    public static int resolutionWidth;
-    public static int resolutionHeight;
+    public static int resolutionWidth = 1920;
+    public static int resolutionHeight = 1080;
 
     [Header("RundenCounter")]
     [SerializeField] private int roundCounter;
@@ -37,7 +37,7 @@ public class GameManager : MonoBehaviour
 
 
     void Start()
-    {
+    {        
         preparation = true;
         combat = false;
 

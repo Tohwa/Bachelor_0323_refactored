@@ -45,7 +45,18 @@ public class AudioManager : MonoBehaviour
         temp.transform.position = _request.Position;
         temp.name = $"{tempData.name}";
         //tempSource.outputAudioMixerGroup;
-        tempSource.clip = tempData.Clips[0];
+
+        if(tempData.Clips.Length > 1 ) 
+        {
+            int rnd = Random.Range(0, tempData.Clips.Length);
+
+            tempSource.clip = tempData.Clips[rnd];
+        }
+        else
+        {
+            tempSource.clip = tempData.Clips[0];
+        }
+        
         tempSource.volume = tempData.Volume;
         tempSource.spatialBlend = _request.Is2D ? 0 : 1;
         tempSource.Play();

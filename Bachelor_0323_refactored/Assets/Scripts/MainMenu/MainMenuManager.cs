@@ -25,18 +25,21 @@ public class MainMenuManager : MonoBehaviour
     [SerializeField] private Toggle fullscreenToggle;
 
     [Header("Menu Audio")]
-    [SerializeField] private AudioData confirmClip;
+    [SerializeField] private AudioClip confirmClip;
     [SerializeField] private AudioClip toggleClip;
     [SerializeField] private AudioClip denyClip;
 
     [Header("Components")]
     [SerializeField] private AudioMixer mixer;
+    [SerializeField] private AudioSource BGMSource;
+    [SerializeField] private AudioSource SFXSource;
+    
     #endregion
 
     private void Awake()
     {
         settingsMenu.SetActive(false);
-        windowedToggle.isOn = true;
+        windowedToggle.isOn = false;
     }
 
     private void Start()
@@ -60,6 +63,12 @@ public class MainMenuManager : MonoBehaviour
         {
             windowedToggle.isOn = !_value;
             Screen.fullScreen = true;
+
+            if (toggleClip != null && SFXSource != null)
+            {
+                SFXSource.clip = toggleClip;
+                SFXSource.Play();
+            }
         }
     }
 
@@ -69,11 +78,18 @@ public class MainMenuManager : MonoBehaviour
         {
             fullscreenToggle.isOn = !_value;
             Screen.fullScreen = false;
+
+            if (toggleClip != null && SFXSource != null)
+            {
+                SFXSource.clip = toggleClip;
+                SFXSource.Play();
+            }
         }
     }
 
     public void PlayGame()
     {
+        BGMSource.Stop();
         SceneManager.LoadScene("Sascha");
     }
 
@@ -85,17 +101,26 @@ public class MainMenuManager : MonoBehaviour
         graphicsMenu.SetActive(true);
         settingsMenu.SetActive(true);
 
-        SoundRequest.Request(false, Vector3.zero, confirmClip, "SFXVol");
+        if (confirmClip != null && SFXSource != null)
+        {
+            SFXSource.clip = confirmClip;
+            SFXSource.Play();
+        }
     }
 
     public void SettingsToMainMenu()
     {
-
         settingsMenu.SetActive(false);
         audioMenu.SetActive(false);
         keyMapMenu.SetActive(false);
         graphicsMenu.SetActive(false);
         mainMenu.SetActive(true);
+
+        if(denyClip != null && SFXSource != null)
+        {
+            SFXSource.clip = denyClip;
+            SFXSource.Play();
+        }     
     }
 
     public void OpenGraphics()
@@ -103,18 +128,37 @@ public class MainMenuManager : MonoBehaviour
         audioMenu.SetActive(false);
         keyMapMenu.SetActive(false);
         graphicsMenu.SetActive(true);
+
+        if (toggleClip != null && SFXSource != null)
+        {
+            SFXSource.clip = toggleClip;
+            SFXSource.Play();
+        }
     }
     public void OpenAudio()
     {
         audioMenu.SetActive(true);
         keyMapMenu.SetActive(false);
         graphicsMenu.SetActive(false);
+
+        if (toggleClip != null && SFXSource != null)
+        {
+            SFXSource.clip = toggleClip;
+            SFXSource.Play();
+        }
     }
+
     public void OpenKeyMap()
     {
         audioMenu.SetActive(false);
         keyMapMenu.SetActive(true);
         graphicsMenu.SetActive(false);
+
+        if (toggleClip != null && SFXSource != null)
+        {
+            SFXSource.clip = toggleClip;
+            SFXSource.Play();
+        }
     }
 
     public void QuitGame()
