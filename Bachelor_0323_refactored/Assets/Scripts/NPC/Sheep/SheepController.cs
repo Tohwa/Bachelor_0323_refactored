@@ -16,6 +16,7 @@ public class SheepController : MonoBehaviour
 
     public Vector3 oriPos;
 
+
     public NavMeshAgent Agent { get; private set; }
 
     public StateMachine SheepStateMachine { get; private set; }
@@ -43,6 +44,8 @@ public class SheepController : MonoBehaviour
         {
             Agent = GetComponent<NavMeshAgent>();
         }
+
+        
 
         timer = wanderTimer.Value;
 

@@ -40,13 +40,11 @@ public class Bullet : MonoBehaviour, IPoolableBullet<Bullet>
         {
             pool.ReturnItem(this);
 
-            if (other.CompareTag("Enemy") || other.CompareTag("BossEnemy"))
+            if (other.gameObject.CompareTag("Goblin") || other.gameObject.CompareTag("Boar") || other.gameObject.CompareTag("Wolf") || other.CompareTag("Goat") || other.CompareTag("BossEnemy"))
             {
                 other.gameObject.GetComponent<EnemyHealth>().hp -= damage;
-
+                Debug.Log(other.gameObject.GetComponent<EnemyHealth>().hp);
                 Instantiate(impactPrefab, other.gameObject.transform);
-
-
             }
         }
     }

@@ -10,7 +10,7 @@ public class EscapeTrigger : MonoBehaviour
 
     public void OnTriggerEnter(Collider other)
     {
-        if (other.gameObject.CompareTag("Enemy") || other.gameObject.CompareTag("BossEnemy"))
+        if (other.gameObject.CompareTag("Goblin") || other.gameObject.CompareTag("Boar") || other.gameObject.CompareTag("Wolf") || other.gameObject.CompareTag("BossEnemy"))
         {
             GameEvent.Raise();
         }

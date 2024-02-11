@@ -18,6 +18,10 @@ TagManager:
   - SolidFencePart
   - StrongFencePart
   - BossEnemy
+  - Goblin
+  - Goat
+  - Wolf
+  - Boar
   layers:
   - Default
   - TransparentFX
@@ -29,7 +33,7 @@ TagManager:
   - 
   - 
   - 
-  - 
+  - goblin
   - 
   - 
   - 

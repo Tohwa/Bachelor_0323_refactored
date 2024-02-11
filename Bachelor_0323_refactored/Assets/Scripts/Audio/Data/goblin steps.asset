@@ -1,0 +1,24 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c63a0d1455d1e8b47acb196451e01871, type: 3}
+  m_Name: goblin steps
+  m_EditorClassIdentifier: 
+  volume: 0.2
+  clips:
+  - {fileID: 8300000, guid: bf79a14fdf4441d46b39933e604045f9, type: 3}
+  - {fileID: 8300000, guid: 75deaf77863b9a742a29c821af5166d5, type: 3}
+  - {fileID: 8300000, guid: 33d3beec0c208504c8f6f1fd9eab0548, type: 3}
+  - {fileID: 8300000, guid: 7f8e2e49469bcba4f92a3bf596e3a5c2, type: 3}
+  - {fileID: 8300000, guid: 66734215a432238439fb3e9ffceaec0d, type: 3}
+  - {fileID: 8300000, guid: ecc258c1412e04546b3632d072abf225, type: 3}
+  - {fileID: 8300000, guid: 386a2067cf88dd542b196bfb2c8980bc, type: 3}
+  - {fileID: 8300000, guid: 6900686f2f83281469ab3ab0e40eeac0, type: 3}
