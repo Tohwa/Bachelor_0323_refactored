@@ -38,14 +38,14 @@ public class Timer : MonoBehaviour
 
             roundCounter++;
 
-            if(roundCounter != 10)
+            if(roundCounter != 2)
             {
                 timer = combatTime.Value;
             }
         }
 
 
-        if(roundCounter == 10)
+        if(roundCounter == 2)
         {
             timerHUD.SetActive(false);
         }

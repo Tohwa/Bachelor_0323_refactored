@@ -51,6 +51,8 @@ public class UiManager : MonoBehaviour
     [Header("Scripts")]
     [SerializeField] private GameManager manager;
 
+
+
     #endregion
 
     private void Awake()

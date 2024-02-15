@@ -42,6 +42,14 @@ public class BossHealthBar : MonoBehaviour
 
     private void Update()
     {
+        foreach(GameObject obj in enemySet.Items)
+        {
+            if (obj.CompareTag("BossEnemy"))
+            {
+                gameObject.SetActive(true);
+            }
+        }
+
         healthText.text = "Bosshealth: " + enemyHealthComponent.hp;
 
         if (enemyHealthComponent.hp > maxHealth)
