@@ -10,9 +10,13 @@ public class PlayerHealth : MonoBehaviour
 
     public float hp;
 
-    private void Start()
+    private void Awake()
     {
         hp = health.Value;
+    }
+    private void Start()
+    {
+        
     }
 
     private void Update()

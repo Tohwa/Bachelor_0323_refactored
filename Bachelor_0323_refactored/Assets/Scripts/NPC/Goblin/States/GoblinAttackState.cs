@@ -28,6 +28,12 @@ public class GoblinAttackState : BaseState
                 goblin.timer = 0;
 
                 goblin.target.transform.parent.transform.parent.GetComponent<FenceDurability>().hp -= goblin.damage.Value;
+                
+                int rnd = Random.Range(0, goblin.goblinSteps.Clips.Length);
+
+                goblin.SFXSource.clip = goblin.goblinAttack.Clips[rnd];
+                goblin.SFXSource.Play();
+
                 Debug.Log("Attacking Fence");
 
                 if (goblin.target.transform.parent.transform.parent.GetComponent<FenceDurability>().hp <= 0)
@@ -48,6 +54,11 @@ public class GoblinAttackState : BaseState
                 goblin.timer = 0;
 
                 goblin.target.GetComponent<SheepHealth>().hp -= goblin.damage.Value;
+
+                int rnd = Random.Range(0, goblin.goblinSteps.Clips.Length);
+
+                goblin.SFXSource.clip = goblin.goblinAttack.Clips[rnd];
+                goblin.SFXSource.Play();
 
                 Debug.Log("Attacking Sheep");
 

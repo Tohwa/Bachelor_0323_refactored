@@ -1,0 +1,20 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c63a0d1455d1e8b47acb196451e01871, type: 3}
+  m_Name: Shepherd steps
+  m_EditorClassIdentifier: 
+  volume: 0.01
+  clips:
+  - {fileID: 8300000, guid: b52fe1897fb09f04796794321b39cec5, type: 3}
+  - {fileID: 8300000, guid: c54996bbf6b3c27429b9f78d0845b2b9, type: 3}
+  - {fileID: 8300000, guid: 9ce22d2c16665b941af40122dd635f19, type: 3}
+  - {fileID: 8300000, guid: dd82fbf084b98a2409ff006a714a0d40, type: 3}

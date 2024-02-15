@@ -18,6 +18,13 @@ public class GoblinController : MonoBehaviour
 
     public StateMachine GoblinStateMachine { get; private set; }
 
+    public AudioSource SFXSource;
+
+    public AudioData goblinSteps;
+    public AudioData goblinAttack;
+
+    public float stepTimer;
+
     public GoblinLocateState LocateTargetState { get; private set; }
     public GoblinAttackState AttackState { get; private set; }
     public GoblinChaseState ChaseState { get; private set; }

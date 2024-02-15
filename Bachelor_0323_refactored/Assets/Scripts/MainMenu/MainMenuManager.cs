@@ -90,7 +90,7 @@ public class MainMenuManager : MonoBehaviour
     public void PlayGame()
     {
         BGMSource.Stop();
-        SceneManager.LoadScene("Sascha");
+        SceneManager.LoadScene("GameScene");
     }
 
     public void SettingsMenu()

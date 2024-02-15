@@ -12,6 +12,9 @@ using UnityEngine.UI;
 public class UiManager : MonoBehaviour
 {
     #region Fields
+    [Header("Object Set")]
+    [SerializeField] private GameObjectSet curEnemySet;
+
     [Header("GameObjects")]
     [SerializeField] private GameObject pauseMenu;
     [SerializeField] private GameObject settingsMenu;
@@ -35,16 +38,19 @@ public class UiManager : MonoBehaviour
 
     [Header("Components")]
     [SerializeField] private AudioMixer mixer;
-    [SerializeField] private AudioSource BGMSource;
+    [SerializeField] private AudioSource normalBGMSource;
+    [SerializeField] private AudioSource bossBGMSource;
+
     [SerializeField] private AudioSource SFXSource;
 
-    [Header("Menu Audio")]
+    [Header("Audio")]
     [SerializeField] private AudioClip confirmClip;
     [SerializeField] private AudioClip toggleClip;
     [SerializeField] private AudioClip denyClip;
 
     [Header("Scripts")]
     [SerializeField] private GameManager manager;
+
     #endregion
 
     private void Awake()
@@ -73,7 +79,16 @@ public class UiManager : MonoBehaviour
         if(manager.gamePaused)
         {
             PauseGame();
-        }     
+        }
+        
+        foreach(GameObject obj in curEnemySet.Items)
+        {
+            if (obj.CompareTag("BossEnemy"))
+            {
+                bossBGMSource.enabled = true;
+                normalBGMSource.enabled = false;
+            }
+        }
     }
 
     public void OnFullscreenToggleChange(bool _value)
@@ -133,7 +148,7 @@ public class UiManager : MonoBehaviour
         Time.timeScale = 1f;
         manager.gamePaused = false;
         SceneManager.LoadScene("MainMenu");
-        BGMSource.Stop();
+        normalBGMSource.Stop();
 
         if (denyClip != null && SFXSource != null)
         {
@@ -164,7 +179,7 @@ public class UiManager : MonoBehaviour
     {
         Time.timeScale = 1f;
         manager.gamePaused = false;
-        SceneManager.LoadScene("Sascha");
+        SceneManager.LoadScene("GameScene");
 
         if (confirmClip != null && SFXSource != null)
         {

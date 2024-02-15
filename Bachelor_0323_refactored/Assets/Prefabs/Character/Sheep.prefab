@@ -139,6 +139,8 @@ MonoBehaviour:
     ConstantValue: 10
     Variable: {fileID: 11400000, guid: 5c7490ab24c4129498bd7c08e0b26f73, type: 2}
   hp: 0
+  hitSounds: {fileID: 11400000, guid: 5be3b8bb8341f0840a6d7f08b7c0f606, type: 2}
+  SFXSource: {fileID: 2241294919966984080}
 --- !u!114 &1776193350979061425
 MonoBehaviour:
   m_ObjectHideFlags: 0

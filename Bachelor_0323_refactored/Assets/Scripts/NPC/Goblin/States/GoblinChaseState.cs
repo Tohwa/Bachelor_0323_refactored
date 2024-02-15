@@ -21,6 +21,7 @@ public class GoblinChaseState : BaseState
 
     public override void LogicUpdate()
     {
+
         if (!goblin.Agent.pathPending)
         {
             if (goblin.Agent.remainingDistance <= goblin.Agent.stoppingDistance)
@@ -37,6 +38,17 @@ public class GoblinChaseState : BaseState
             goblin.GoblinStateMachine.ChangeGoblinState(goblin.LocateTargetState);
             goblin.Agent.ResetPath();
         }
+        else
+        {
+            int rnd = Random.Range(0, goblin.goblinSteps.Clips.Length);
+
+            goblin.SFXSource.clip = goblin.goblinSteps.Clips[rnd];
+            goblin.SFXSource.Play();
+
+            goblin.stepTimer = 1;
+        }
+
+        goblin.stepTimer -= Time.deltaTime;
     }
 
     public override void PhysicsUpdate()

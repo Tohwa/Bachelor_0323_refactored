@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
+using UnityEngine.SceneManagement;
 
 public class GameManager : MonoBehaviour
 {
@@ -15,6 +16,9 @@ public class GameManager : MonoBehaviour
 
     public FloatReference prepTimer;
     public FloatReference combatTimer;
+
+    [SerializeField] private PlayerHealth playerHealth;
+    [SerializeField] private GameObjectSet sheepSet;
 
     public bool preparation;
     public bool combat;
@@ -77,6 +81,15 @@ public class GameManager : MonoBehaviour
         if(roundCounter == 10)
         {
             BossHUD.SetActive(true);
+        }
+
+        if(playerHealth.hp == 0)
+        {
+            SceneManager.LoadScene("EndScreen");
+        }
+        else if(sheepSet.Items.Count == 0)
+        {
+            SceneManager.LoadScene("EndScreen");
         }
     }
 
