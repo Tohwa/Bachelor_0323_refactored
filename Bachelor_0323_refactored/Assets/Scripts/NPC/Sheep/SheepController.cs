@@ -15,6 +15,7 @@ public class SheepController : MonoBehaviour
     public bool journeyHome;
 
     public Vector3 oriPos;
+    public Vector3 traveledPos;
 
     public GameObject cage;
 
@@ -29,8 +30,6 @@ public class SheepController : MonoBehaviour
 
     public GameObjectSet fenceSet;
 
-    public float hp;
-    public float prevHP;
     public float travelDistance;
 
     private void Awake()
@@ -49,15 +48,6 @@ public class SheepController : MonoBehaviour
         {
             Agent = GetComponent<NavMeshAgent>();
         }
-
-        if (hp == null)
-        {
-            hp = gameObject.GetComponent<SheepHealth>().hp;
-        }
-        
-        prevHP = hp;
-
-
 
         timer = wanderTimer.Value;
 
@@ -79,16 +69,16 @@ public class SheepController : MonoBehaviour
     private void Update()
     {
         SheepStateMachine.sheepState.LogicUpdate();
+
+        if(gameObject.transform.position == traveledPos)
+        {
+            escape = false;
+        }
     }
 
     private void FixedUpdate()
     {
         SheepStateMachine.sheepState.PhysicsUpdate();
-    }
-
-    public void RunAway()
-    {
-        escape = true;
     }
 
     public void TravelHome()

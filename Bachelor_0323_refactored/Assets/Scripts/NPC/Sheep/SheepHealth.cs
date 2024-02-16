@@ -10,6 +10,7 @@ public class SheepHealth : MonoBehaviour
     private float prevHP;
 
     [SerializeField] private AudioData hitSounds;
+    [SerializeField] private SheepController controller;
 
     public AudioSource SFXSource;
 
@@ -33,6 +34,7 @@ public class SheepHealth : MonoBehaviour
             SFXSource.clip = hitSounds.Clips[rnd];
             SFXSource.Play();
             prevHP = hp;
+            controller.escape = true;
         }
 
         if (hp <= 0)

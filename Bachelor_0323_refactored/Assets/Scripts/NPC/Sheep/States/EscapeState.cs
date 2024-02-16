@@ -12,7 +12,7 @@ public class EscapeState : BaseState
 
     public override void EnterState()
     {
-        Debug.Log("running");
+        Debug.Log("running");        
     }
 
     public override void ExitState()
@@ -21,26 +21,15 @@ public class EscapeState : BaseState
     }
 
     public override void LogicUpdate()
-    {       
-        //if (sheep.timer >= sheep.wanderTimer.Value)
-        //{
-        //    Vector3 newPos = RandomNavSphere(sheep.transform.position, sheep.wanderRadius.Value, 3);
-        //    sheep.Agent.SetDestination(newPos);
-        //    sheep.timer = 0;  
-        //}
+    {
+        Vector3 newPos = RandomNavSphere(sheep.transform.position, sheep.wanderRadius.Value, 3);
+        sheep.travelDistance = Distance(sheep.transform.position, newPos);
+        sheep.traveledPos = newPos;
 
-        if(sheep.prevHP > sheep.hp)
+        if (sheep.travelDistance > 8)
         {
-            Vector3 newPos = RandomNavSphere(sheep.transform.position, sheep.wanderRadius.Value, 3);
-            sheep.travelDistance = Distance(sheep.transform.position, newPos);
-
-            if(sheep.travelDistance > 8)
-            {
-                sheep.Agent.speed = 10;
-                sheep.Agent.SetDestination(newPos);
-
-                sheep.prevHP = sheep.hp;
-            }
+            sheep.Agent.speed = 10;
+            sheep.Agent.SetDestination(newPos);
         }
 
         if (sheep.journeyHome)

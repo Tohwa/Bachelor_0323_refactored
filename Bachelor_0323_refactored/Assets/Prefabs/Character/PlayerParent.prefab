@@ -26,7 +26,7 @@ Transform:
   m_GameObject: {fileID: 2622881501335536042}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.0023, y: 0.0332, z: 0.0176}
+  m_LocalPosition: {x: 0.0023, y: 0.0332, z: 0.0308}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -46,11 +46,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   FireDelay:
     UseConstant: 1
-    ConstantValue: 1.5
+    ConstantValue: 0.5
     Variable: {fileID: 11400000, guid: 0d35ccb8c5e61bd48b1c81aafebbeffd, type: 2}
   poolSize:
     UseConstant: 1
-    ConstantValue: 10
+    ConstantValue: 100
     Variable: {fileID: 11400000, guid: 68286db2dc1fe154799bf1cd3d0fde98, type: 2}
   BulletVelocity:
     UseConstant: 1

@@ -6,8 +6,11 @@ public class BulletPool<T> where T : MonoBehaviour, IPoolableBullet<T>
 {
     public GameObject prefab;
 
+    Transform oriParent;
+
     public BulletPool(GameObject _prefab, int _size, Transform _parent)
     {
+        oriParent = _parent;
         prefab = _prefab;
         for (int i = 0; i < _size; i++)
         {
@@ -38,6 +41,7 @@ public class BulletPool<T> where T : MonoBehaviour, IPoolableBullet<T>
     public void ReturnItem(T _item)
     {
         _item.Deactivate();
+        _item.transform.parent = oriParent;
         queue.Enqueue(_item);
     }
 }

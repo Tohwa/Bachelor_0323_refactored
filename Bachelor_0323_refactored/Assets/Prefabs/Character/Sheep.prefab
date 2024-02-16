@@ -1,87 +1,5 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1 &6653239108494413362
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 6540937434220335919}
-  - component: {fileID: 2057858343882017983}
-  - component: {fileID: 3141998485872159694}
-  m_Layer: 0
-  m_Name: EscapeTrigger
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &6540937434220335919
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6653239108494413362}
-  serializedVersion: 2
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.14000034, y: 0, z: 0.04}
-  m_LocalScale: {x: 35, y: 35, z: 35}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 7423175663442704396}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &2057858343882017983
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6653239108494413362}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 494b269dcf2453744bd64b73619783fb, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  GameEvent: {fileID: 11400000, guid: 8718a92155267d64b881aa4d57764b90, type: 2}
-  Response:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 2057858343882017983}
-        m_TargetAssemblyTypeName: EscapeTrigger, Assembly-CSharp
-        m_MethodName: OnTriggerEnter
-        m_Mode: 2
-        m_Arguments:
-          m_ObjectArgument: {fileID: 3141998485872159694}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Collider, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
---- !u!135 &3141998485872159694
-SphereCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6653239108494413362}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 1
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Radius: 0.15
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &8021984938255573198
 GameObject:
   m_ObjectHideFlags: 0
@@ -94,7 +12,6 @@ GameObject:
   - component: {fileID: 6771101475816936458}
   - component: {fileID: 1776193350979061425}
   - component: {fileID: 5392968141616867303}
-  - component: {fileID: 3813818339324710576}
   - component: {fileID: 5669577122873477431}
   - component: {fileID: 2053702054275407437}
   - component: {fileID: 2241294919966984080}
@@ -119,7 +36,6 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 4543207875064665840}
-  - {fileID: 6540937434220335919}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &6771101475816936458
@@ -140,6 +56,7 @@ MonoBehaviour:
     Variable: {fileID: 11400000, guid: 5c7490ab24c4129498bd7c08e0b26f73, type: 2}
   hp: 0
   hitSounds: {fileID: 11400000, guid: 5be3b8bb8341f0840a6d7f08b7c0f606, type: 2}
+  controller: {fileID: 1776193350979061425}
   SFXSource: {fileID: 2241294919966984080}
 --- !u!114 &1776193350979061425
 MonoBehaviour:
@@ -159,17 +76,19 @@ MonoBehaviour:
     Variable: {fileID: 11400000, guid: 199b0c58ab5d411448394ff00e432612, type: 2}
   wanderRadius:
     UseConstant: 1
-    ConstantValue: 15
+    ConstantValue: 10
     Variable: {fileID: 11400000, guid: b1f37a2b7986a4d479c41a6efd4f4b2e, type: 2}
   wanderTimer:
     UseConstant: 1
-    ConstantValue: 15
+    ConstantValue: 10
     Variable: {fileID: 11400000, guid: 8a37d227d7586c44daa0dee9ac9b4337, type: 2}
   timer: 0
   escape: 0
   journeyHome: 0
   oriPos: {x: 0, y: 0, z: 0}
+  cage: {fileID: 0}
   fenceSet: {fileID: 11400000, guid: 05aa19ef385595643a353d4a244ff574, type: 2}
+  travelDistance: 0
 --- !u!114 &5392968141616867303
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -183,34 +102,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   sheepList: {fileID: 11400000, guid: fa964c0b4d8e57f40ab57337bf0a07c9, type: 2}
---- !u!114 &3813818339324710576
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8021984938255573198}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: df7a9d225c34e4843ba3a814bfed448f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Event: {fileID: 11400000, guid: 8718a92155267d64b881aa4d57764b90, type: 2}
-  Response:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 1776193350979061425}
-        m_TargetAssemblyTypeName: SheepController, Assembly-CSharp
-        m_MethodName: RunAway
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
 --- !u!114 &5669577122873477431
 MonoBehaviour:
   m_ObjectHideFlags: 0
