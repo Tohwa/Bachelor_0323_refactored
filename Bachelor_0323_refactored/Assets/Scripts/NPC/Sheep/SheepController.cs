@@ -16,6 +16,7 @@ public class SheepController : MonoBehaviour
 
     public Vector3 oriPos;
 
+    public GameObject cage;
 
     public NavMeshAgent Agent { get; private set; }
 

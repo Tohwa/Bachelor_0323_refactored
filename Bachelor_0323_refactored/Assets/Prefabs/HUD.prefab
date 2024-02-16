@@ -1978,7 +1978,6 @@ GameObject:
   m_Component:
   - component: {fileID: 4026307854680004850}
   - component: {fileID: 3275855601490593453}
-  - component: {fileID: 219116002163469004}
   m_Layer: 5
   m_Name: Boss
   m_TagString: Untagged
@@ -2022,34 +2021,6 @@ MonoBehaviour:
   enemySet: {fileID: 11400000, guid: 7b6e7fa62edaf2748b417b093e9c896c, type: 2}
   healthBar: {fileID: 1283690259878570718}
   healthText: {fileID: 4963881373390791458}
---- !u!114 &219116002163469004
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4748727902494855634}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: df7a9d225c34e4843ba3a814bfed448f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Event: {fileID: 11400000, guid: 0567344b8325e774d8a4c242608aa5e8, type: 2}
-  Response:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 3275855601490593453}
-        m_TargetAssemblyTypeName: BossHealthBar, Assembly-CSharp
-        m_MethodName: AdvanceRoundCounter
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
 --- !u!1 &4762428408147778231
 GameObject:
   m_ObjectHideFlags: 0

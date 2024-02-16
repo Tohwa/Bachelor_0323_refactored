@@ -18925,6 +18925,21 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1776193350979061425, guid: d7f9d9ed1ce63834784d3e56d65e2c5e,
+        type: 3}
+      propertyPath: cage
+      value: 
+      objectReference: {fileID: 4593238558892690499}
+    - target: {fileID: 1776193350979061425, guid: d7f9d9ed1ce63834784d3e56d65e2c5e,
+        type: 3}
+      propertyPath: wanderTimer.ConstantValue
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 1776193350979061425, guid: d7f9d9ed1ce63834784d3e56d65e2c5e,
+        type: 3}
+      propertyPath: wanderRadius.ConstantValue
+      value: 10
+      objectReference: {fileID: 0}
     - target: {fileID: 7423175663442704396, guid: d7f9d9ed1ce63834784d3e56d65e2c5e,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -27372,6 +27387,21 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1776193350979061425, guid: d7f9d9ed1ce63834784d3e56d65e2c5e,
+        type: 3}
+      propertyPath: cage
+      value: 
+      objectReference: {fileID: 4593238558892690499}
+    - target: {fileID: 1776193350979061425, guid: d7f9d9ed1ce63834784d3e56d65e2c5e,
+        type: 3}
+      propertyPath: wanderTimer.ConstantValue
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 1776193350979061425, guid: d7f9d9ed1ce63834784d3e56d65e2c5e,
+        type: 3}
+      propertyPath: wanderRadius.ConstantValue
+      value: 10
+      objectReference: {fileID: 0}
     - target: {fileID: 7423175663442704396, guid: d7f9d9ed1ce63834784d3e56d65e2c5e,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -69491,6 +69521,21 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1776193350979061425, guid: d7f9d9ed1ce63834784d3e56d65e2c5e,
+        type: 3}
+      propertyPath: cage
+      value: 
+      objectReference: {fileID: 4593238558892690499}
+    - target: {fileID: 1776193350979061425, guid: d7f9d9ed1ce63834784d3e56d65e2c5e,
+        type: 3}
+      propertyPath: wanderTimer.ConstantValue
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 1776193350979061425, guid: d7f9d9ed1ce63834784d3e56d65e2c5e,
+        type: 3}
+      propertyPath: wanderRadius.ConstantValue
+      value: 10
+      objectReference: {fileID: 0}
     - target: {fileID: 7423175663442704396, guid: d7f9d9ed1ce63834784d3e56d65e2c5e,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -71185,7 +71230,7 @@ PrefabInstance:
     - target: {fileID: 1944229351736342208, guid: 6653aff272d939649abc35029f9b9416,
         type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 0.000030517578
+      value: 0.000015258789
       objectReference: {fileID: 0}
     - target: {fileID: 2038615785932029424, guid: 6653aff272d939649abc35029f9b9416,
         type: 3}
@@ -71467,8 +71512,7 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 1836889704}
-    m_RemovedComponents:
-    - {fileID: 219116002163469004, guid: 6653aff272d939649abc35029f9b9416, type: 3}
+    m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
@@ -71481,6 +71525,11 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1387870867}
     m_Modifications:
+    - target: {fileID: 2479123732507388872, guid: cf74fa8849d999845947854ceddb0656,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 4166591019897149283, guid: cf74fa8849d999845947854ceddb0656,
         type: 3}
       propertyPath: fenceParent
@@ -71546,6 +71595,21 @@ PrefabInstance:
       propertyPath: Response.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 1387870866}
+    - target: {fileID: 6140567554360879859, guid: cf74fa8849d999845947854ceddb0656,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6508069065782536821, guid: cf74fa8849d999845947854ceddb0656,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7045960283848438551, guid: cf74fa8849d999845947854ceddb0656,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 7136535957484748502, guid: cf74fa8849d999845947854ceddb0656,
         type: 3}
       propertyPath: m_Name
@@ -71556,6 +71620,12 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: cf74fa8849d999845947854ceddb0656, type: 3}
+--- !u!1 &4593238558892690499 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7136535957484748502, guid: cf74fa8849d999845947854ceddb0656,
+    type: 3}
+  m_PrefabInstance: {fileID: 4593238558892690498}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &8515579902541465821
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -71642,6 +71712,21 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1776193350979061425, guid: d7f9d9ed1ce63834784d3e56d65e2c5e,
+        type: 3}
+      propertyPath: cage
+      value: 
+      objectReference: {fileID: 4593238558892690499}
+    - target: {fileID: 1776193350979061425, guid: d7f9d9ed1ce63834784d3e56d65e2c5e,
+        type: 3}
+      propertyPath: wanderTimer.ConstantValue
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 1776193350979061425, guid: d7f9d9ed1ce63834784d3e56d65e2c5e,
+        type: 3}
+      propertyPath: wanderRadius.ConstantValue
+      value: 10
+      objectReference: {fileID: 0}
     - target: {fileID: 7423175663442704396, guid: d7f9d9ed1ce63834784d3e56d65e2c5e,
         type: 3}
       propertyPath: m_LocalPosition.x
