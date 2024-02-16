@@ -16,6 +16,7 @@ public class Timer : MonoBehaviour
     private bool updateToCombat;
 
     private int roundCounter;
+    [SerializeField] private GameObjectSet enemySet;
 
     public TMP_Text text;
 
@@ -34,13 +35,12 @@ public class Timer : MonoBehaviour
         }
         else if (updateToCombat)
         {
-            updateToCombat = false;
-
-            roundCounter++;
-
-            if(roundCounter != 2)
+            foreach(GameObject obj in enemySet.Items)
             {
-                timer = combatTime.Value;
+                if (obj.CompareTag("BossEnemy"))   
+                {
+                    timerHUD.SetActive(false);
+                }
             }
         }
 

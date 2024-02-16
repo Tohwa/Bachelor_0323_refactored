@@ -19,47 +19,44 @@ public class BossHealthBar : MonoBehaviour
 
     private void Start()
     {
-        foreach (var item in enemySet.Items)
-        {
-            if (item.CompareTag("BossEnemy"))
-            {
-                enemy = item;
-            }
-        }
-
-        enemyHealthComponent = enemy.GetComponent<EnemyHealth>();
-
-        if (enemyHealthComponent != null)
-        {
-            maxHealth = enemyHealthComponent.hp;
-        }
-        else
-        {
-            // Fehlerbehandlung, falls das Skript nicht gefunden wurde
-            Debug.LogError("EnemyHealth-Skript nicht gefunden!");
-        }
+       
     }
 
     private void Update()
     {
-        foreach(GameObject obj in enemySet.Items)
+        if(enemySet.Items.Count > 0)
         {
-            if (obj.CompareTag("BossEnemy"))
+            foreach (var item in enemySet.Items)
             {
-                gameObject.SetActive(true);
+                if (item.CompareTag("BossEnemy"))
+                {
+                    enemyHealthComponent = item.GetComponent<EnemyHealth>();
+                    healthText.gameObject.SetActive(true);
+                    healthBar.gameObject.SetActive(true);
+                }
             }
-        }
 
-        healthText.text = "Bosshealth: " + enemyHealthComponent.hp;
+            if (enemyHealthComponent != null)
+            {
+                maxHealth = enemyHealthComponent.hp;
 
-        if (enemyHealthComponent.hp > maxHealth)
-        {
-            enemyHealthComponent.hp = maxHealth;
-        }
+                healthText.text = "Bosshealth: " + enemyHealthComponent.hp;
 
-        lerpSpeed = 3f * Time.deltaTime;
+                if (enemyHealthComponent.hp > maxHealth)
+                {
+                    enemyHealthComponent.hp = maxHealth;
+                }
 
-        HealthBarFiller();
+                lerpSpeed = 3f * Time.deltaTime;
+
+                HealthBarFiller();
+            }
+            else
+            {
+                // Fehlerbehandlung, falls das Skript nicht gefunden wurde
+                Debug.LogError("EnemyHealth-Skript nicht gefunden!");
+            }
+        }        
     }
 
     private void HealthBarFiller()

@@ -29,6 +29,10 @@ public class SheepController : MonoBehaviour
 
     public GameObjectSet fenceSet;
 
+    public float hp;
+    public float prevHP;
+    public float travelDistance;
+
     private void Awake()
     {
         SheepStateMachine = new StateMachine();
@@ -46,7 +50,14 @@ public class SheepController : MonoBehaviour
             Agent = GetComponent<NavMeshAgent>();
         }
 
+        if (hp == null)
+        {
+            hp = gameObject.GetComponent<SheepHealth>().hp;
+        }
         
+        prevHP = hp;
+
+
 
         timer = wanderTimer.Value;
 
