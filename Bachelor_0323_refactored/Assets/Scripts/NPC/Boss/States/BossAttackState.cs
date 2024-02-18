@@ -27,7 +27,6 @@ public class BossAttackState : BaseState
                 boss.timer = 0;
 
                 boss.target.transform.parent.transform.parent.GetComponent<FenceDurability>().hp -= boss.damage.Value;
-                Debug.Log("Attacking Fence");
 
                 if (boss.target.transform.parent.transform.parent.GetComponent<FenceDurability>().hp <= 0)
                 {
@@ -47,8 +46,7 @@ public class BossAttackState : BaseState
                 boss.timer = 0;
 
                 boss.target.GetComponent<SheepHealth>().hp -= boss.damage.Value;
-
-                Debug.Log("Attacking Sheep");
+                
 
                 if (boss.target.GetComponent<SheepHealth>().hp <= 0)
                 {

@@ -17,6 +17,7 @@ GameObject:
   - component: {fileID: 1327389023572190111}
   - component: {fileID: 2106108612725414844}
   - component: {fileID: 7771380606976144180}
+  - component: {fileID: 846086298571516777}
   m_Layer: 0
   m_Name: Boss
   m_TagString: BossEnemy
@@ -131,10 +132,14 @@ MonoBehaviour:
   lootPrefab: {fileID: 1037475309014304320, guid: f268c7e4c9d8f64439dac7ba89038997,
     type: 3}
   hp: 0
-  goblinHitSounds: {fileID: 0}
-  goatHitSounds: {fileID: 0}
-  goblinSource: {fileID: 0}
-  goatSource: {fileID: 0}
+  goblinHitSounds: {fileID: 11400000, guid: f109720312102c640ab291763c778403, type: 2}
+  goatHitSounds: {fileID: 11400000, guid: f109720312102c640ab291763c778403, type: 2}
+  bossHitSounds: {fileID: 11400000, guid: ee254baa11de9c64ea059044546b7dcf, type: 2}
+  goblinSource: {fileID: 8542244102420271279, guid: 2e964b00c6c41c545974ce2bd0aa427d,
+    type: 3}
+  goatSource: {fileID: 2565045524003374800, guid: b94b816191c16bb49b58dd7d3d274c92,
+    type: 3}
+  bossSource: {fileID: 846086298571516777}
 --- !u!114 &2693350850643973182
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -225,3 +230,100 @@ MonoBehaviour:
   timer: 0
   sheepSet: {fileID: 11400000, guid: fa964c0b4d8e57f40ab57337bf0a07c9, type: 2}
   fenceSet: {fileID: 11400000, guid: 05aa19ef385595643a353d4a244ff574, type: 2}
+--- !u!82 &846086298571516777
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5735220365590825905}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 9093584893423113549, guid: f818d2af96cc9934e97b7c53fc10379f,
+    type: 2}
+  m_audioClip: {fileID: 0}
+  m_PlayOnAwake: 0
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 20
+  Pan2D: 0
+  rolloffMode: 1
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4

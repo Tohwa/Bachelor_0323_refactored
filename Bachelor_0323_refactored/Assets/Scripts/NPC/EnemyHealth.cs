@@ -14,9 +14,11 @@ public class EnemyHealth : MonoBehaviour
 
     [SerializeField] private AudioData goblinHitSounds;
     [SerializeField] private AudioData goatHitSounds;
+    [SerializeField] private AudioData bossHitSounds;
 
     public AudioSource goblinSource;
     public AudioSource goatSource;
+    public AudioSource bossSource;
 
     private float deathTimer;
 
@@ -44,6 +46,13 @@ public class EnemyHealth : MonoBehaviour
                 goatSource.Play();
                 prevHP = hp;
             }
+            else if (gameObject.CompareTag("BossEnemy"))
+            {
+                int rndGoat = Random.Range(0, bossHitSounds.Clips.Length);
+                bossSource.clip = bossHitSounds.Clips[rndGoat];
+                bossSource.Play();
+                prevHP = hp;
+            }
         }
 
         if (hp <= 0)
@@ -60,9 +69,6 @@ public class EnemyHealth : MonoBehaviour
                 Instantiate(lootPrefab, gameObject.transform.position, lootPrefab.transform.rotation, null);
                 gameObject.SetActive(false);
             }
-
-            
-
         }
     }
 }

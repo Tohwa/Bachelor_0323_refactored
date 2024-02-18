@@ -20,10 +20,7 @@ public class GoblinController : MonoBehaviour
 
     public AudioSource SFXSource;
 
-    public AudioData goblinSteps;
     public AudioData goblinAttack;
-
-    public float stepTimer;
 
     public GoblinLocateState LocateTargetState { get; private set; }
     public GoblinAttackState AttackState { get; private set; }
