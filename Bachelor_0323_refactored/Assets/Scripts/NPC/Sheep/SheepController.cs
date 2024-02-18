@@ -53,7 +53,7 @@ public class SheepController : MonoBehaviour
 
         oriPos = transform.position;
 
-        Agent.speed = speed.Value;
+        //Agent.speed = 7f;
 
         if(fenceSet.Items.Count > 0 )
         {

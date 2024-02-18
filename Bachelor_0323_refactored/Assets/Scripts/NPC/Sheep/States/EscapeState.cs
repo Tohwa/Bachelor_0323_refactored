@@ -5,14 +5,28 @@ using UnityEngine.AI;
 
 public class EscapeState : BaseState
 {
-    
+
     public EscapeState(SheepController _ally, StateMachine _stateMachine) : base(_ally, _stateMachine)
     {
     }
 
     public override void EnterState()
     {
-        Debug.Log("running");        
+        Debug.Log("running");
+
+        Vector3 newPos = RandomNavSphere(sheep.cage.transform.position, sheep.wanderRadius.Value * 3, 3);
+        sheep.travelDistance = Distance(sheep.transform.position, newPos);
+        sheep.traveledPos = newPos;
+
+        if (sheep.travelDistance > 15)
+        {
+            sheep.Agent.SetDestination(newPos);
+
+            if (sheep.transform.position == newPos)
+            {
+                sheep.escape = false;
+            }
+        }
     }
 
     public override void ExitState()
@@ -22,17 +36,20 @@ public class EscapeState : BaseState
 
     public override void LogicUpdate()
     {
-        Vector3 newPos = RandomNavSphere(sheep.transform.position, sheep.wanderRadius.Value, 3);
-        sheep.travelDistance = Distance(sheep.transform.position, newPos);
-        sheep.traveledPos = newPos;
 
-        if (sheep.travelDistance > 8)
+        if (!sheep.Agent.pathPending)
         {
-            sheep.Agent.speed = 10;
-            sheep.Agent.SetDestination(newPos);
+            if (sheep.Agent.remainingDistance <= sheep.Agent.stoppingDistance)
+            {
+                if (!sheep.Agent.hasPath || sheep.Agent.velocity.sqrMagnitude == 0f)
+                {
+                    sheep.escape = false;
+                    sheep.SheepStateMachine.ChangeSheepState(sheep.AlarmedState);
+                    sheep.Agent.ResetPath();
+                }
+            }
         }
-
-        if (sheep.journeyHome)
+        else if (sheep.journeyHome)
         {
             sheep.SheepStateMachine.ChangeSheepState(sheep.ReturnState);
         }

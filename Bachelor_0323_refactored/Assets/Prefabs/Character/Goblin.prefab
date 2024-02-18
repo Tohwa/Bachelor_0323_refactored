@@ -13,7 +13,6 @@ GameObject:
   - component: {fileID: 8599755468721495711}
   - component: {fileID: 107030081401160076}
   - component: {fileID: 729088857454703433}
-  - component: {fileID: 1598360762978031885}
   - component: {fileID: 1039753021596211579}
   - component: {fileID: 5682042473579739803}
   - component: {fileID: 8542244102420271279}
@@ -123,25 +122,13 @@ MonoBehaviour:
     UseConstant: 1
     ConstantValue: 10
     Variable: {fileID: 11400000, guid: 0308143245588df45933a4fda9007bef, type: 2}
+  lootPrefab: {fileID: 1037475309014304320, guid: f268c7e4c9d8f64439dac7ba89038997,
+    type: 3}
   hp: 0
   goblinHitSounds: {fileID: 11400000, guid: f109720312102c640ab291763c778403, type: 2}
   goatHitSounds: {fileID: 11400000, guid: f109720312102c640ab291763c778403, type: 2}
   goblinSource: {fileID: 8542244102420271279}
   goatSource: {fileID: 2565045524003374800, guid: b94b816191c16bb49b58dd7d3d274c92,
-    type: 3}
---- !u!114 &1598360762978031885
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3127882309121237085}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d5e49247780668e4db969de864ec8a46, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  lootPrefab: {fileID: 1037475309014304320, guid: f268c7e4c9d8f64439dac7ba89038997,
     type: 3}
 --- !u!136 &1039753021596211579
 CapsuleCollider:

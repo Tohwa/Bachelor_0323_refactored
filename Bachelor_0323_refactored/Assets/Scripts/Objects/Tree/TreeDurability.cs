@@ -7,6 +7,8 @@ public class TreeDurability : MonoBehaviour
     public FloatReference durability;
     public FloatReference damageTimer;
 
+    public GameObject lootPrefab;
+
     public bool gettingHit;
     public bool activeTarget;
 
@@ -39,7 +41,7 @@ public class TreeDurability : MonoBehaviour
         if (hp <= 0)
         {
             hp = 0;
-
+            Instantiate(lootPrefab, gameObject.transform.position, lootPrefab.transform.rotation, null);
             gameObject.SetActive(false);
         }
     }

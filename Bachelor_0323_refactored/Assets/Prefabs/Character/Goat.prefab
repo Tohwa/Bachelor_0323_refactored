@@ -12,7 +12,6 @@ GameObject:
   - component: {fileID: 5428283516785420531}
   - component: {fileID: 2445812631224449011}
   - component: {fileID: 5576675597101101127}
-  - component: {fileID: 1421860615906914137}
   - component: {fileID: 906125961400071135}
   - component: {fileID: 4415562614159579555}
   - component: {fileID: 2565045524003374800}
@@ -55,6 +54,8 @@ MonoBehaviour:
     UseConstant: 0
     ConstantValue: 0
     Variable: {fileID: 11400000, guid: 266d4b943ad7f3a49900152328326b01, type: 2}
+  lootPrefab: {fileID: 1037475309014304320, guid: f268c7e4c9d8f64439dac7ba89038997,
+    type: 3}
   hp: 0
   goblinHitSounds: {fileID: 11400000, guid: f109720312102c640ab291763c778403, type: 2}
   goatHitSounds: {fileID: 11400000, guid: f109720312102c640ab291763c778403, type: 2}
@@ -101,20 +102,6 @@ MonoBehaviour:
     Variable: {fileID: 11400000, guid: 3e506c43b05ff2a4596c8742b0c9a59f, type: 2}
   canAttack: 0
   timer: 0
---- !u!114 &1421860615906914137
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6508997823980204144}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d5e49247780668e4db969de864ec8a46, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  lootPrefab: {fileID: 1037475309014304320, guid: f268c7e4c9d8f64439dac7ba89038997,
-    type: 3}
 --- !u!195 &906125961400071135
 NavMeshAgent:
   m_ObjectHideFlags: 0

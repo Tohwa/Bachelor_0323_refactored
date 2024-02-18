@@ -6,8 +6,8 @@ public class SheepHealth : MonoBehaviour
 {
     public FloatReference health;
 
-    [HideInInspector] public float hp;
-    private float prevHP;
+    /*[HideInInspector]*/ public float hp;
+    public float prevHP;
 
     [SerializeField] private AudioData hitSounds;
     [SerializeField] private SheepController controller;

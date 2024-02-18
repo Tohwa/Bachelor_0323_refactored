@@ -12,6 +12,9 @@ public class CozyState : BaseState
     public override void EnterState()
     {
         Debug.Log("Cozy!");
+
+        sheep.Agent.speed = 3f;
+        sheep.Agent.acceleration = 8;
     }
 
     public override void ExitState()

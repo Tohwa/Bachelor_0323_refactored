@@ -1,10 +1,13 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class EnemyHealth : MonoBehaviour
 {
     public FloatReference health;
+
+    public GameObject lootPrefab;
 
     [HideInInspector] public float hp;
     private float prevHP;
@@ -46,7 +49,20 @@ public class EnemyHealth : MonoBehaviour
         if (hp <= 0)
         {
             hp = 0;
-            gameObject.SetActive(false);
+
+            if (gameObject.CompareTag("BossEnemy"))
+            {
+                SceneManager.LoadScene("EndScreen");
+                gameObject.SetActive(false);
+            }
+            else
+            {
+                Instantiate(lootPrefab, gameObject.transform.position, lootPrefab.transform.rotation, null);
+                gameObject.SetActive(false);
+            }
+
+            
+
         }
     }
 }

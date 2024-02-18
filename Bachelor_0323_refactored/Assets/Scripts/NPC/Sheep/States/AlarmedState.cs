@@ -11,6 +11,9 @@ public class AlarmedState : BaseState
     public override void EnterState()
     {
         Debug.Log("alarm");
+
+        sheep.Agent.speed = 15f;
+        sheep.Agent.acceleration = 50f;
     }
 
     public override void ExitState()

@@ -56,6 +56,8 @@ MonoBehaviour:
     UseConstant: 1
     ConstantValue: 1
     Variable: {fileID: 11400000, guid: 79a83d8f5266c2b438654a2213bf2430, type: 2}
+  lootPrefab: {fileID: 3678792476139805969, guid: 6f3f0b10faec31b4e8e2eb3f19cff0c0,
+    type: 3}
   gettingHit: 0
   activeTarget: 0
   hp: 0
@@ -230,7 +232,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1297041884384738898}
-  - component: {fileID: 7486086251581794447}
   m_Layer: 0
   m_Name: LootSpawn
   m_TagString: Untagged
@@ -253,20 +254,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 8507309446213692580}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &7486086251581794447
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5399649733242284797}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d5e49247780668e4db969de864ec8a46, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  lootPrefab: {fileID: 3678792476139805969, guid: 6f3f0b10faec31b4e8e2eb3f19cff0c0,
-    type: 3}
 --- !u!1 &5840272975509143264
 GameObject:
   m_ObjectHideFlags: 0

@@ -23,7 +23,7 @@ public class GameManager : MonoBehaviour
     public bool preparation;
     public bool combat;
     public bool gamePaused;
-
+    private bool startTimer = true;
 
     public float timer;
 
@@ -51,7 +51,12 @@ public class GameManager : MonoBehaviour
 
     void Update()
     {
-        timer -= Time.deltaTime;
+        CheckForBossEnemy();
+
+        if (startTimer)
+        {
+            timer -= Time.deltaTime;
+        }
 
         if (timer <= 0 && preparation)
         {
@@ -61,7 +66,7 @@ public class GameManager : MonoBehaviour
             timer = combatTimer.Value;
             SendCombatMessage();
         }
-        else if (timer <= 0 && combat && roundCounter != 10|| combat && curEnemySet.Items.Count == 0 && roundCounter != 10)
+        else if (timer <= 0 && combat|| combat && curEnemySet.Items.Count == 0)
         {
             preparation = true;
             combat = false;
@@ -101,5 +106,16 @@ public class GameManager : MonoBehaviour
     public void SendCombatMessage()
     {
         combatEvent.Raise();
+    }
+
+    private void CheckForBossEnemy()
+    {
+        foreach(GameObject obj in curEnemySet.Items)
+        {
+            if (obj.CompareTag("BossEnemy"))
+            {
+                startTimer = false;
+            }
+        }
     }
 }

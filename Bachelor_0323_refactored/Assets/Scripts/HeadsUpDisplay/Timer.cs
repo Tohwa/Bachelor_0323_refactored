@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
+using UnityEngine.UI;
 
 public class Timer : MonoBehaviour
 {
@@ -15,7 +16,7 @@ public class Timer : MonoBehaviour
     private bool updateToPrep;
     private bool updateToCombat;
 
-    private int roundCounter;
+    private int roundCounter = 0;
     [SerializeField] private GameObjectSet enemySet;
 
     public TMP_Text text;
@@ -35,19 +36,23 @@ public class Timer : MonoBehaviour
         }
         else if (updateToCombat)
         {
-            foreach(GameObject obj in enemySet.Items)
-            {
-                if (obj.CompareTag("BossEnemy"))   
-                {
-                    timerHUD.SetActive(false);
-                }
-            }
+            roundCounter++;          
+
+            updateToCombat = false;
+
+            timer = combatTime.Value;
         }
 
 
         if(roundCounter == 2)
         {
-            timerHUD.SetActive(false);
+            foreach (GameObject obj in enemySet.Items)
+            {
+                if (obj.CompareTag("BossEnemy"))
+                {
+                    timerHUD.SetActive(false);
+                }
+            }
         }
         else
         {

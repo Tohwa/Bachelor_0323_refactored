@@ -34,7 +34,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 1, z: 0}
-  m_LocalScale: {x: 3, y: 3, z: 3}
+  m_LocalScale: {x: 1.5, y: 1.5, z: 1.5}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
@@ -128,7 +128,13 @@ MonoBehaviour:
     UseConstant: 0
     ConstantValue: 10
     Variable: {fileID: 11400000, guid: ab1907e122b3e8642ac2b7c6976dd3a1, type: 2}
+  lootPrefab: {fileID: 1037475309014304320, guid: f268c7e4c9d8f64439dac7ba89038997,
+    type: 3}
   hp: 0
+  goblinHitSounds: {fileID: 0}
+  goatHitSounds: {fileID: 0}
+  goblinSource: {fileID: 0}
+  goatSource: {fileID: 0}
 --- !u!114 &2693350850643973182
 MonoBehaviour:
   m_ObjectHideFlags: 0

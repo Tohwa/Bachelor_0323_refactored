@@ -54,7 +54,7 @@ public class BossHealthBar : MonoBehaviour
             else
             {
                 // Fehlerbehandlung, falls das Skript nicht gefunden wurde
-                Debug.LogError("EnemyHealth-Skript nicht gefunden!");
+                //Debug.LogError("EnemyHealth-Skript nicht gefunden!");
             }
         }        
     }
