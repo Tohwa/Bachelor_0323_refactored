@@ -1473,6 +1473,11 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 2602101048043803410, guid: c8c48192513a0f641b28236833a6090c,
+        type: 3}
+      propertyPath: m_Constraints
+      value: 116
+      objectReference: {fileID: 0}
     - target: {fileID: 2990740244596324448, guid: c8c48192513a0f641b28236833a6090c,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -2493,6 +2498,11 @@ PrefabInstance:
       propertyPath: m_LocalPosition.z
       value: 18.9
       objectReference: {fileID: 0}
+    - target: {fileID: 476260787796581220, guid: cdfc15af81f749248abcadffa2f3b482,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -42.3
+      objectReference: {fileID: 0}
     - target: {fileID: 1463541308584414840, guid: cdfc15af81f749248abcadffa2f3b482,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -2521,7 +2531,7 @@ PrefabInstance:
     - target: {fileID: 4738131804202837003, guid: cdfc15af81f749248abcadffa2f3b482,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: 44.6
+      value: -22.72
       objectReference: {fileID: 0}
     - target: {fileID: 5404524708736313390, guid: cdfc15af81f749248abcadffa2f3b482,
         type: 3}
@@ -2596,7 +2606,7 @@ PrefabInstance:
     - target: {fileID: 9042250478735624244, guid: cdfc15af81f749248abcadffa2f3b482,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: 45.3
+      value: -40.26
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -6072,7 +6082,7 @@ PrefabInstance:
     - target: {fileID: 8682098170645006492, guid: 63e2f9f769dfea247902a402427550fa,
         type: 3}
       propertyPath: waves.Array.data[1].enemies.Array.size
-      value: 5
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 8682098170645006492, guid: 63e2f9f769dfea247902a402427550fa,
         type: 3}
@@ -6096,13 +6106,13 @@ PrefabInstance:
         type: 3}
       propertyPath: waves.Array.data[1].enemies.Array.data[1]
       value: 
-      objectReference: {fileID: 3127882309121237085, guid: 2e964b00c6c41c545974ce2bd0aa427d,
+      objectReference: {fileID: 5735220365590825905, guid: c25819a6f7c435044b2d30bdce8b20b0,
         type: 3}
     - target: {fileID: 8682098170645006492, guid: 63e2f9f769dfea247902a402427550fa,
         type: 3}
       propertyPath: waves.Array.data[1].enemies.Array.data[2]
       value: 
-      objectReference: {fileID: 5735220365590825905, guid: c25819a6f7c435044b2d30bdce8b20b0,
+      objectReference: {fileID: 3127882309121237085, guid: 2e964b00c6c41c545974ce2bd0aa427d,
         type: 3}
     - target: {fileID: 8682098170645006492, guid: 63e2f9f769dfea247902a402427550fa,
         type: 3}

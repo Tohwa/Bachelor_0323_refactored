@@ -14,7 +14,7 @@ public class EscapeState : BaseState
     {
         Debug.Log("running");
 
-        Vector3 newPos = RandomNavSphere(sheep.cage.transform.position, sheep.wanderRadius.Value * 3, 3);
+        Vector3 newPos = sheep.RandomNavSphere(sheep.cage.transform.position, sheep.wanderRadius.Value * 3, 3);
         sheep.travelDistance = Distance(sheep.transform.position, newPos);
         sheep.traveledPos = newPos;
 
@@ -49,7 +49,8 @@ public class EscapeState : BaseState
                 }
             }
         }
-        else if (sheep.journeyHome)
+        
+        if (sheep.journeyHome)
         {
             sheep.SheepStateMachine.ChangeSheepState(sheep.ReturnState);
         }
@@ -58,19 +59,6 @@ public class EscapeState : BaseState
     public override void PhysicsUpdate()
     {
 
-    }
-
-    private Vector3 RandomNavSphere(Vector3 origin, float dist, int layermask)
-    {
-        Vector3 randDirection = Random.insideUnitSphere * dist;
-
-        randDirection += origin;
-
-        NavMeshHit navHit;
-
-        NavMesh.SamplePosition(randDirection, out navHit, dist, layermask);
-
-        return navHit.position;
     }
 
     public float Distance(Vector3 firstTransform, Vector3 secTransform)

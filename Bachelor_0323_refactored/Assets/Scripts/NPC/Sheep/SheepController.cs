@@ -53,8 +53,6 @@ public class SheepController : MonoBehaviour
 
         oriPos = transform.position;
 
-        //Agent.speed = 7f;
-
         if(fenceSet.Items.Count > 0 )
         {
             SheepStateMachine.InitSheepState(CozyState);
@@ -84,5 +82,18 @@ public class SheepController : MonoBehaviour
     public void TravelHome()
     {
         journeyHome = true;
+    }
+
+    public Vector3 RandomNavSphere(Vector3 origin, float dist, int layermask)
+    {
+        Vector3 randDirection = Random.insideUnitSphere * dist;
+
+        randDirection += origin;
+
+        NavMeshHit navHit;
+
+        NavMesh.SamplePosition(randDirection, out navHit, dist, layermask);
+
+        return navHit.position;
     }
 }

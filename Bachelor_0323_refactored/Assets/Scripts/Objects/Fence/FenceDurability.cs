@@ -17,6 +17,7 @@ public class FenceDurability : MonoBehaviour
 
     public float hp;
 
+
     public void Update()
     {
         if (gameObject.CompareTag("Weak"))
@@ -72,6 +73,28 @@ public class FenceDurability : MonoBehaviour
             gameObject.transform.GetChild(3).gameObject.SetActive(false);
 
             fenceDestroyed.Raise();
+
+            if (gameObject.CompareTag("Weak"))
+            {
+                Transform childTransform = gameObject.transform.GetChild(0);
+                ActivationCheck activationCheck = childTransform.GetComponent<ActivationCheck>();
+                activationCheck.SetDeactivated();
+                hp = weakDurability.Value;
+            }
+            else if (gameObject.CompareTag("Strong"))
+            {
+                Transform childTransform = gameObject.transform.GetChild(0);
+                ActivationCheck activationCheck = childTransform.GetComponent<ActivationCheck>();
+                activationCheck.SetDeactivated();
+                hp = solidDurability.Value;
+            }
+            else if (gameObject.CompareTag("Strong"))
+            {
+                Transform childTransform = gameObject.transform.GetChild(0);
+                ActivationCheck activationCheck = childTransform.GetComponent<ActivationCheck>();
+                activationCheck.SetDeactivated();
+                hp = strongDurability.Value;
+            }
         }
     }
 }

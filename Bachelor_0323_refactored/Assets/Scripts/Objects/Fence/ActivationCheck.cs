@@ -15,4 +15,9 @@ public class ActivationCheck : MonoBehaviour
     {
         wasActivated = true;
     }
+
+    public void SetDeactivated() 
+    { 
+        wasActivated = false; 
+    }
 }

@@ -32,6 +32,10 @@ public class GameManager : MonoBehaviour
     public static float SFXSliderValue = 0.75f;
     public static float BGMSliderValue = 0.75f;
 
+    public static bool sheepDead;
+    public static bool playerDead;
+    public static bool bossDead;
+
     public static int resolutionWidth = 1920;
     public static int resolutionHeight = 1080;
 
@@ -90,10 +94,12 @@ public class GameManager : MonoBehaviour
 
         if(playerHealth.hp == 0)
         {
+            playerDead = true;
             SceneManager.LoadScene("EndScreen");
         }
         else if(sheepSet.Items.Count == 0)
         {
+            sheepDead = true;
             SceneManager.LoadScene("EndScreen");
         }
     }

@@ -26,7 +26,7 @@ public class CozyState : BaseState
     {
         if (sheep.timer >= sheep.wanderTimer.Value)
         {
-            Vector3 newPos = RandomNavSphere(sheep.cage.transform.position, sheep.wanderRadius.Value, 3);
+            Vector3 newPos = sheep.RandomNavSphere(sheep.cage.transform.position, sheep.wanderRadius.Value, 3);
             sheep.Agent.SetDestination(newPos);
             sheep.timer = 0;
         }
@@ -42,18 +42,5 @@ public class CozyState : BaseState
     public override void PhysicsUpdate()
     {
         
-    }
-
-    private Vector3 RandomNavSphere(Vector3 origin, float dist, int layermask)
-    {
-        Vector3 randDirection = Random.insideUnitSphere * dist;
-
-        randDirection += origin;
-
-        NavMeshHit navHit;
-
-        NavMesh.SamplePosition(randDirection, out navHit, dist, layermask);
-
-        return navHit.position;
     }
 }

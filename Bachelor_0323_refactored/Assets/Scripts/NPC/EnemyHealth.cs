@@ -62,6 +62,7 @@ public class EnemyHealth : MonoBehaviour
             if (gameObject.CompareTag("BossEnemy"))
             {
                 SceneManager.LoadScene("EndScreen");
+                GameManager.bossDead = true;
                 gameObject.SetActive(false);
             }
             else

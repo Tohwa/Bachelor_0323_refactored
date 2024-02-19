@@ -1,0 +1,21 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c63a0d1455d1e8b47acb196451e01871, type: 3}
+  m_Name: Shepherd's death
+  m_EditorClassIdentifier: 
+  volume: 1
+  clips:
+  - {fileID: 8300000, guid: df0726b1e2951924bb199e22424c4ec7, type: 3}
+  - {fileID: 8300000, guid: d846c4e813deaa947acac60f8e73d65a, type: 3}
+  - {fileID: 8300000, guid: b4ddbdfb98d5f7c46912141c569ef83a, type: 3}
+  - {fileID: 8300000, guid: 267e274ef60de594784aad509ed03d42, type: 3}
+  - {fileID: 8300000, guid: 89bb4f024a42c1143a9606b3ccf4d228, type: 3}

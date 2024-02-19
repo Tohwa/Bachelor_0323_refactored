@@ -10,6 +10,8 @@ public class ReturnHomeState : BaseState
 
     public override void EnterState()
     {
+        sheep.Agent.ResetPath();
+        Vector3 newPos = sheep.RandomNavSphere(sheep.cage.transform.position, sheep.wanderRadius.Value, 3);
         sheep.Agent.SetDestination(sheep.oriPos);
     }
 
@@ -35,6 +37,6 @@ public class ReturnHomeState : BaseState
 
     public override void PhysicsUpdate()
     {
-
+        
     }
 }

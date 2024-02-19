@@ -12,6 +12,7 @@ public class AlarmedState : BaseState
     {
         Debug.Log("alarm");
 
+        sheep.Agent.ResetPath();
         sheep.Agent.speed = 15f;
         sheep.Agent.acceleration = 50f;
     }
@@ -30,6 +31,10 @@ public class AlarmedState : BaseState
         else if(sheep.fenceSet.Items.Count > 0)
         {
             sheep.SheepStateMachine.ChangeSheepState(sheep.CozyState);
+        }
+        else if(sheep.journeyHome)
+        {
+            sheep.SheepStateMachine.ChangeSheepState(sheep.ReturnState);
         }
     }
 
