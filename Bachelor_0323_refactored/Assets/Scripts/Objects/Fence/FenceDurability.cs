@@ -14,6 +14,7 @@ public class FenceDurability : MonoBehaviour
     public FloatReference solidDurability;
     public FloatReference strongDurability;
 
+    private float waitTimer = 3f;
 
     public float hp;
 
@@ -74,27 +75,79 @@ public class FenceDurability : MonoBehaviour
 
             fenceDestroyed.Raise();
 
-            if (gameObject.CompareTag("Weak"))
+            DeactivationSequence();
+
+            waitTimer -= Time.deltaTime;
+        }
+
+        
+    }
+
+    private void DeactivationSequence()
+    {
+        if (gameObject.CompareTag("Weak"))
+        {
+            Transform childTransformOne = gameObject.transform.GetChild(0);
+            Transform childTransformTwo = gameObject.transform.parent.gameObject.transform.GetChild(1).transform.GetChild(0);
+            Transform childTransformThree = gameObject.transform.parent.gameObject.transform.GetChild(2).transform.GetChild(0);
+
+            ActivationCheck activationCheckOne = childTransformOne.GetComponent<ActivationCheck>();
+            ActivationCheck activationCheckTwo = childTransformTwo.GetComponent<ActivationCheck>();
+            ActivationCheck activationCheckThree = childTransformThree.GetComponent<ActivationCheck>();
+
+            activationCheckOne.SetDeactivated();
+            activationCheckTwo.SetDeactivated();
+            activationCheckThree.SetDeactivated();
+            
+            if(waitTimer <= 0)
             {
-                Transform childTransform = gameObject.transform.GetChild(0);
-                ActivationCheck activationCheck = childTransform.GetComponent<ActivationCheck>();
-                activationCheck.SetDeactivated();
                 hp = weakDurability.Value;
+                waitTimer = 3f;
             }
-            else if (gameObject.CompareTag("Strong"))
+            
+        }
+        else if (gameObject.CompareTag("Solid"))
+        {
+            Transform childTransformOne = gameObject.transform.GetChild(0);
+            Transform childTransformTwo = gameObject.transform.parent.gameObject.transform.GetChild(0).transform.GetChild(0);
+            Transform childTransformThree = gameObject.transform.parent.gameObject.transform.GetChild(2).transform.GetChild(0);
+
+            ActivationCheck activationCheckOne = childTransformOne.GetComponent<ActivationCheck>();
+            ActivationCheck activationCheckTwo = childTransformTwo.GetComponent<ActivationCheck>();
+            ActivationCheck activationCheckThree = childTransformThree.GetComponent<ActivationCheck>();
+
+            activationCheckOne.SetDeactivated();
+            activationCheckTwo.SetDeactivated();
+            activationCheckThree.SetDeactivated();
+
+            if (waitTimer <= 0)
             {
-                Transform childTransform = gameObject.transform.GetChild(0);
-                ActivationCheck activationCheck = childTransform.GetComponent<ActivationCheck>();
-                activationCheck.SetDeactivated();
                 hp = solidDurability.Value;
+                waitTimer = 3f;
             }
-            else if (gameObject.CompareTag("Strong"))
+
+            
+        }
+        else if (gameObject.CompareTag("Strong"))
+        {
+            Transform childTransformOne = gameObject.transform.GetChild(0);
+            Transform childTransformTwo = gameObject.transform.parent.gameObject.transform.GetChild(0).transform.GetChild(0);
+            Transform childTransformThree = gameObject.transform.parent.gameObject.transform.GetChild(1).transform.GetChild(0);
+
+            ActivationCheck activationCheckOne = childTransformOne.GetComponent<ActivationCheck>();
+            ActivationCheck activationCheckTwo = childTransformTwo.GetComponent<ActivationCheck>();
+            ActivationCheck activationCheckThree = childTransformThree.GetComponent<ActivationCheck>();
+
+            activationCheckOne.SetDeactivated();
+            activationCheckTwo.SetDeactivated();
+            activationCheckThree.SetDeactivated();
+
+            if (waitTimer <= 0)
             {
-                Transform childTransform = gameObject.transform.GetChild(0);
-                ActivationCheck activationCheck = childTransform.GetComponent<ActivationCheck>();
-                activationCheck.SetDeactivated();
                 hp = strongDurability.Value;
+                waitTimer = 3f;
             }
+            
         }
     }
 }

@@ -22,6 +22,7 @@ TagManager:
   - Goat
   - Wolf
   - Boar
+  - Fence
   layers:
   - Default
   - TransparentFX

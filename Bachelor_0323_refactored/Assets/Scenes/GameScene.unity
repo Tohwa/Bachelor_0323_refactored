@@ -1169,8 +1169,8 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-  crystalCount: 15
-  woodCount: 15
+  crystalCount: 12
+  woodCount: 12
   weakFenceBuilt: 0
   solidFenceBuilt: 0
   strongFenceBuilt: 0
@@ -2491,47 +2491,62 @@ PrefabInstance:
     - target: {fileID: 404001850338373453, guid: cdfc15af81f749248abcadffa2f3b482,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -26.5
+      value: -25.3
       objectReference: {fileID: 0}
     - target: {fileID: 404001850338373453, guid: cdfc15af81f749248abcadffa2f3b482,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: 18.9
+      value: 36.3
+      objectReference: {fileID: 0}
+    - target: {fileID: 476260787796581220, guid: cdfc15af81f749248abcadffa2f3b482,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 38.2
       objectReference: {fileID: 0}
     - target: {fileID: 476260787796581220, guid: cdfc15af81f749248abcadffa2f3b482,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: -42.3
+      value: 12.3
       objectReference: {fileID: 0}
     - target: {fileID: 1463541308584414840, guid: cdfc15af81f749248abcadffa2f3b482,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 28.9
+      value: -40.6
+      objectReference: {fileID: 0}
+    - target: {fileID: 1463541308584414840, guid: cdfc15af81f749248abcadffa2f3b482,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 4.3
+      objectReference: {fileID: 0}
+    - target: {fileID: 1484762959542834329, guid: cdfc15af81f749248abcadffa2f3b482,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -13.4
       objectReference: {fileID: 0}
     - target: {fileID: 1484762959542834329, guid: cdfc15af81f749248abcadffa2f3b482,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: -3.2
+      value: 36.9
       objectReference: {fileID: 0}
     - target: {fileID: 1627455125170957088, guid: cdfc15af81f749248abcadffa2f3b482,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 21.8
+      value: 34.9
       objectReference: {fileID: 0}
     - target: {fileID: 1627455125170957088, guid: cdfc15af81f749248abcadffa2f3b482,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: 25.4
+      value: 31.1
       objectReference: {fileID: 0}
     - target: {fileID: 4738131804202837003, guid: cdfc15af81f749248abcadffa2f3b482,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -29.1
+      value: 1.2
       objectReference: {fileID: 0}
     - target: {fileID: 4738131804202837003, guid: cdfc15af81f749248abcadffa2f3b482,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: -22.72
+      value: 32.6
       objectReference: {fileID: 0}
     - target: {fileID: 5404524708736313390, guid: cdfc15af81f749248abcadffa2f3b482,
         type: 3}
@@ -2586,12 +2601,22 @@ PrefabInstance:
     - target: {fileID: 6397874966271849802, guid: cdfc15af81f749248abcadffa2f3b482,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -40.1
+      value: 37.2
       objectReference: {fileID: 0}
     - target: {fileID: 6397874966271849802, guid: cdfc15af81f749248abcadffa2f3b482,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: 19.9
+      value: 0.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 8176830856267110546, guid: cdfc15af81f749248abcadffa2f3b482,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 16.7
+      objectReference: {fileID: 0}
+    - target: {fileID: 8176830856267110546, guid: cdfc15af81f749248abcadffa2f3b482,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 40.9
       objectReference: {fileID: 0}
     - target: {fileID: 8880305822818832206, guid: cdfc15af81f749248abcadffa2f3b482,
         type: 3}
@@ -2601,12 +2626,12 @@ PrefabInstance:
     - target: {fileID: 9042250478735624244, guid: cdfc15af81f749248abcadffa2f3b482,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -13.9
+      value: -38.4
       objectReference: {fileID: 0}
     - target: {fileID: 9042250478735624244, guid: cdfc15af81f749248abcadffa2f3b482,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: -40.26
+      value: 12.5
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -19124,7 +19149,7 @@ PrefabInstance:
     - target: {fileID: 1776193350979061425, guid: d7f9d9ed1ce63834784d3e56d65e2c5e,
         type: 3}
       propertyPath: wanderRadius.ConstantValue
-      value: 10
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 2053702054275407437, guid: d7f9d9ed1ce63834784d3e56d65e2c5e,
         type: 3}
@@ -27595,7 +27620,7 @@ PrefabInstance:
     - target: {fileID: 1776193350979061425, guid: d7f9d9ed1ce63834784d3e56d65e2c5e,
         type: 3}
       propertyPath: wanderRadius.ConstantValue
-      value: 10
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 2053702054275407437, guid: d7f9d9ed1ce63834784d3e56d65e2c5e,
         type: 3}
@@ -48526,7 +48551,7 @@ GameObject:
   - component: {fileID: 1387870868}
   m_Layer: 0
   m_Name: Fence
-  m_TagString: Untagged
+  m_TagString: Fence
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -69771,7 +69796,7 @@ PrefabInstance:
     - target: {fileID: 1776193350979061425, guid: d7f9d9ed1ce63834784d3e56d65e2c5e,
         type: 3}
       propertyPath: wanderRadius.ConstantValue
-      value: 10
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 2053702054275407437, guid: d7f9d9ed1ce63834784d3e56d65e2c5e,
         type: 3}
@@ -72227,6 +72252,11 @@ PrefabInstance:
         type: 3}
       propertyPath: speed.ConstantValue
       value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 1776193350979061425, guid: d7f9d9ed1ce63834784d3e56d65e2c5e,
+        type: 3}
+      propertyPath: wanderRadius.ConstantValue
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 2053702054275407437, guid: d7f9d9ed1ce63834784d3e56d65e2c5e,
         type: 3}

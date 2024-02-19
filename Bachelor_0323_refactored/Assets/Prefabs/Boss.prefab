@@ -216,15 +216,15 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   target: {fileID: 0}
   speed:
-    UseConstant: 1
+    UseConstant: 0
     ConstantValue: 2
     Variable: {fileID: 11400000, guid: 0ec81c94c6456bd41817892921c22e17, type: 2}
   damage:
-    UseConstant: 1
+    UseConstant: 0
     ConstantValue: 2
     Variable: {fileID: 11400000, guid: 59767bcc160de3e4ea5f52f5796b4322, type: 2}
   attackDelay:
-    UseConstant: 1
+    UseConstant: 0
     ConstantValue: 1.5
     Variable: {fileID: 11400000, guid: f26025610b6efa1488d895dff764b1a3, type: 2}
   timer: 0

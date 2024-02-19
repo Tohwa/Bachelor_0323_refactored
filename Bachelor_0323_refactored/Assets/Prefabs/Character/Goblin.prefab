@@ -88,9 +88,7 @@ MonoBehaviour:
     Variable: {fileID: 11400000, guid: 868c6291bd338c24597bf37b3f4d6215, type: 2}
   timer: 0
   SFXSource: {fileID: 8542244102420271279}
-  goblinSteps: {fileID: 11400000, guid: 55b2ee500a7621b4e8593bacfcd5ebbe, type: 2}
   goblinAttack: {fileID: 11400000, guid: 8a2fb39105895e3408cdf7de8b9e7a1a, type: 2}
-  stepTimer: 0
   sheepSet: {fileID: 11400000, guid: fa964c0b4d8e57f40ab57337bf0a07c9, type: 2}
   fenceSet: {fileID: 11400000, guid: 05aa19ef385595643a353d4a244ff574, type: 2}
 --- !u!114 &107030081401160076
@@ -119,7 +117,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   health:
-    UseConstant: 1
+    UseConstant: 0
     ConstantValue: 10
     Variable: {fileID: 11400000, guid: 0308143245588df45933a4fda9007bef, type: 2}
   lootPrefab: {fileID: 1037475309014304320, guid: f268c7e4c9d8f64439dac7ba89038997,
@@ -127,9 +125,11 @@ MonoBehaviour:
   hp: 0
   goblinHitSounds: {fileID: 11400000, guid: f109720312102c640ab291763c778403, type: 2}
   goatHitSounds: {fileID: 11400000, guid: f109720312102c640ab291763c778403, type: 2}
+  bossHitSounds: {fileID: 0}
   goblinSource: {fileID: 8542244102420271279}
   goatSource: {fileID: 2565045524003374800, guid: b94b816191c16bb49b58dd7d3d274c92,
     type: 3}
+  bossSource: {fileID: 0}
 --- !u!136 &1039753021596211579
 CapsuleCollider:
   m_ObjectHideFlags: 0
